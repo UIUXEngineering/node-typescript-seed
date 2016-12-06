@@ -1,0 +1,33 @@
+{
+  "name": "@uiuxengineering/node-typescript-seed",
+  "version": "1.0.0",
+  "description": "Node project with TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UIUXEngineering/node-typescript-seed.git"
+  },
+  "keywords": [
+    "Node",
+    "TypeScript"
+  ],
+  "author": "Jerry Orta <jerryorta.dev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UIUXEngineering/node-typescript-seed/issues"
+  },
+  "homepage": "https://github.com/UIUXEngineering/node-typescript-seed#readme",
+  "devDependencies": {
+    "commitizen": "^2.8.6",
+    "cz-conventional-changelog": "^1.2.0",
+    "gulp-conventional-changelog": "^1.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
