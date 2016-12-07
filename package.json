@@ -45,8 +45,10 @@
     "gulp-util": "^3.0.7",
     "isstream": "^0.1.2",
     "lodash": "^4.17.2",
+    "run-sequence": "^1.2.2",
     "tildify": "^1.2.0",
     "ts-node": "^1.7.0",
+    "typescript": "^2.0.10",
     "yargs": "^6.5.0"
   },
   "config": {
