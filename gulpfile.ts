@@ -3,7 +3,12 @@ import * as runSequence from 'run-sequence';
 
 import Config from './tools/config';
 import {loadTasks} from './tools/utils';
+import {checkEnvironment} from './tools/utils';
 
+checkEnvironment({
+  requiredNpmVersion: '>=3.5.3 <4.0.0',
+  requiredNodeVersion: '>=5.4.1 <7.0.0',
+});
 
 loadTasks(Config.TASKS_PATH);
 
