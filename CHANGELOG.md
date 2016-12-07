@@ -1,3 +1,13 @@
+<a name="0.0.0-alpha.4"></a>
+# [0.0.0-alpha.4](https://github.com/UIUXEngineering/node-typescript-seed/compare/0.0.0-alpha.3...0.0.0-alpha.4) (2016-12-07)
+
+
+### Bug Fixes
+
+* **changelog:** push latest changes to changelog ([981dcd4](https://github.com/UIUXEngineering/node-typescript-seed/commit/981dcd4))
+
+
+
 <a name="0.0.0-alpha.3"></a>
 # [0.0.0-alpha.3](https://github.com/UIUXEngineering/node-typescript-seed/compare/0.0.0-alpha.2...0.0.0-alpha.3) (2016-12-07)
 
