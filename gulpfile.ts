@@ -76,6 +76,9 @@ gulp.task('_release', function (done: any) {
     'push.changes',
     'create.new.tag',
     'github.release',
+    'regenerate.changelog',
+    'commit.changes',
+    'push.changes',
     function (error: any) {
       if (error) {
         console.log(error.message);
