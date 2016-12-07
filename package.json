@@ -14,6 +14,7 @@
     "release.patch": "gulp release.patch",
     "release.minor": "gulp release.minor",
     "release.major": "gulp release.major",
+    "shrinkwrap": "node tools/utils/seed/npm/reshrinkwrap",
     "test": "test"
   },
   "repository": {
