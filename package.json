@@ -42,6 +42,7 @@
     "cz-conventional-changelog": "^1.2.0",
     "gulp": "^3.9.1",
     "gulp-conventional-changelog": "^1.1.0",
+    "gulp-load-plugins": "^1.4.0",
     "gulp-util": "^3.0.7",
     "isstream": "^0.1.2",
     "lodash": "^4.17.2",
