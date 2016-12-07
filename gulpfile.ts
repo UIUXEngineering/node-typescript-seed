@@ -71,11 +71,13 @@ gulp.task('release.major', function (done: any) {
 // Sub task, do not call directly
 gulp.task('_release', function (done: any) {
   runSequence(
-    'changelog',
+    // 'changelog',
     'commit.changes',
     'push.changes',
     'create.new.tag',
     'github.release',
+
+    // update changelog and push to master
     'regenerate.changelog',
     'commit.changes',
     'push.changes',
