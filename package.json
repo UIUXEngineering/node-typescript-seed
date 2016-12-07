@@ -5,6 +5,14 @@
   "main": "index.js",
   "scripts": {
     "init.releaser": "conventional-github-releaser -p angular -r 0",
+    "release": "gulp release",
+    "release.build": "gulp release.build",
+    "release.alpha": "gulp release.alpha",
+    "release.beta": "gulp release.beta",
+    "release.rc": "gulp release.rc",
+    "release.patch": "gulp release.patch",
+    "release.minor": "gulp release.minor",
+    "release.major": "gulp release.major",
     "test": "test"
   },
   "repository": {
