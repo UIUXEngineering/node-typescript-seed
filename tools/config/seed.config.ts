@@ -61,6 +61,11 @@ export class SeedConfig {
   TASKS_PATH                              = join(process.cwd(), this.TOOLS_DIR, this.TASKS_DIR);
 
   /**
+   * SPECIFIC FILES
+   */
+  RESHRINKWRAP                            = join(process.cwd(), this.TOOLS_DIR, 'utils', 'seed', 'npm', 'reshrinkwrap');
+
+  /**
    * The version of the application as defined in the `package.json`.
    */
   VERSION = appVersion();

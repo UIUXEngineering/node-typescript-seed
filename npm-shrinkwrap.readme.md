@@ -17,7 +17,7 @@ To add a new dependency do the following:
 2. make sure you are in sync with `upstream/master`
 3. ensure that your `node_modules` directory is not stale by running `npm install`
 4. add a new dependency via `npm install --save-dev <packagename>`
-5. run `./tools/utils/seed/npm/reshrinkwrap`
+5. run `gulp reshrinkwrap`
 6. these steps should change 3 files: `package.json`, `npm-shrinkwrap.json` and `npm-shrinkwrap.clean.json`
 7. commit changes to these three files and you are done
 
@@ -31,7 +31,7 @@ To update existing dependency do the following:
 3. ensure that your `node_modules` directory is not stale by running `npm install`
 4. run `npm install --save-dev <packagename>@<version|latest>` or `npm update <packagename>` to 
    update to the latest version that matches version constraint in `package.json`
-5. run `./tools/utils/seed/npm/reshrinkwrap`
+5. run `gulp reshrinkwrap`
 6. these steps should change 2 files: `npm-shrinkwrap.json` and `npm-shrinkwrap.clean.json`.
    Optionally if you used `npm install ...` in the first step, `package.json` might be modified as 
    well.
@@ -46,6 +46,6 @@ To Remove an existing dependency do the following:
 2. make sure you are in sync with `upstream/master`: `git fetch upstream && git rebase upstream/master`
 3. ensure that your `node_modules` directory is not stale by running `npm install`
 4. run `npm uninstall --save-dev <packagename>@<version|latest>`
-5. run `./tools/utils/seed/npm/reshrinkwrap`
+5. run `gulp reshrinkwrap`
 6. these steps should change 3 files: `package.json`, `npm-shrinkwrap.json` and `npm-shrinkwrap.clean.json`.
 7. commit changes to these three files and you are done
