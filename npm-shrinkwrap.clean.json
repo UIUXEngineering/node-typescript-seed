@@ -1110,6 +1110,9 @@
     "rmfr": {
       "version": "1.0.1"
     },
+    "rollup": {
+      "version": "0.36.4"
+    },
     "run-async": {
       "version": "2.3.0"
     },

@@ -1,6 +1,6 @@
 import * as gulp from 'gulp';
 import * as runSequence from 'run-sequence';
-
+import { join } from 'path';
 import Config from './tools/config';
 import {loadTasks} from './tools/utils';
 import {checkEnvironment} from './tools/utils';
@@ -21,6 +21,7 @@ gulp.task('build', function (done: any) {
     'build.app',
     done);
 });
+
 
 /**
  * RELEASE

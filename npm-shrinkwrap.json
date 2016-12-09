@@ -1822,6 +1822,11 @@
       "from": "rmfr@latest",
       "resolved": "http://registry.npmjs.org/rmfr/-/rmfr-1.0.1.tgz"
     },
+    "rollup": {
+      "version": "0.36.4",
+      "from": "rollup@latest",
+      "resolved": "http://registry.npmjs.org/rollup/-/rollup-0.36.4.tgz"
+    },
     "run-async": {
       "version": "2.3.0",
       "from": "run-async@>=2.2.0 <3.0.0",

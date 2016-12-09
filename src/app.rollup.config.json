@@ -1,0 +1,5 @@
+{
+  "entry": "es6/app.js",
+  "dest": "umd/app.umd.js",
+  "format": "umd"
+}

@@ -4,5 +4,5 @@
 export * from './seed/tasks_tools';
 export * from './seed/incSemver';
 export * from './seed/check-environment';
-export * from './seed/readTSConfig';
+export * from './seed/JSONParse';
 export * from './seed/createBuildConfigs';
