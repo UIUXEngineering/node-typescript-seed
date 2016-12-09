@@ -15,7 +15,8 @@ This is a personal project to rapidly start node projects. Support is limited un
 # References
 
 - [tsconfig schema](http://json.schemastore.org/tsconfig)
-- [tsconfig documentation](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html  )
+- [tsconfig documentation](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
+- [typescript compiler options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
 
 
 # Releasing
