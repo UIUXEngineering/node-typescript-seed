@@ -117,10 +117,20 @@
       "from": "@types/vinyl@*",
       "resolved": "http://registry.npmjs.org/@types/vinyl/-/vinyl-2.0.0.tgz"
     },
+    "@types/vinyl-buffer": {
+      "version": "0.0.28",
+      "from": "@types/vinyl-buffer@0.0.28",
+      "resolved": "http://registry.npmjs.org/@types/vinyl-buffer/-/vinyl-buffer-0.0.28.tgz"
+    },
     "@types/yargs": {
       "version": "6.3.3",
       "from": "@types/yargs@latest",
       "resolved": "http://registry.npmjs.org/@types/yargs/-/yargs-6.3.3.tgz"
+    },
+    "acorn": {
+      "version": "4.0.3",
+      "from": "acorn@>=4.0.0 <5.0.0",
+      "resolved": "http://registry.npmjs.org/acorn/-/acorn-4.0.3.tgz"
     },
     "add-stream": {
       "version": "1.0.0",
@@ -236,6 +246,11 @@
       "version": "1.5.2",
       "from": "async@>=1.4.0 <2.0.0",
       "resolved": "http://registry.npmjs.org/async/-/async-1.5.2.tgz"
+    },
+    "atob": {
+      "version": "1.1.3",
+      "from": "atob@>=1.1.0 <1.2.0",
+      "resolved": "http://registry.npmjs.org/atob/-/atob-1.1.3.tgz"
     },
     "balanced-match": {
       "version": "0.4.2",
@@ -439,6 +454,18 @@
       "from": "core-util-is@>=1.0.0 <1.1.0",
       "resolved": "http://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz"
     },
+    "css": {
+      "version": "2.2.1",
+      "from": "css@>=2.0.0 <3.0.0",
+      "resolved": "http://registry.npmjs.org/css/-/css-2.2.1.tgz",
+      "dependencies": {
+        "source-map": {
+          "version": "0.1.43",
+          "from": "source-map@>=0.1.38 <0.2.0",
+          "resolved": "http://registry.npmjs.org/source-map/-/source-map-0.1.43.tgz"
+        }
+      }
+    },
     "currently-unhandled": {
       "version": "0.4.1",
       "from": "currently-unhandled@>=0.4.1 <0.5.0",
@@ -458,6 +485,16 @@
       "version": "1.0.12",
       "from": "dateformat@>=1.0.12 <2.0.0",
       "resolved": "http://registry.npmjs.org/dateformat/-/dateformat-1.0.12.tgz"
+    },
+    "debug": {
+      "version": "2.3.3",
+      "from": "debug@>=2.0.0 <3.0.0",
+      "resolved": "http://registry.npmjs.org/debug/-/debug-2.3.3.tgz"
+    },
+    "debug-fabulous": {
+      "version": "0.0.4",
+      "from": "debug-fabulous@>=0.0.0 <0.1.0",
+      "resolved": "http://registry.npmjs.org/debug-fabulous/-/debug-fabulous-0.0.4.tgz"
     },
     "decamelize": {
       "version": "1.2.0",
@@ -488,6 +525,11 @@
       "version": "4.0.0",
       "from": "detect-indent@4.0.0",
       "resolved": "http://registry.npmjs.org/detect-indent/-/detect-indent-4.0.0.tgz"
+    },
+    "detect-newline": {
+      "version": "2.1.0",
+      "from": "detect-newline@>=2.0.0 <3.0.0",
+      "resolved": "http://registry.npmjs.org/detect-newline/-/detect-newline-2.1.0.tgz"
     },
     "dot-prop": {
       "version": "3.0.0",
@@ -906,10 +948,15 @@
         }
       }
     },
+    "gulp-rename": {
+      "version": "1.2.2",
+      "from": "gulp-rename@latest",
+      "resolved": "http://registry.npmjs.org/gulp-rename/-/gulp-rename-1.2.2.tgz"
+    },
     "gulp-sourcemaps": {
-      "version": "1.6.0",
-      "from": "gulp-sourcemaps@1.6.0",
-      "resolved": "http://registry.npmjs.org/gulp-sourcemaps/-/gulp-sourcemaps-1.6.0.tgz",
+      "version": "1.9.1",
+      "from": "gulp-sourcemaps@latest",
+      "resolved": "http://registry.npmjs.org/gulp-sourcemaps/-/gulp-sourcemaps-1.9.1.tgz",
       "dependencies": {
         "vinyl": {
           "version": "1.2.0",
@@ -988,7 +1035,14 @@
         "vinyl-fs": {
           "version": "2.4.4",
           "from": "vinyl-fs@>=2.4.3 <2.5.0",
-          "resolved": "http://registry.npmjs.org/vinyl-fs/-/vinyl-fs-2.4.4.tgz"
+          "resolved": "http://registry.npmjs.org/vinyl-fs/-/vinyl-fs-2.4.4.tgz",
+          "dependencies": {
+            "gulp-sourcemaps": {
+              "version": "1.6.0",
+              "from": "gulp-sourcemaps@1.6.0",
+              "resolved": "http://registry.npmjs.org/gulp-sourcemaps/-/gulp-sourcemaps-1.6.0.tgz"
+            }
+          }
         }
       }
     },
@@ -1269,6 +1323,11 @@
       "from": "lazy-cache@>=1.0.3 <2.0.0",
       "resolved": "http://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz"
     },
+    "lazy-debug-legacy": {
+      "version": "0.0.1",
+      "from": "lazy-debug-legacy@>=0.0.0 <0.1.0",
+      "resolved": "http://registry.npmjs.org/lazy-debug-legacy/-/lazy-debug-legacy-0.0.1.tgz"
+    },
     "lazystream": {
       "version": "1.0.0",
       "from": "lazystream@>=1.0.0 <2.0.0",
@@ -1512,6 +1571,11 @@
       "version": "1.0.0",
       "from": "modify-values@>=1.0.0 <2.0.0",
       "resolved": "http://registry.npmjs.org/modify-values/-/modify-values-1.0.0.tgz"
+    },
+    "ms": {
+      "version": "0.7.2",
+      "from": "ms@0.7.2",
+      "resolved": "http://registry.npmjs.org/ms/-/ms-0.7.2.tgz"
     },
     "multipipe": {
       "version": "0.1.2",
@@ -1797,6 +1861,11 @@
       "from": "resolve-dir@>=0.1.0 <0.2.0",
       "resolved": "http://registry.npmjs.org/resolve-dir/-/resolve-dir-0.1.1.tgz"
     },
+    "resolve-url": {
+      "version": "0.2.1",
+      "from": "resolve-url@>=0.2.1 <0.3.0",
+      "resolved": "http://registry.npmjs.org/resolve-url/-/resolve-url-0.2.1.tgz"
+    },
     "restore-cursor": {
       "version": "1.0.1",
       "from": "restore-cursor@>=1.0.1 <2.0.0",
@@ -1877,6 +1946,11 @@
       "from": "source-map@>=0.4.4 <0.5.0",
       "resolved": "http://registry.npmjs.org/source-map/-/source-map-0.4.4.tgz"
     },
+    "source-map-resolve": {
+      "version": "0.3.1",
+      "from": "source-map-resolve@>=0.3.0 <0.4.0",
+      "resolved": "http://registry.npmjs.org/source-map-resolve/-/source-map-resolve-0.3.1.tgz"
+    },
     "source-map-support": {
       "version": "0.4.6",
       "from": "source-map-support@>=0.4.0 <0.5.0",
@@ -1888,6 +1962,11 @@
           "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.5.6.tgz"
         }
       }
+    },
+    "source-map-url": {
+      "version": "0.3.0",
+      "from": "source-map-url@>=0.3.0 <0.4.0",
+      "resolved": "http://registry.npmjs.org/source-map-url/-/source-map-url-0.3.0.tgz"
     },
     "sparkles": {
       "version": "1.0.0",
@@ -2114,6 +2193,11 @@
       "version": "1.0.0",
       "from": "unique-stream@>=1.0.0 <2.0.0",
       "resolved": "http://registry.npmjs.org/unique-stream/-/unique-stream-1.0.0.tgz"
+    },
+    "urix": {
+      "version": "0.1.0",
+      "from": "urix@>=0.1.0 <0.2.0",
+      "resolved": "http://registry.npmjs.org/urix/-/urix-0.1.0.tgz"
     },
     "user-home": {
       "version": "1.1.1",
