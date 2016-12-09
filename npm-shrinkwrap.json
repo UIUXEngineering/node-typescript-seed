@@ -22,11 +22,6 @@
       "from": "@types/chokidar@*",
       "resolved": "http://registry.npmjs.org/@types/chokidar/-/chokidar-1.4.29.tgz"
     },
-    "@types/core-js": {
-      "version": "0.9.35",
-      "from": "@types/core-js@>=0.9.34 <0.10.0",
-      "resolved": "http://registry.npmjs.org/@types/core-js/-/core-js-0.9.35.tgz"
-    },
     "@types/express": {
       "version": "4.0.34",
       "from": "@types/express@>=4.0.33 <5.0.0",
@@ -61,6 +56,11 @@
       "version": "4.14.42",
       "from": "@types/lodash@>=4.14.38 <5.0.0",
       "resolved": "http://registry.npmjs.org/@types/lodash/-/lodash-4.14.42.tgz"
+    },
+    "@types/merge2": {
+      "version": "0.3.29",
+      "from": "@types/merge2@latest",
+      "resolved": "http://registry.npmjs.org/@types/merge2/-/merge2-0.3.29.tgz"
     },
     "@types/micromatch": {
       "version": "2.3.29",
@@ -885,7 +885,7 @@
         "readable-stream": {
           "version": "1.0.34",
           "from": "readable-stream@>=1.0.33-1 <1.1.0-0",
-          "resolved": "http://registry.npmjs.org/readable-stream/-/readable-stream-1.0.34.tgz"
+          "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.34.tgz"
         },
         "through2": {
           "version": "0.6.5",
@@ -1471,6 +1471,11 @@
       "from": "merge-stream@>=1.0.0 <2.0.0",
       "resolved": "http://registry.npmjs.org/merge-stream/-/merge-stream-1.0.1.tgz"
     },
+    "merge2": {
+      "version": "1.0.2",
+      "from": "merge2@latest",
+      "resolved": "http://registry.npmjs.org/merge2/-/merge2-1.0.2.tgz"
+    },
     "micromatch": {
       "version": "2.3.11",
       "from": "micromatch@>=2.3.7 <3.0.0",
@@ -1806,6 +1811,16 @@
       "version": "1.0.1",
       "from": "right-pad@>=1.0.1 <2.0.0",
       "resolved": "http://registry.npmjs.org/right-pad/-/right-pad-1.0.1.tgz"
+    },
+    "rimraf": {
+      "version": "2.5.4",
+      "from": "rimraf@>=2.5.4 <3.0.0",
+      "resolved": "http://registry.npmjs.org/rimraf/-/rimraf-2.5.4.tgz"
+    },
+    "rmfr": {
+      "version": "1.0.1",
+      "from": "rmfr@latest",
+      "resolved": "http://registry.npmjs.org/rmfr/-/rmfr-1.0.1.tgz"
     },
     "run-async": {
       "version": "2.3.0",

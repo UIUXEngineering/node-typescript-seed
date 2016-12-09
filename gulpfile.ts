@@ -12,6 +12,19 @@ checkEnvironment({
 
 loadTasks(Config.TASKS_PATH);
 
+/**
+ * BUILD
+ */
+gulp.task('build', function (done: any) {
+  runSequence(
+    'clean.build',
+    'build.app',
+    done);
+});
+
+/**
+ * RELEASE
+ */
 gulp.task('release', function (done: any) {
   runSequence(
     'bump',

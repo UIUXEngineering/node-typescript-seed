@@ -7,9 +7,15 @@ A seed for NodeJS projects using typescript.
 This is a personal project to rapidly start node projects. Support is limited unless issues and requests are within the scope of my current work and needs, but PR's and collaborators are very welcome. 
 
 # Table of Contents
+- [References](#references)
 - [Releasing](#releasing)
 - [Change Log](#change-log)
 - [License](#license)
+
+# References
+
+- [tsconfig schema](http://json.schemastore.org/tsconfig)
+- [tsconfig documentation](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html  )
 
 
 # Releasing

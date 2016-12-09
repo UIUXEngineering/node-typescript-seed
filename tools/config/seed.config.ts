@@ -39,21 +39,24 @@ export class SeedConfig {
    * BASE PATHS
   */
 
-   // TOOLS DIRECTORIES
-   // -------------
-   TOOLS_DIR                               = 'tools';
-   TASKS_DIR                               = 'tasks';
+  SRC                                     = 'src';
+  TOOLS_DIR                               = 'tools';
+  TASKS_DIR                               = 'tasks';
+  ES6                                     = 'es6';
+  TYPES                                   = 'types';
 
 
   /**
    * PATHS TO FILES
    */
-
+  APP_TSCONFIG                            = 'app.tsconfig.json';
+  APP_ROLLUP_CONFIG                       = 'app.rollup.config.js';
 
 
   /**
    * PATHS
    */
+  SRC_PATH                                = join(process.cwd(), this.SRC);
 
   /**
    * TASK PATHS

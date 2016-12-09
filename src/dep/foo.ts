@@ -1,4 +1,4 @@
-export class Demo {
+export class FOO {
   _name: string;
 
   constructor() {

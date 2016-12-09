@@ -5,7 +5,7 @@ import Config from '../../../config';
 
 export = (done: any) => {
 
-  let files = join(resolve( './' + Config.TOOLS_DIR), '**', '*.+(js|map)');
+  let files = join(resolve( './' + Config.TOOLS_DIR), '**-(npm)', '*.+(js|map)');
 
   rmfr(files, {glob: true})
     .then(() => {
