@@ -44,6 +44,7 @@ export class SeedConfig {
   TASKS_DIR                               = 'tasks';
   ES6                                     = 'es6';
   TYPES                                   = 'types';
+  UMD                                     = 'umd';
 
 
   /**

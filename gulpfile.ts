@@ -18,7 +18,8 @@ loadTasks(Config.TASKS_PATH);
 gulp.task('build', function (done: any) {
   runSequence(
     'clean.build',
-    'build.app',
+    'build.es6',
+    'rollup.umd',
     done);
 });
 
