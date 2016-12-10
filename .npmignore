@@ -1,0 +1,10 @@
+.idea
+node_modules
+tools
+.gitignore
+CHANGELOG.md
+gulpfile.ts
+npm-shrinkwrap.clean.json
+npm-shrinkwrap.json
+npm-shrinkwrap.readme.md
+tsconfig.json
