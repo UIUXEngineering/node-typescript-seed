@@ -75,6 +75,18 @@ export class SeedConfig {
    */
   RESHRINKWRAP = join(process.cwd(), this.TOOLS_DIR, 'utils', 'seed', 'npm', 'reshrinkwrap');
 
+  TYPESCRIPT_CONFIG = {
+    "declaration": true,
+    "stripInternal": true,
+    "experimentalDecorators": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "inlineSources": true,
+    "target": "es5",
+    "skipLibCheck": true,
+    "lib": [ "es2015", "dom" ]
+  };
 
   ROLLUP_CONFIG = {
     ROLLUP: {
