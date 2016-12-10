@@ -18,7 +18,7 @@ export = () => {
 
   let buildConfig = createBuildConfig(buildParams);
 
-  let tsResult = gulp.src(join(Config.SRC, '**', '*.ts'))
+  let tsResult = gulp.src(join(Config.SRC_DIR, '**', '*.ts'))
     .pipe(plugins.typescript(buildConfig.tsconfig));
 
   return merge([

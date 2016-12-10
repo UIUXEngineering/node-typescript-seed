@@ -1,5 +1,5 @@
-import { join  } from 'path';
-import { argv  } from 'yargs';
+import {join} from 'path';
+import {argv} from 'yargs';
 
 /************************* DO NOT CHANGE ************************
  *
@@ -9,11 +9,7 @@ import { argv  } from 'yargs';
  * Your application-specific configurations should be
  * in project.config.ts. If you need to change any tasks
  * from "./tasks" overwrite them by creating a task with the
- * same name in "./projects". For further information take a
- * look at the documentation:
- *
- * 1) https://github.com/mgechev/angular2-seed/tree/master/tools
- * 2) https://github.com/mgechev/angular2-seed/wiki
+ * same name in "./projects".
  *
  *****************************************************************/
 
@@ -21,11 +17,20 @@ import { argv  } from 'yargs';
  * This class represents the basic configuration of the seed.
  * It provides the following:
  * - Constants for directories, ports, versions etc.
- * - Injectable application assets
- * - SystemJS configuration
- * - BrowserSync configuration
  */
 export class SeedConfig {
+
+  /**
+   *
+   * BUILD PARAMS
+   */
+
+  // Required js bundle module name. Needs to be dot notation.
+  MODULE_NAME = 'typescript.seed';
+
+  // output format - 'amd', 'cjs', 'es', 'iife', 'umd'
+  JS_BUNDLE_FORMAT = 'umd';
+
 
   /**
    * The flag for the debug option of the application.
@@ -33,47 +38,66 @@ export class SeedConfig {
    * when running `npm start`.
    * @type {boolean}
    */
-  DEBUG                                    = argv['debug'] || false;
+  DEBUG = argv['debug'] || false;
 
   /**
    * BASE PATHS
-  */
+   */
 
-  SRC                                     = 'src';
-  TOOLS_DIR                               = 'tools';
-  TASKS_DIR                               = 'tasks';
-  ES6                                     = 'es6';
-  TYPES                                   = 'types';
-  UMD                                     = 'umd';
+  SRC_DIR = 'src';
+  TOOLS_DIR = 'tools';
+  TASKS_DIR = 'tasks';
+  ES6_DIR = 'es6';
+  TYPES_DIR = 'types';
+  UMD_DIR = 'umd';
 
 
   /**
-   * PATHS TO FILES
+   * FILES
    */
+  TS_ENTRY_FILENAME = 'app.ts';
+  ES6_ENTRY_FILENAME = 'app.js';
+  JS_BUNDLE_FILENAME = 'app.umd.js';
   APP_TSCONFIG                            = 'app.tsconfig.json';
-  APP_ROLLUP_CONFIG                       = 'app.rollup.config.js';
-
 
   /**
    * PATHS
    */
-  SRC_PATH                                = join(process.cwd(), this.SRC);
+  SRC_PATH = join(process.cwd(), this.SRC_DIR);
 
   /**
    * TASK PATHS
    */
-  TASKS_PATH                              = join(process.cwd(), this.TOOLS_DIR, this.TASKS_DIR);
+  TASKS_PATH = join(process.cwd(), this.TOOLS_DIR, this.TASKS_DIR);
 
   /**
    * SPECIFIC FILES
    */
-  RESHRINKWRAP                            = join(process.cwd(), this.TOOLS_DIR, 'utils', 'seed', 'npm', 'reshrinkwrap');
+  RESHRINKWRAP = join(process.cwd(), this.TOOLS_DIR, 'utils', 'seed', 'npm', 'reshrinkwrap');
+
+
+  ROLLUP_CONFIG = {
+    ROLLUP: {
+      entry: join(this.ES6_DIR, this.ES6_ENTRY_FILENAME)
+    },
+
+    BUNDLE: {
+      dest: join(this.UMD_DIR, this.JS_BUNDLE_FILENAME),
+
+      // required for umd bundles
+      moduleName: this.MODULE_NAME,
+
+      // output format - 'amd', 'cjs', 'es', 'iife', 'umd'
+      format: this.JS_BUNDLE_FORMAT,
+      sourceMap: true
+
+    }
+  };
 
   /**
    * The version of the application as defined in the `package.json`.
    */
   VERSION = appVersion();
-
 
 
   /**

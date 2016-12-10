@@ -5,9 +5,9 @@ import Config from '../../../config';
 
 export = (done: any) => {
 
-  let es6: string = join(resolve('./' + Config.ES6));
-  let types: string = join(resolve('./' + Config.TYPES));
-  let umd: string = join(resolve('./' + Config.UMD));
+  let es6: string = join(resolve('./' + Config.ES6_DIR));
+  let types: string = join(resolve('./' + Config.TYPES_DIR));
+  let umd: string = join(resolve('./' + Config.UMD_DIR));
 
   Promise.all([
     rmfr(es6, {glob: true}),

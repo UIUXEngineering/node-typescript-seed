@@ -4,13 +4,13 @@ import Config from '../../config';
 
 export function createBuildConfig(buildConfig: any):any {
 
-  let tsConfigPath = join(Config.SRC, buildConfig.pathRelativeToSrc, buildConfig.tsconfigFilename);
+  let tsConfigPath = join(Config.SRC_DIR, buildConfig.pathRelativeToSrc, buildConfig.tsconfigFilename);
   let tsconfig: any = JSONParse(tsConfigPath);
   // tsconfig.out = join(buildConfig.pathRelativeToSrc, buildConfig.outputFileName);
 
   //Gulp build options
   let gulpParams: any = {
-    src: join(Config.SRC, buildConfig.pathRelativeToSrc, buildConfig.fileName)
+    src: join(Config.SRC_DIR, buildConfig.pathRelativeToSrc, buildConfig.fileName)
   };
 
   return {
