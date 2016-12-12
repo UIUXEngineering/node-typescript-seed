@@ -25,6 +25,17 @@ gulp.task('build', function (done: any) {
 
 
 /**
+ * TEST
+ */
+gulp.task('test', function (done: any) {
+  runSequence(
+    'clean.tmp',
+    'build.app.cjs',
+    'jasmine',
+    done);
+});
+
+/**
  * RELEASE
  */
 gulp.task('release', function (done: any) {

@@ -1,5 +1,6 @@
 import {join} from 'path';
 import {argv} from 'yargs';
+import * as cloneDeep from 'lodash/cloneDeep';
 
 /************************* DO NOT CHANGE ************************
  *
@@ -50,6 +51,7 @@ export class SeedConfig {
   ES6_DIR = 'es6';
   TYPES_DIR = 'types';
   UMD_DIR = 'umd';
+  TMP_DIR = 'tmp';
 
 
   /**
@@ -75,7 +77,7 @@ export class SeedConfig {
    */
   RESHRINKWRAP = join(process.cwd(), this.TOOLS_DIR, 'utils', 'seed', 'npm', 'reshrinkwrap');
 
-  TYPESCRIPT_CONFIG = {
+  TYPESCRIPT_ES6_CONFIG = {
     "declaration": true,
     "stripInternal": true,
     "experimentalDecorators": true,
@@ -87,6 +89,18 @@ export class SeedConfig {
     "skipLibCheck": true,
     "lib": [ "es2015", "dom" ]
   };
+
+  TYPESCRIPT_CJS_CONFIG = ((_config) => {
+    let config = cloneDeep(_config);
+
+    // do not create *.d.ts files
+    config["declaration"] = false;
+    config["module"] = "CommonJS";
+    // config["suppressExcessPropertyErrors"] = true;
+
+    return config;
+
+  })(this.TYPESCRIPT_ES6_CONFIG);
 
   ROLLUP_CONFIG = {
     ROLLUP: {

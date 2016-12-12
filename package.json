@@ -14,7 +14,7 @@
     "release.patch": "gulp release.patch",
     "release.minor": "gulp release.minor",
     "release.major": "gulp release.major",
-    "test": "test"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
@@ -71,7 +71,7 @@
     "semver": "^5.3.0",
     "tildify": "^1.2.0",
     "ts-node": "^1.7.0",
-    "typescript": "^2.0.10",
+    "typescript": "^2.1.4",
     "yargs": "^6.5.0"
   },
   "config": {
