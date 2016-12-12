@@ -13,7 +13,7 @@ export = () => {
 
   return merge([
     tsResult.dts.pipe(gulp.dest(Config.TYPES_DIR)),
-    tsResult.js.pipe(gulp.dest(Config.ES6_DIR))
+    tsResult.js.pipe(gulp.dest(Config.DIST_ES6))
   ]);
 
 };

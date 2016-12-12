@@ -1,4 +1,5 @@
-export var FOO = (function () {
+"use strict";
+var FOO = (function () {
     function FOO() {
         this._name = 'FOO';
     }
@@ -14,3 +15,4 @@ export var FOO = (function () {
     });
     return FOO;
 }());
+exports.FOO = FOO;

@@ -1,5 +1,6 @@
-import { FOO } from './dep/foo';
-export var Demo = (function () {
+"use strict";
+var foo_1 = require("./dep/foo");
+var Demo = (function () {
     function Demo(Dep) {
         this._name = 'NAME';
         this._dep = new Dep();
@@ -23,6 +24,8 @@ export var Demo = (function () {
     });
     return Demo;
 }());
-export function create() {
-    return new Demo(FOO);
+exports.Demo = Demo;
+function create() {
+    return new Demo(foo_1.FOO);
 }
+exports.create = create;

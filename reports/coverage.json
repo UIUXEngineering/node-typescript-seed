@@ -1,0 +1,15 @@
+{
+ "files": [],
+ "sloc": 0,
+ "ssoc": 0,
+ "sboc": 0,
+ "coverage": null,
+ "statements": null,
+ "blocks": null,
+ "uncovered": [
+  "src/app.ts",
+  "src/dep/foo.ts",
+  "src/jasmineExamples/Player.ts",
+  "src/jasmineExamples/Song.ts"
+ ]
+}

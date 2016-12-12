@@ -13,5 +13,5 @@ export = () => {
 
   return gulp.src(files)
     .pipe(plugins.typescript(Config.TYPESCRIPT_CJS_CONFIG))
-    .pipe(gulp.dest(join(Config.TMP_DIR)));
+    .pipe(gulp.dest(join(Config.DIST_CJS)));
 };

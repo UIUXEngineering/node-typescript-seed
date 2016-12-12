@@ -1,4 +1,4 @@
-/// <reference path="../../../tools/manual_typings/project/jasmine.d.ts" />
+/// <reference path="../../tools/manual_typings/project/jasmine.d.ts" />
 
 describe("Player", function() {
   var Player = require('./Player');

@@ -19,6 +19,7 @@ gulp.task('build', function (done: any) {
   runSequence(
     'clean.build',
     'build.es6',
+    'build.cjs',
     'rollup.umd',
     done);
 });
@@ -29,8 +30,8 @@ gulp.task('build', function (done: any) {
  */
 gulp.task('test', function (done: any) {
   runSequence(
-    'clean.tmp',
-    'build.app.cjs',
+    // 'clean.tmp',
+    // 'build.cjs',
     'jasmine',
     done);
 });

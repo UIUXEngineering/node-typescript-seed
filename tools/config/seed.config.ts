@@ -52,7 +52,12 @@ export class SeedConfig {
   TYPES_DIR = 'types';
   UMD_DIR = 'umd';
   TMP_DIR = 'tmp';
+  CJS_DIR = 'cjs';
+  DIST_DIR = 'dist';
 
+  DIST_ES6 = join(this.DIST_DIR, this.ES6_DIR);
+  DIST_CJS = join(this.DIST_DIR, this.CJS_DIR);
+  DIST_UMD = join(this.DIST_DIR, this.UMD_DIR);
 
   /**
    * FILES
@@ -104,11 +109,11 @@ export class SeedConfig {
 
   ROLLUP_CONFIG = {
     ROLLUP: {
-      entry: join(this.ES6_DIR, this.ES6_ENTRY_FILENAME)
+      entry: join(this.DIST_ES6, this.ES6_ENTRY_FILENAME)
     },
 
     BUNDLE: {
-      dest: join(this.UMD_DIR, this.JS_BUNDLE_FILENAME),
+      dest: join(this.DIST_UMD, this.JS_BUNDLE_FILENAME),
 
       // required for umd bundles
       moduleName: this.MODULE_NAME,
