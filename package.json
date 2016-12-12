@@ -63,6 +63,7 @@
     "gulp-util": "^3.0.7",
     "isstream": "^0.1.2",
     "jasmine": "^2.5.2",
+    "jasmine-spec-reporter": "^2.7.0",
     "lodash": "^4.17.2",
     "merge2": "^1.0.2",
     "rmfr": "^1.0.1",

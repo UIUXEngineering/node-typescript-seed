@@ -1,8 +1,11 @@
-
 var Jasmine = require('jasmine');
+var SpecReporter = require('jasmine-spec-reporter');
 
 var jasmine = new Jasmine();
 
+jasmine.configureDefaultReporter({print: noop});    // jasmine < 2.4.1, remove default reporter logs
+jasmine.env.clearReporters();                       // jasmine >= 2.5.2, remove default reporter logs
+jasmine.addReporter(new SpecReporter());            // add jasmine-spec-reporter
 
 jasmine.loadConfig({
         "spec_dir": "tmp",
@@ -28,13 +31,6 @@ jasmine.onComplete(function(passed) {
     done();
 });
 
-jasmine.configureDefaultReporter({
-    // timer: new jasmine.Timer(),
-    print: function() {
-        process.stdout.write(util.format.apply(this, arguments));
-    },
-    showColors: true,
-    jasmineCorePath: this.jasmineCorePath
-});
+function noop() {};
 
 jasmine.execute();
