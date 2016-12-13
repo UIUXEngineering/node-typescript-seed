@@ -30,8 +30,7 @@ gulp.task('build', function (done: any) {
  */
 gulp.task('test', function (done: any) {
   runSequence(
-    // 'clean.tmp',
-    // 'build.cjs',
+    'clean.test.cjs',
     'jasmine',
     done);
 });
