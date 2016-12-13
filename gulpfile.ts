@@ -24,6 +24,23 @@ gulp.task('build', function (done: any) {
     done);
 });
 
+/**
+ * QA
+ */
+gulp.task('qa', function(done: any) {
+  runSequence(
+    'tslint.dev',
+    'test',
+    done);
+});
+
+gulp.task('qa.coverage', function(done: any) {
+  runSequence(
+    'tslint.dev',
+    'test.coverage',
+    done);
+});
+
 
 /**
  * TEST

@@ -1,1 +1,4 @@
-declare function Song(): void;
+declare class Song {
+    persistFavoriteStatus(): void;
+}
+export { Song };

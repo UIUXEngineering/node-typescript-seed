@@ -66,7 +66,7 @@ export class SeedConfig {
   TS_ENTRY_FILENAME = 'app.ts';
   ES6_ENTRY_FILENAME = 'app.js';
   JS_BUNDLE_FILENAME = 'app.umd.js';
-  APP_TSCONFIG                            = 'app.tsconfig.json';
+  APP_TSCONFIG  = 'app.tsconfig.json';
 
   /**
    * PATHS
@@ -82,6 +82,7 @@ export class SeedConfig {
    * SPECIFIC FILES
    */
   RESHRINKWRAP = join(process.cwd(), this.TOOLS_DIR, 'utils', 'seed', 'npm', 'reshrinkwrap');
+  GIT_HOOKS_PATH = join(process.cwd(), this.TOOLS_DIR, 'git_hooks');
 
   TYPESCRIPT_ES6_CONFIG = {
     'declaration': true,
