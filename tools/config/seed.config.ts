@@ -128,6 +128,42 @@ export class SeedConfig {
   };
 
   /**
+   * The port where the application will run, if the `hot-loader` option mode
+   * is used. The default hot-loader port is `5578`.
+   *
+   * @type {number}
+   */
+  HOT_LOADER_PORT                         = 5578;
+
+  /**
+   * The BrowserSync configuration serving coverage reports.
+   * The default open behavior is to open the browser,
+   * To prevent the browser from opening
+   * `--b`  flag when running `npm start` (tested with serve.dev)
+   * example `npm start -- --b`
+   * @type {any}
+   */
+  BROWSER_SYNC_CONFIG_COVERAGE: any = {
+    middleware: [require('connect-history-api-fallback')({ index: join('/' + `index.html`) })],
+    port: 8090,
+    // startPath: this.APP_SRC + '/',
+    open: argv['b'] ? false : true,
+    files: [].concat(
+      // [this.BROWSER_DEST + '/app/**/*.css'],
+      // [this.BROWSER_DEST + '/app/**/*.scss'],
+      [this.COVERAGE_DIR + '/app/**/*.json'],
+      [this.COVERAGE_DIR + '/app/**/*.html'],
+      [this.COVERAGE_DIR + '/index.html'],
+      [this.COVERAGE_DIR + '/**/*.svg'],
+      [this.COVERAGE_DIR + '/**/*.map']
+    ),
+    server: {
+      baseDir: this.COVERAGE_DIR + '/',
+      index: 'index.html'
+    }
+  };
+
+  /**
    * The version of the application as defined in the `package.json`.
    */
   VERSION = appVersion();
