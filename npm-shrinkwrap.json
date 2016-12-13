@@ -47,11 +47,6 @@
       "from": "@types/gulp-util@>=3.0.29 <4.0.0",
       "resolved": "http://registry.npmjs.org/@types/gulp-util/-/gulp-util-3.0.29.tgz"
     },
-    "@types/jasmine": {
-      "version": "2.5.38",
-      "from": "@types/jasmine@>=2.5.35 <3.0.0",
-      "resolved": "http://registry.npmjs.org/@types/jasmine/-/jasmine-2.5.38.tgz"
-    },
     "@types/lodash": {
       "version": "4.14.42",
       "from": "@types/lodash@>=4.14.38 <5.0.0",
@@ -970,7 +965,7 @@
     },
     "gulp-sourcemaps": {
       "version": "1.9.1",
-      "from": "gulp-sourcemaps@latest",
+      "from": "gulp-sourcemaps@>=1.9.1 <2.0.0",
       "resolved": "http://registry.npmjs.org/gulp-sourcemaps/-/gulp-sourcemaps-1.9.1.tgz",
       "dependencies": {
         "vinyl": {

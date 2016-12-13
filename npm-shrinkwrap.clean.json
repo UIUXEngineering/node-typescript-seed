@@ -29,9 +29,6 @@
     "@types/gulp-util": {
       "version": "3.0.29"
     },
-    "@types/jasmine": {
-      "version": "2.5.38"
-    },
     "@types/lodash": {
       "version": "4.14.42"
     },

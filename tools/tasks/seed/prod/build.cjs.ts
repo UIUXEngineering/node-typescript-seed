@@ -12,6 +12,8 @@ export = () => {
   ];
 
   return gulp.src(files)
+    .pipe(plugins.sourcemaps.init())
     .pipe(plugins.typescript(Config.TYPESCRIPT_CJS_CONFIG))
+    .pipe(plugins.sourcemaps.write())
     .pipe(gulp.dest(join(Config.DIST_CJS)));
 };
