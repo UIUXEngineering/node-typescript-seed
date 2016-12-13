@@ -47,6 +47,11 @@
       "from": "@types/gulp-util@>=3.0.29 <4.0.0",
       "resolved": "http://registry.npmjs.org/@types/gulp-util/-/gulp-util-3.0.29.tgz"
     },
+    "@types/jasmine": {
+      "version": "2.5.38",
+      "from": "@types/jasmine@>=2.5.35 <3.0.0",
+      "resolved": "http://registry.npmjs.org/@types/jasmine/-/jasmine-2.5.38.tgz"
+    },
     "@types/lodash": {
       "version": "4.14.42",
       "from": "@types/lodash@>=4.14.38 <5.0.0",
@@ -331,6 +336,11 @@
       "version": "1.1.0",
       "from": "code-point-at@>=1.0.0 <2.0.0",
       "resolved": "http://registry.npmjs.org/code-point-at/-/code-point-at-1.1.0.tgz"
+    },
+    "colors": {
+      "version": "1.1.2",
+      "from": "colors@1.1.2",
+      "resolved": "http://registry.npmjs.org/colors/-/colors-1.1.2.tgz"
     },
     "commitizen": {
       "version": "2.8.6",
@@ -936,6 +946,11 @@
         }
       }
     },
+    "gulp-jasmine": {
+      "version": "2.4.2",
+      "from": "gulp-jasmine@>=2.4.2 <3.0.0",
+      "resolved": "http://registry.npmjs.org/gulp-jasmine/-/gulp-jasmine-2.4.2.tgz"
+    },
     "gulp-load-plugins": {
       "version": "1.4.0",
       "from": "gulp-load-plugins@latest",
@@ -1299,6 +1314,16 @@
       "version": "2.5.2",
       "from": "jasmine-core@>=2.5.2 <2.6.0",
       "resolved": "http://registry.npmjs.org/jasmine-core/-/jasmine-core-2.5.2.tgz"
+    },
+    "jasmine-spec-reporter": {
+      "version": "2.7.0",
+      "from": "jasmine-spec-reporter@>=2.7.0 <3.0.0",
+      "resolved": "http://registry.npmjs.org/jasmine-spec-reporter/-/jasmine-spec-reporter-2.7.0.tgz"
+    },
+    "jasmine-terminal-reporter": {
+      "version": "1.0.2",
+      "from": "jasmine-terminal-reporter@>=1.0.0 <2.0.0",
+      "resolved": "http://registry.npmjs.org/jasmine-terminal-reporter/-/jasmine-terminal-reporter-1.0.2.tgz"
     },
     "json-stable-stringify": {
       "version": "1.0.1",
@@ -1782,6 +1807,11 @@
       "version": "0.1.0",
       "from": "plugin-log@>=0.1.0 <0.2.0",
       "resolved": "http://registry.npmjs.org/plugin-log/-/plugin-log-0.1.0.tgz"
+    },
+    "pluralize": {
+      "version": "1.2.1",
+      "from": "pluralize@>=1.2.1 <2.0.0",
+      "resolved": "http://registry.npmjs.org/pluralize/-/pluralize-1.2.1.tgz"
     },
     "preserve": {
       "version": "0.2.0",

@@ -29,6 +29,9 @@
     "@types/gulp-util": {
       "version": "3.0.29"
     },
+    "@types/jasmine": {
+      "version": "2.5.38"
+    },
     "@types/lodash": {
       "version": "4.14.42"
     },
@@ -199,6 +202,9 @@
     },
     "code-point-at": {
       "version": "1.1.0"
+    },
+    "colors": {
+      "version": "1.1.2"
     },
     "commitizen": {
       "version": "2.8.6",
@@ -572,6 +578,9 @@
         }
       }
     },
+    "gulp-jasmine": {
+      "version": "2.4.2"
+    },
     "gulp-load-plugins": {
       "version": "1.4.0",
       "dependencies": {
@@ -795,6 +804,12 @@
     },
     "jasmine-core": {
       "version": "2.5.2"
+    },
+    "jasmine-spec-reporter": {
+      "version": "2.7.0"
+    },
+    "jasmine-terminal-reporter": {
+      "version": "1.0.2"
     },
     "json-stable-stringify": {
       "version": "1.0.1"
@@ -1088,6 +1103,9 @@
     },
     "plugin-log": {
       "version": "0.1.0"
+    },
+    "pluralize": {
+      "version": "1.2.1"
     },
     "preserve": {
       "version": "0.2.0"

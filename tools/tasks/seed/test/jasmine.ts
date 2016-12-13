@@ -19,18 +19,11 @@ export = (done: any) => {
   ];
 
   return  gulp.src(files)
-    .pipe(plugins.coverage.instrument({
-      pattern: instrumentFiles,
-      debugDirectory: 'debug'
-    }))
   // gulp-jasmine works on filepaths so you can't have any plugins before it
     .pipe(plugins.jasmine({
       reporter: [
         new SpecReporter()
       ]
-    }))
-    .pipe(plugins.coverage.gather())
-    .pipe(plugins.coverage.format({ reporter: 'json' }))
-    .pipe(gulp.dest('reports'));
+    }));
 
 };
