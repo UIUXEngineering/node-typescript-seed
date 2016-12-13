@@ -54,6 +54,7 @@ export class SeedConfig {
   TMP_DIR = 'tmp';
   CJS_DIR = 'cjs';
   DIST_DIR = 'dist';
+  COVERAGE_DIR = 'coverage';
 
   DIST_ES6 = join(this.DIST_DIR, this.ES6_DIR);
   DIST_CJS = join(this.DIST_DIR, this.CJS_DIR);
@@ -92,6 +93,7 @@ export class SeedConfig {
     "inlineSources": true,
     "target": "es5",
     "skipLibCheck": true,
+    "removeComments": true,
     "lib": [ "es2015", "dom" ]
   };
 

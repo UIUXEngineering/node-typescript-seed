@@ -5,10 +5,10 @@ import Config from '../../../config';
 
 export = (done: any) => {
 
-  let tmp: string = join(resolve('./' + Config.TMP_DIR));
+  let cjs: string = join(resolve('./' + Config.DIST_CJS));
 
   Promise.all([
-    rmfr(tmp, {glob: true})])
+    rmfr(cjs, {glob: true})])
     .then(() => {
       done();
     }).catch(() => {
