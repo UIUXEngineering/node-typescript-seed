@@ -9,7 +9,7 @@ beforeEach(function () {
 
           return {
             pass: player.currentlyPlayingSong === expected && player.isPlaying
-          }
+          };
         }
       };
     }

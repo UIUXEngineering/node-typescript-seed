@@ -35,7 +35,7 @@ gulp.task('test', function (done: any) {
     done);
 });
 
-gulp.task('test.cover', function (done: any) {
+gulp.task('test.coverage', function (done: any) {
   runSequence(
     'clean.coverage',
     'clean.test.cjs',
