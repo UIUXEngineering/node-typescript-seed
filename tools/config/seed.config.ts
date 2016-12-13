@@ -1,5 +1,5 @@
-import {join} from 'path';
-import {argv} from 'yargs';
+import { join } from 'path';
+import { argv } from 'yargs';
 import * as cloneDeep from 'lodash/cloneDeep';
 
 /************************* DO NOT CHANGE ************************
@@ -9,8 +9,8 @@ import * as cloneDeep from 'lodash/cloneDeep';
  *
  * Your application-specific configurations should be
  * in project.config.ts. If you need to change any tasks
- * from "./tasks" overwrite them by creating a task with the
- * same name in "./projects".
+ * from './tasks' overwrite them by creating a task with the
+ * same name in './projects'.
  *
  *****************************************************************/
 
@@ -45,16 +45,16 @@ export class SeedConfig {
    * BASE PATHS
    */
 
-  SRC_DIR = 'src';
-  TOOLS_DIR = 'tools';
-  TASKS_DIR = 'tasks';
+  APP_SRC = 'src';
+  CJS_DIR = 'cjs';
+  COVERAGE_DIR = 'coverage';
+  DIST_DIR = 'dist';
   ES6_DIR = 'es6';
+  TASKS_DIR = 'tasks';
+  TMP_DIR = 'tmp';
+  TOOLS_DIR = 'tools';
   TYPES_DIR = 'types';
   UMD_DIR = 'umd';
-  TMP_DIR = 'tmp';
-  CJS_DIR = 'cjs';
-  DIST_DIR = 'dist';
-  COVERAGE_DIR = 'coverage';
 
   DIST_ES6 = join(this.DIST_DIR, this.ES6_DIR);
   DIST_CJS = join(this.DIST_DIR, this.CJS_DIR);
@@ -71,7 +71,7 @@ export class SeedConfig {
   /**
    * PATHS
    */
-  SRC_PATH = join(process.cwd(), this.SRC_DIR);
+  SRC_PATH = join(process.cwd(), this.APP_SRC);
 
   /**
    * TASK PATHS
@@ -84,26 +84,26 @@ export class SeedConfig {
   RESHRINKWRAP = join(process.cwd(), this.TOOLS_DIR, 'utils', 'seed', 'npm', 'reshrinkwrap');
 
   TYPESCRIPT_ES6_CONFIG = {
-    "declaration": true,
-    "stripInternal": true,
-    "experimentalDecorators": true,
-    "module": "es2015",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "inlineSources": true,
-    "target": "es5",
-    "skipLibCheck": true,
-    "removeComments": true,
-    "lib": [ "es2015", "dom" ]
+    'declaration': true,
+    'stripInternal': true,
+    'experimentalDecorators': true,
+    'module': 'es2015',
+    'moduleResolution': 'node',
+    'sourceMap': true,
+    'inlineSources': true,
+    'target': 'es5',
+    'skipLibCheck': true,
+    'removeComments': true,
+    'lib': [ 'es2015', 'dom' ]
   };
 
   TYPESCRIPT_CJS_CONFIG = ((_config) => {
     let config = cloneDeep(_config);
 
     // do not create *.d.ts files
-    config["declaration"] = false;
-    config["module"] = "CommonJS";
-    // config["suppressExcessPropertyErrors"] = true;
+    config['declaration'] = false;
+    config['module'] = 'CommonJS';
+    // config['suppressExcessPropertyErrors'] = true;
 
     return config;
 

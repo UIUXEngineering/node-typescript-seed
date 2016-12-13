@@ -5,7 +5,7 @@ import Config from '../../../config';
 
 export = (done: any) => {
 
-  let testCJS: string = join(resolve('./' + Config.SRC_DIR), '**', '*.js');
+  let testCJS: string = join(resolve('./' + Config.APP_SRC), '**', '*.js');
 
   Promise.all([
     rmfr(testCJS, {glob: true})])

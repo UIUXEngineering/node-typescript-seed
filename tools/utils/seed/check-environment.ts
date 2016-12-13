@@ -8,10 +8,8 @@
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 import * as semver from 'semver';
-import {exec} from 'child_process';
-import {checkNodeModules} from './npm/check-node-modules-process';
-
-'use strict';
+import { exec } from 'child_process';
+import { checkNodeModules } from './npm/check-node-modules-process';
 
 let issues = [];
 

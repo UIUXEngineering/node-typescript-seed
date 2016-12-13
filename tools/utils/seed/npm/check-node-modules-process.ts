@@ -44,7 +44,7 @@ function _checkCache(markerFile, cacheMarkerFile) {
   var markerContent = fs.readFileSync(absoluteMarkerFilePath, FS_OPTS);
   var cacheMarkerContent = fs.readFileSync(absoluteCacheMarkerFilePath, FS_OPTS);
 
-  return markerContent == cacheMarkerContent;
+  return markerContent === cacheMarkerContent;
 }
 
 

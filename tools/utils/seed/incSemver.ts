@@ -21,7 +21,7 @@ export function incSemverBuild(): string {
   var version = getPackageJsonVersion();
   var buildNumber: number;
 
-  // strip off and "-" versioning such as 1.2.3-beta.1
+  // strip off and '-' versioning such as 1.2.3-beta.1
   var newVersion: string = version.split('-')[0];
 
   if (version.indexOf('build') !== -1) {
@@ -47,7 +47,7 @@ export function incSemverAlpha(): string {
   var version = getPackageJsonVersion();
   var buildNumber: number;
 
-  // strip off and "-" versioning such as 1.2.3-beta.1
+  // strip off and '-' versioning such as 1.2.3-beta.1
   var newVersion: string = version.split('-')[0];
 
   if (version.indexOf('alpha') !== -1) {
@@ -73,7 +73,7 @@ export function incSemverBeta(): string {
   var version = getPackageJsonVersion();
   var buildNumber: number;
 
-  // strip off and "-" versioning such as 1.2.3-beta.1
+  // strip off and '-' versioning such as 1.2.3-beta.1
   var newVersion: string = version.split('-')[0];
 
   if (version.indexOf('beta') !== -1) {
@@ -99,7 +99,7 @@ export function incSemveRC(): string {
   var version = getPackageJsonVersion();
   var buildNumber: number;
 
-  // strip off and "-" versioning such as 1.2.3-beta.1
+  // strip off and '-' versioning such as 1.2.3-beta.1
   var newVersion: string = version.split('-')[0];
 
   if (version.indexOf('rc') !== -1) {
@@ -124,7 +124,7 @@ export function incSemveRC(): string {
 export function incSemverPatch(): string {
   var version = getPackageJsonVersion();
 
-  // strip off and "-" versioning such as 1.2.3-beta.1
+  // strip off and '-' versioning such as 1.2.3-beta.1
   var newVersion: string = version.split('-')[0];
   newVersion = inc(newVersion, 'patch');
 
@@ -143,7 +143,7 @@ export function incSemverPatch(): string {
 export function incSemverMinor(): string {
   var version = getPackageJsonVersion();
 
-  // strip off and "-" versioning such as 1.2.3-beta.1
+  // strip off and '-' versioning such as 1.2.3-beta.1
   var newVersion: string = version.split('-')[0];
   newVersion = inc(newVersion, 'minor');
 
@@ -162,7 +162,7 @@ export function incSemverMinor(): string {
 export function incSemverMajor(): string {
   var version = getPackageJsonVersion();
 
-  // strip off and "-" versioning such as 1.2.3-beta.1
+  // strip off and '-' versioning such as 1.2.3-beta.1
   var newVersion: string = version.split('-')[0];
   newVersion = inc(newVersion, 'major');
 

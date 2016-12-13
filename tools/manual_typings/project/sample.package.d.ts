@@ -1,3 +1,3 @@
-// declare module "moment/moment" {
+// declare module 'moment/moment' {
 //   export = moment;
 // }

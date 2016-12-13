@@ -8,7 +8,7 @@ const plugins = <any>gulpLoadPlugins();
 
 export = () => {
 
-  let tsResult = gulp.src(join(Config.SRC_DIR, '**', '*.ts'))
+  let tsResult = gulp.src(join(Config.APP_SRC, '**', '*.ts'))
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.typescript(Config.TYPESCRIPT_ES6_CONFIG));
 

@@ -8,7 +8,7 @@ const plugins = <any>gulpLoadPlugins();
 export = () => {
 
   let files: string[] = [
-    join(Config.SRC_DIR, '**', '*.ts'),
+    join(Config.APP_SRC, '**', '*.ts'),
     '!src/**/*.spec.ts'
   ];
 

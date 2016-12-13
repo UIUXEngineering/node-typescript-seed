@@ -8,11 +8,11 @@ const plugins = <any>gulpLoadPlugins();
 export = () => {
 
   let files: string[] = [
-    join(Config.SRC_DIR, '**', '*.ts')];
+    join(Config.APP_SRC, '**', '*.ts')];
 
   return gulp.src(files)
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.typescript(Config.TYPESCRIPT_CJS_CONFIG))
     .pipe(plugins.sourcemaps.write())
-    .pipe(gulp.dest(Config.SRC_DIR));
+    .pipe(gulp.dest(Config.APP_SRC));
 };
