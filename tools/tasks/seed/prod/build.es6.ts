@@ -9,11 +9,14 @@ const plugins = <any>gulpLoadPlugins();
 export = () => {
 
   let tsResult = gulp.src(join(Config.SRC_DIR, '**', '*.ts'))
+    .pipe(plugins.sourcemaps.init())
     .pipe(plugins.typescript(Config.TYPESCRIPT_ES6_CONFIG));
 
   return merge([
     tsResult.dts.pipe(gulp.dest(Config.TYPES_DIR)),
-    tsResult.js.pipe(gulp.dest(Config.DIST_ES6))
+
+    tsResult.js.pipe(plugins.sourcemaps.write())
+    .pipe(gulp.dest(Config.DIST_ES6))
   ]);
 
 };
