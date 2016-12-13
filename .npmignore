@@ -11,3 +11,4 @@ npm-shrinkwrap.json
 npm-shrinkwrap.readme.md
 tsconfig.json
 tmp
+coverage
