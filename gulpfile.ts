@@ -45,6 +45,15 @@ gulp.task('qa.coverage', function(done: any) {
 /**
  * TEST
  */
+gulp.task('watch', function(done: any) {
+  runSequence(
+    'clean.test.cjs',
+    'jasmine',
+    'watch.dev',
+    done);
+});
+
+
 gulp.task('test', function (done: any) {
   runSequence(
     'clean.test.cjs',
