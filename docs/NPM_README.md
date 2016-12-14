@@ -93,6 +93,7 @@ Import using either method above, or using `define`:
 # Contribute
 
 To contribute, see the [project repo](<%= repo %>).
+See [docs/PROJECT_README.md](docs/PROJECT_README.md) for development guide.
 
 
 # Report Issues
