@@ -1,6 +1,6 @@
 import { join } from 'path';
 import { argv } from 'yargs';
-import * as cloneDeep from 'lodash/cloneDeep';
+import * as _ from 'lodash';
 
 /************************* DO NOT CHANGE ************************
  *
@@ -100,7 +100,7 @@ export class SeedConfig {
   };
 
   TYPESCRIPT_CJS_CONFIG = ((_config) => {
-    let config = cloneDeep(_config);
+    let config = _.cloneDeep(_config);
 
     // do not create *.d.ts files
     config['declaration'] = false;

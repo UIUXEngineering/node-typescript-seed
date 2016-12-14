@@ -161,3 +161,10 @@ gulp.task('_release', function (done: any) {
     });
 });
 
+gulp.task('postinstall', function(done: any) {
+  runSequence(
+    'copy.gitHooks',
+    'reshrinkwrap',
+    done);
+});
+
