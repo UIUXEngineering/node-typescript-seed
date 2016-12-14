@@ -44,13 +44,17 @@ Import from index.ts
 
 Import features from the `dist/es6` directory. You may import a file directly from the `dist/es6` directory.
 
-```javascript
+```javascript 1.6
 
     import '<%= name %>/dist/es6/index';
     
-    // or
+    // or import feature
+        
+    import { someFeature } from '<%= name %>';
     
-    import '<%= name %>/dist/es6/[path/to/feature/file];
+    // or import feature file directly
+    
+    import * as someFeature from '<%= name %>/[path/to/feature/file]'
 
 ```
 
