@@ -1,8 +1,6 @@
 import * as gulp from 'gulp';
 import * as gulpLoadPlugins from 'gulp-load-plugins';
 
-var SpecReporter = require('jasmine-spec-reporter');
-
 const plugins = <any>gulpLoadPlugins();
 
 export = (done: any) => {
@@ -13,6 +11,6 @@ export = (done: any) => {
   ];
 
   return gulp.src(cjsInstrumentFiles)
-    .pipe(plugins.istanbul())
+    .pipe(plugins.istanbul({ includeUntested: true }))
     .pipe(plugins.istanbul.hookRequire()); //this forces any call to 'require' to return our instrumented files
 };
