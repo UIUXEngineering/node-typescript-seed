@@ -64,11 +64,10 @@ export class SeedConfig {
   /**
    * FILES
    */
-  TS_ENTRY_FILENAME = 'app.ts';
-  ES6_ENTRY_FILENAME = 'app.js';
-  JS_BUNDLE_FILENAME = 'app.umd.js';
-  JS_BUNDLE_MIN_FILENAME = 'app.umd.min.js';
-  APP_TSCONFIG_FILENAME  = 'app.tsconfig.json';
+  TS_ENTRY_FILENAME = 'index.ts';
+  ES6_ENTRY_FILENAME = 'index.js';
+  JS_BUNDLE_FILENAME = 'index.js';
+  JS_BUNDLE_MIN_FILENAME = 'index.min.js';
   PROJECT_README_FILENAME = 'PROJECT_README.md';
   NPM_README_FILENAME = 'NPM_README.md';
 

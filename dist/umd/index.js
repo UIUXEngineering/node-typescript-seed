@@ -55,4 +55,4 @@ exports.create = create;
 Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
-//# sourceMappingURL=app.umd.js.map
+//# sourceMappingURL=index.js.map
