@@ -55,6 +55,7 @@ export class SeedConfig {
   TOOLS_DIR = 'tools';
   TYPES_DIR = 'types';
   UMD_DIR = 'umd';
+  DOCS_DIR = 'docs';
 
   DIST_ES6 = join(this.DIST_DIR, this.ES6_DIR);
   DIST_CJS = join(this.DIST_DIR, this.CJS_DIR);
@@ -67,7 +68,9 @@ export class SeedConfig {
   ES6_ENTRY_FILENAME = 'app.js';
   JS_BUNDLE_FILENAME = 'app.umd.js';
   JS_BUNDLE_MIN_FILENAME = 'app.umd.min.js';
-  APP_TSCONFIG  = 'app.tsconfig.json';
+  APP_TSCONFIG_FILENAME  = 'app.tsconfig.json';
+  PROJECT_README_FILENAME = 'PROJECT_README.md';
+  NPM_README_FILENAME = 'NPM_README.md';
 
   /**
    * PATHS

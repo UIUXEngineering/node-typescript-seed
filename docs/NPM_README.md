@@ -1,0 +1,96 @@
+# <%= name %>
+
+# Table of Contents
+- [Install](#install)
+- [TypeScript Usage](#typescript-usage)
+- [ES6 Usage](#es6-usage)
+- [CommonJS Usage](#commonjs-usage)
+- [UMD Usage](#umd-usage)
+- [Contribute](#contribute)
+- [Report Issues](#report-issues)
+
+# Install
+
+Install using npm or yarn.
+
+```bash
+    npm i <%= name %> -D
+    
+    # or
+    
+    yarn install <%= name %>
+
+```
+
+# TypeScript Usage
+
+Import from index.ts
+
+```typescript
+    // import index.ts
+    import '<%= name %>';
+    
+    // or import feature
+    
+    import { someFeature } from '<%= name %>';
+    
+    // or import feature file directly
+    
+    import * as someFeature from '<%= name %>/[path/to/feature/file]'
+
+```
+
+# ES6 Usage
+
+Import features from the `dist/es6` directory. You may import a file directly from the `dist/es6` directory.
+
+```javascript
+
+    import '<%= name %>/dist/es6/index';
+    
+    // or
+    
+    import '<%= name %>/dist/es6/[path/to/feature/file];
+
+```
+
+# CommonJS Usage
+
+Import features from the `dist/cjs` directory. You may import a file directly from the `dist/es6` directory.
+
+```javascript
+
+    var someFeature = require('<%= name %>/dist/cjs');
+    
+    // or
+    
+    var someFeature = require('<%= name %>/dist/cjs/[path/to/feature/file]');
+
+```
+
+# UMD Usage
+
+Import using either method above, or using `define`:
+
+```javascript
+
+    define(['node_modules/<%= name %>/dist/umd'], function(dep1) {
+        // do stuff with module
+    });
+    
+    // or 
+    
+    define(['node_modules/<%= name %>/dist/umd/[feature filename]'], function(dep1) {
+        // do stuff with module
+    });
+
+```
+
+# Contribute
+
+To contribute, see the [project repo](<%= repo %>).
+
+
+# Report Issues
+
+Report issues to project [issue queue](<%= issues %>);

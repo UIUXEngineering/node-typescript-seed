@@ -7,6 +7,9 @@ A seed for NodeJS projects using typescript.
 This is a personal project to rapidly start node projects. Support is limited unless issues and requests are within the scope of my current work and needs, but PR's and collaborators are very welcome. 
 
 # Table of Contents
+- [Clone](#clone)
+- [Install](#install)
+- [Init Project](#init-project)
 - [References](#references)
 - [Releasing](#releasing)
 - [Change Log](#change-log)
@@ -17,7 +20,52 @@ This is a personal project to rapidly start node projects. Support is limited un
 - [tsconfig schema](http://json.schemastore.org/tsconfig)
 - [tsconfig documentation](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
 - [typescript compiler options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
+- [UMD examples](https://github.com/umdjs/umd)
+- [UMD article](http://bob.yexley.net/umd-javascript-that-runs-anywhere/)
 
+
+# Clone
+
+Clone this seed.
+
+```bash
+$ git clone --depth 1 https://github.com/mgechev/angular-seed.git
+
+```
+
+Or pull master into your established *empty* repo. 
+
+```bash
+# add this repo as upstream remote to your repo.
+$ git remote add upstream https://github.com/UIUXEngineering/node-typescript-seed.git
+
+# pull from master
+$ git pull upstream master
+```
+
+# Install
+
+```bash
+$ cd your repo
+
+# install the project's dependencies
+$ npm install
+# fast install (via Yarn, https://yarnpkg.com)
+$ yarn install  # or yarn
+
+```
+
+# Init Project
+
+Update the ***name*** and ***repo url*** in the `package.json` file with your project information. Then run init with npm or yarn.
+
+```bash
+$ npm run init
+
+# or
+
+$ yarn run init
+```
 
 # Releasing
 

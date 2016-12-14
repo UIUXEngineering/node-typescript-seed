@@ -168,3 +168,10 @@ gulp.task('postinstall', function(done: any) {
     done);
 });
 
+gulp.task('init', function(done: any) {
+  runSequence(
+    'copy.readme',
+    'init.npm.readme',
+    done);
+});
+
