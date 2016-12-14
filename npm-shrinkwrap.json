@@ -2355,6 +2355,53 @@
         }
       }
     },
+    "gulp-uglify": {
+      "version": "2.0.0",
+      "from": "gulp-uglify@latest",
+      "resolved": "http://registry.npmjs.org/gulp-uglify/-/gulp-uglify-2.0.0.tgz",
+      "dependencies": {
+        "async": {
+          "version": "0.2.10",
+          "from": "async@>=0.2.6 <0.3.0",
+          "resolved": "http://registry.npmjs.org/async/-/async-0.2.10.tgz"
+        },
+        "camelcase": {
+          "version": "1.2.1",
+          "from": "camelcase@>=1.0.2 <2.0.0",
+          "resolved": "http://registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz"
+        },
+        "cliui": {
+          "version": "2.1.0",
+          "from": "cliui@>=2.1.0 <3.0.0",
+          "resolved": "http://registry.npmjs.org/cliui/-/cliui-2.1.0.tgz"
+        },
+        "source-map": {
+          "version": "0.5.6",
+          "from": "source-map@>=0.5.1 <0.6.0",
+          "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.5.6.tgz"
+        },
+        "uglify-js": {
+          "version": "2.7.0",
+          "from": "uglify-js@2.7.0",
+          "resolved": "http://registry.npmjs.org/uglify-js/-/uglify-js-2.7.0.tgz"
+        },
+        "window-size": {
+          "version": "0.1.0",
+          "from": "window-size@0.1.0",
+          "resolved": "http://registry.npmjs.org/window-size/-/window-size-0.1.0.tgz"
+        },
+        "wordwrap": {
+          "version": "0.0.2",
+          "from": "wordwrap@0.0.2",
+          "resolved": "http://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz"
+        },
+        "yargs": {
+          "version": "3.10.0",
+          "from": "yargs@>=3.10.0 <3.11.0",
+          "resolved": "http://registry.npmjs.org/yargs/-/yargs-3.10.0.tgz"
+        }
+      }
+    },
     "gulp-util": {
       "version": "3.0.7",
       "from": "gulp-util@latest",
@@ -3157,6 +3204,11 @@
       "version": "1.2.1",
       "from": "make-error@>=1.1.1 <2.0.0",
       "resolved": "http://registry.npmjs.org/make-error/-/make-error-1.2.1.tgz"
+    },
+    "make-error-cause": {
+      "version": "1.2.2",
+      "from": "make-error-cause@>=1.1.1 <2.0.0",
+      "resolved": "http://registry.npmjs.org/make-error-cause/-/make-error-cause-1.2.2.tgz"
     },
     "map-cache": {
       "version": "0.2.2",
@@ -4319,6 +4371,11 @@
           "resolved": "http://registry.npmjs.org/yargs/-/yargs-3.10.0.tgz"
         }
       }
+    },
+    "uglify-save-license": {
+      "version": "0.4.1",
+      "from": "uglify-save-license@>=0.4.1 <0.5.0",
+      "resolved": "http://registry.npmjs.org/uglify-save-license/-/uglify-save-license-0.4.1.tgz"
     },
     "uglify-to-browserify": {
       "version": "1.0.2",

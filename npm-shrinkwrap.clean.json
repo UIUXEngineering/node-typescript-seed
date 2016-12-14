@@ -1445,6 +1445,35 @@
         }
       }
     },
+    "gulp-uglify": {
+      "version": "2.0.0",
+      "dependencies": {
+        "async": {
+          "version": "0.2.10"
+        },
+        "camelcase": {
+          "version": "1.2.1"
+        },
+        "cliui": {
+          "version": "2.1.0"
+        },
+        "source-map": {
+          "version": "0.5.6"
+        },
+        "uglify-js": {
+          "version": "2.7.0"
+        },
+        "window-size": {
+          "version": "0.1.0"
+        },
+        "wordwrap": {
+          "version": "0.0.2"
+        },
+        "yargs": {
+          "version": "3.10.0"
+        }
+      }
+    },
     "gulp-util": {
       "version": "3.0.7",
       "dependencies": {
@@ -1933,6 +1962,9 @@
     },
     "make-error": {
       "version": "1.2.1"
+    },
+    "make-error-cause": {
+      "version": "1.2.2"
     },
     "map-cache": {
       "version": "0.2.2"
@@ -2647,6 +2679,9 @@
           "version": "3.10.0"
         }
       }
+    },
+    "uglify-save-license": {
+      "version": "0.4.1"
     },
     "uglify-to-browserify": {
       "version": "1.0.2"

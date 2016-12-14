@@ -66,6 +66,7 @@ export class SeedConfig {
   TS_ENTRY_FILENAME = 'app.ts';
   ES6_ENTRY_FILENAME = 'app.js';
   JS_BUNDLE_FILENAME = 'app.umd.js';
+  JS_BUNDLE_MIN_FILENAME = 'app.umd.min.js';
   APP_TSCONFIG  = 'app.tsconfig.json';
 
   /**

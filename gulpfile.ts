@@ -21,6 +21,7 @@ gulp.task('build', function (done: any) {
     'build.es6',
     'build.cjs',
     'rollup.umd',
+    'rollup.umd.uglify',
     done);
 });
 
