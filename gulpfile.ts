@@ -35,6 +35,12 @@ gulp.task('qa', function(done: any) {
     done);
 });
 
+gulp.task('qa.env', function(done: any) {
+  runSequence(
+    'tslint.env',
+    done);
+});
+
 gulp.task('qa.coverage', function(done: any) {
   runSequence(
     'tslint.dev',
