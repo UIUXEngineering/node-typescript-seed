@@ -1,5 +1,8 @@
 import { FOO } from './dep/foo';
 
+/**
+ * Sample Demo Class
+ */
 export class Demo {
   _name: string;
   _dep: FOO;
@@ -9,10 +12,18 @@ export class Demo {
     this._dep = new Dep();
   }
 
+  /**
+   * Name Setter
+   * @param _val
+   */
   set name(_val: string) {
     this._name = _val;
   }
 
+  /**
+   * Name Getter
+   * @returns {string}
+   */
   get name():string {
     return this._name;
   }
