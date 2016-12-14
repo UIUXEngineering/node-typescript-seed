@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "init.releaser": "conventional-github-releaser -p angular -r 0",
-    "postinstall": "node tools/utils/seed/npm/copy-npm-shrinkwrap && gulp copy.gitHooks",
+    "postinstall": "node tools/utils/seed/npm/copy-npm-shrinkwrap && gulp postinstall",
     "release": "gulp release",
     "release.build": "gulp release.build",
     "release.alpha": "gulp release.alpha",
