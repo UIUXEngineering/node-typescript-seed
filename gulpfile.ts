@@ -220,14 +220,28 @@ gulp.task('_release', function (done: any) {
 
 gulp.task('postinstall', function(done: any) {
   runSequence(
-    'copy.gitHooks',
+    'copy.npm.shrinkwrap',
     'reshrinkwrap',
     done);
 });
 
 gulp.task('init', function(done: any) {
   runSequence(
-    'copy.readme',
+    'init.env',
+    'init.readme',
+    done);
+});
+
+gulp.task('init.env', function(done: any) {
+  runSequence(
+    'copy.gitHooks',
+    done);
+});
+
+
+gulp.task('init.readme', function(done: any) {
+  runSequence(
+    'archive.readme',
     'init.npm.readme',
     done);
 });

@@ -10,6 +10,7 @@ This is a personal project to rapidly start node projects. Support is limited un
 
 # Table of Contents
 - [Clone](#clone)
+- [Yarn and NPM](#yarn-and-npm)
 - [Install](#install)
 - [Init Project](#init-project)
 - [References](#references)
@@ -45,27 +46,45 @@ $ git remote add upstream https://github.com/UIUXEngineering/node-typescript-see
 $ git pull upstream master
 ```
 
+# Yarn And NPM
+This repo supports both yarn and npm. Yarn is the preferred package management tool. Npm is is maintained in case your build environment does not support yar.
+
+For local development, *always use yarn*. When adding and removing npm modules, shrinkwrap is automatically updated.
+
+You will see an error when installing / uninstall with yarn saying that npm-shrinkwrap is not respected. That is fine, nothing is broken. You are more than welecome to remove the shrinkwrap files and comment the tasks in the gulpFile.ts.
+
+
 # Install
 
 ```bash
 $ cd your repo
 
-# install the project's dependencies
-$ npm install
 # fast install (via Yarn, https://yarnpkg.com)
 $ yarn install  # or yarn
+
+# install the project's dependencies
+$ npm install
 
 ```
 
 # Init Project
 
-Update the ***name*** and ***repo url*** in the `package.json` file with your project information. Then run init with npm or yarn.
+Update the ***name*** and ***repo url*** in the `package.json` file with your project information. 
+
+
+If you just want to copy git hooks for a git push workflow:
 
 ```bash
-$ npm run init
+$ yarn run init
+```
 
-# or
+if you just want to set up the README.md for npm publication:
+```bash
+$ yarn run init.readme
+```
 
+If you want to initialize both above:
+```bash
 $ yarn run init
 ```
 

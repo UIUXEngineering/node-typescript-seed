@@ -901,9 +901,9 @@ compare-func@^1.3.1:
     array-ify "^1.0.0"
     dot-prop "^3.0.0"
 
-compodoc@0.0.22:
-  version "0.0.22"
-  resolved "https://registry.yarnpkg.com/compodoc/-/compodoc-0.0.22.tgz#2b63e75572c6e542faf3bf20644578349021a0b4"
+compodoc@^0.0.23:
+  version "0.0.23"
+  resolved "https://registry.yarnpkg.com/compodoc/-/compodoc-0.0.23.tgz#3c15803a54b55a6c12399e8a5362c563fd7607df"
   dependencies:
     angular2-dependencies-graph "^1.0.0-alpha.12"
     cheerio "^0.22.0"
@@ -1287,13 +1287,13 @@ debug@0.7.4:
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/debug/-/debug-0.7.4.tgz#06e1ea8082c2cb14e39806e22e2f6f757f92af39"
 
-debug@2.2.0, debug@^2.2.0, debug@~2.2.0:
+debug@2.2.0, debug@~2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.2.0.tgz#f87057e995b1a1f6ae6a4960664137bc56f039da"
   dependencies:
     ms "0.7.1"
 
-debug@2.3.3, debug@2.X:
+debug@2.3.3, debug@2.X, debug@^2.2.0:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.3.3.tgz#40c453e67e6e13c901ddec317af8986cda9eff8c"
   dependencies:
@@ -2048,7 +2048,7 @@ fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
 
-fsevents@^1.0.0, fsevents@^1.0.15:
+fsevents@^1.0.0:
   version "1.0.15"
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-1.0.15.tgz#fa63f590f3c2ad91275e4972a6cea545fb0aae44"
   dependencies:
@@ -2962,8 +2962,8 @@ is-npm@^1.0.0:
   resolved "https://registry.yarnpkg.com/is-npm/-/is-npm-1.0.0.tgz#f2fb63a65e4905b406c86072765a1a4dc793b9f4"
 
 is-number-like@^1.0.3:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/is-number-like/-/is-number-like-1.0.6.tgz#f0511d22c3f9c1e3e9d5b66a960ec49a342466df"
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/is-number-like/-/is-number-like-1.0.7.tgz#a38d6b0fd2cd4282449128859eed86c03fd23552"
   dependencies:
     bubleify "^0.5.1"
     lodash.isfinite "^3.3.2"
@@ -3173,8 +3173,8 @@ jodid25519@^1.0.0:
     jsbn "~0.1.0"
 
 jpegtran-bin@^3.0.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/jpegtran-bin/-/jpegtran-bin-3.1.0.tgz#e6541eba8d97448282a1f8f80a1b6cc9feea55d0"
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/jpegtran-bin/-/jpegtran-bin-3.2.0.tgz#f60ecf4ae999c0bdad2e9fbcdf2b6f0981e7a29b"
   dependencies:
     bin-build "^2.0.0"
     bin-wrapper "^3.0.0"

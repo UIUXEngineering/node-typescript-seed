@@ -99,6 +99,7 @@ export class SeedConfig {
    * SPECIFIC FILES
    */
   RESHRINKWRAP = join(process.cwd(), this.TOOLS_DIR, 'utils', 'seed', 'npm', 'reshrinkwrap');
+  COPY_NPM_SHRINKWRAP = join(process.cwd(), this.TOOLS_DIR, 'utils', 'seed', 'npm', 'copy-npm-shrinkwrap');
   GIT_HOOKS_PATH = join(process.cwd(), this.TOOLS_DIR, 'git_hooks');
 
   TYPESCRIPT_ES6_CONFIG = {
