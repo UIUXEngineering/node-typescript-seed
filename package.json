@@ -15,7 +15,7 @@
     "release.patch": "gulp release.patch",
     "release.minor": "gulp release.minor",
     "release.major": "gulp release.major",
-    "test": "gulp test",
+    "test": "gulp test.src",
     "compodoc": "node_modules/.bin/compodoc -p src/doc.tsconfig.json -d ./docs/angular/",
     "serve.compodoc": "node_modules/.bin/compodoc -s -d ./docs/angular/"
   },
