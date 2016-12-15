@@ -71,10 +71,20 @@ export class SeedConfig {
   PROJECT_README_FILENAME = 'PROJECT_README.md';
   NPM_README_FILENAME = 'NPM_README.md';
 
+
+  /**
+   * COVERAGE
+   */
+  // for source directory
+  COVERAGE_JSON = 'coverage-final.json';
+  COVERAGE_BASE_SRC_DIR = join(this.COVERAGE_DIR, this.APP_SRC);
+  COVERAGE_SRC_JSON_PATH = join(this.COVERAGE_BASE_SRC_DIR, this.COVERAGE_JSON);
+
   /**
    * PATHS
    */
   SRC_PATH = join(process.cwd(), this.APP_SRC);
+
 
   /**
    * TASK PATHS
@@ -155,14 +165,14 @@ export class SeedConfig {
     files: [].concat(
       // [this.BROWSER_DEST + '/app/**/*.css'],
       // [this.BROWSER_DEST + '/app/**/*.scss'],
-      [this.COVERAGE_DIR + '/app/**/*.json'],
-      [this.COVERAGE_DIR + '/app/**/*.html'],
-      [this.COVERAGE_DIR + '/index.html'],
-      [this.COVERAGE_DIR + '/**/*.svg'],
-      [this.COVERAGE_DIR + '/**/*.map']
+      [join(this.COVERAGE_DIR, this.APP_SRC, '**', '*.json')],
+      [join(this.COVERAGE_DIR, this.APP_SRC, '**', '*.html')],
+      [join(this.COVERAGE_DIR, 'index.html')],
+      [join(this.COVERAGE_DIR, '**', '*.svg')],
+      [join(this.COVERAGE_DIR, '**', '*.map')]
     ),
     server: {
-      baseDir: this.COVERAGE_DIR + '/',
+      baseDir: join(this.COVERAGE_DIR, this.APP_SRC),
       index: 'index.html'
     }
   };

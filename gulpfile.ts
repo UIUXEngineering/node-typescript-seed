@@ -44,7 +44,7 @@ gulp.task('qa.env', function(done: any) {
 gulp.task('qa.coverage', function(done: any) {
   runSequence(
     'tslint.dev',
-    'test.coverage',
+    'test.coverage.src',
     done);
 });
 
@@ -52,29 +52,29 @@ gulp.task('qa.coverage', function(done: any) {
 /**
  * TEST
  */
-gulp.task('watch', function(done: any) {
+gulp.task('watch.src', function(done: any) {
   runSequence(
-    'clean.test.cjs',
+    'clean.test.cjs.src',
     'jasmine',
-    'watch.dev',
+    'watch.src.dir',
     done);
 });
 
 
-gulp.task('test', function (done: any) {
+gulp.task('test.src', function (done: any) {
   runSequence(
-    'clean.test.cjs',
-    'jasmine',
+    'clean.test.cjs.src',
+    'jasmine.src',
     done);
 });
 
-gulp.task('test.coverage', function (done: any) {
+gulp.task('test.src.coverage', function (done: any) {
   runSequence(
-    'clean.coverage',
-    'clean.test.cjs',
-    'build.test.cjs',
-    'instrument',
-    'cover',
+    'clean.coverage.src',
+    'clean.test.cjs.src',
+    'build.test.cjs.src',
+    'instrument.src',
+    'cover.src',
     done);
 });
 
