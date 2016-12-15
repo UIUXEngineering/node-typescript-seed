@@ -1,7 +1,7 @@
 # node-typescript-seed
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![Travis Build Status](https://travis-ci.org/UIUXEngineering/node-typescript-seed.svg?branch=develop)
+[![Travis Build Status](https://travis-ci.org/UIUXEngineering/node-typescript-seed.svg?branch=develop)](https://github.com/UIUXEngineering/node-typescript-seed)
 
 A seed for NodeJS projects using typescript. 
 
