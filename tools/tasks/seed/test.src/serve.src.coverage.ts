@@ -12,6 +12,6 @@ export = () => {
     dir: process.cwd()
   });
 
-  browserSync.init(Config.BROWSER_SYNC_CONFIG_COVERAGE);
+  browserSync.init(Config.BROWSER_SYNC_CONFIG_COVERAGE_SRC);
 
 };

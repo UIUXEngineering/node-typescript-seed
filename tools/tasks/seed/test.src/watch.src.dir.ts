@@ -13,8 +13,7 @@ import Config from '../../../config';
  */
 export = () => {
   let src = [
-    join(Config.APP_SRC, '**', '*.ts'),
-    '!' + join(Config.APP_SRC, 'samples*') + sep
+    join(Config.APP_SRC, '**', '*.ts')
   ];
 
   gulp.watch(src, function() {

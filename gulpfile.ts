@@ -26,14 +26,45 @@ gulp.task('build', function (done: any) {
 });
 
 /**
- * QA
+ * QA SRC
  */
-gulp.task('qa.dev', function(done: any) {
+gulp.task('qa.src', function(done: any) {
   runSequence(
-    'tslint.dev',
-    'test',
+    'tslint.src',
+    'test.src',
     done);
 });
+
+
+gulp.task('qa.coverage.src', function(done: any) {
+  runSequence(
+    'tslint.src',
+    'test.coverage.src',
+    done);
+});
+
+/**
+ * QA SAMPLES
+ */
+gulp.task('qa.samples', function(done: any) {
+  runSequence(
+    'tslint.samples',
+    'test.samples',
+    done);
+});
+
+
+gulp.task('qa.coverage.samples', function(done: any) {
+  runSequence(
+    'tslint.samples',
+    'test.coverage.samples',
+    done);
+});
+
+
+/**
+ * QA ENV
+ */
 
 gulp.task('qa.env', function(done: any) {
   runSequence(
@@ -41,21 +72,13 @@ gulp.task('qa.env', function(done: any) {
     done);
 });
 
-gulp.task('qa.coverage', function(done: any) {
-  runSequence(
-    'tslint.dev',
-    'test.coverage.src',
-    done);
-});
-
-
 /**
- * TEST
+ * TEST SRC
  */
 gulp.task('watch.src', function(done: any) {
   runSequence(
     'clean.test.cjs.src',
-    'jasmine',
+    'jasmine.src',
     'watch.src.dir',
     done);
 });
@@ -68,7 +91,7 @@ gulp.task('test.src', function (done: any) {
     done);
 });
 
-gulp.task('test.src.coverage', function (done: any) {
+gulp.task('coverage.src', function (done: any) {
   runSequence(
     'clean.coverage.src',
     'clean.test.cjs.src',
@@ -79,6 +102,34 @@ gulp.task('test.src.coverage', function (done: any) {
 });
 
 
+/**
+ * TEST SAMPLES
+ */
+gulp.task('watch.samples', function(done: any) {
+  runSequence(
+    'clean.test.cjs.samples',
+    'jasmine.samples',
+    'watch.samples.dir',
+    done);
+});
+
+
+gulp.task('test.samples', function (done: any) {
+  runSequence(
+    'clean.test.cjs.samples',
+    'jasmine.samples',
+    done);
+});
+
+gulp.task('coverage.samples', function (done: any) {
+  runSequence(
+    'clean.coverage.samples',
+    'clean.test.cjs.samples',
+    'build.test.cjs.samples',
+    'instrument.samples',
+    'cover.samples',
+    done);
+});
 
 /**
  * RELEASE
