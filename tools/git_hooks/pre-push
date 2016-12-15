@@ -20,4 +20,4 @@ case "$OSTYPE" in
     darwin*) PATH=$PATH:/usr/local/bin
 esac
 
-node_modules/.bin/gulp qa.dev
+node_modules/.bin/gulp qa.src
