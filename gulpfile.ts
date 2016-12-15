@@ -28,7 +28,7 @@ gulp.task('build', function (done: any) {
 /**
  * QA
  */
-gulp.task('qa', function(done: any) {
+gulp.task('qa.dev', function(done: any) {
   runSequence(
     'tslint.dev',
     'test',

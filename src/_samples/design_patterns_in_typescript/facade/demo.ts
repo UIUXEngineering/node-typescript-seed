@@ -1,13 +1,13 @@
-/// <reference path="facade.ts" />
+/// <reference path='facade.ts' />
 namespace FacadePattern {
-	export namespace Demo {
-		export function show() : void {
-		    var facade: FacadePattern.Facade = new FacadePattern.Facade();
+ export namespace Demo {
+  export function show() : void {
+      var facade: FacadePattern.Facade = new FacadePattern.Facade();
 
-			facade.operation1();
+   facade.operation1();
 
-			facade.operation2();
-		}
-	}
+   facade.operation2();
+  }
+ }
 }
 

@@ -6,22 +6,22 @@ namespace FactoryMethodPattern {
 
     export class ConcreteProductA implements AbstractProduct {
         method = (param?: any) => {
-            return "Method of ConcreteProductA";
+            return 'Method of ConcreteProductA';
         }
     }
 
     export class ConcreteProductB implements AbstractProduct {
         method = (param?: any) => {
-            return "Method of ConcreteProductB";
+            return 'Method of ConcreteProductB';
         }
     }
 
 
     export class ProductFactory {
         public static createProduct(type: string) : AbstractProduct {
-            if (type === "A") {
+            if (type === 'A') {
                 return new ConcreteProductA();
-            } else if (type === "B") {
+            } else if (type === 'B') {
                 return new ConcreteProductB();
             }
 

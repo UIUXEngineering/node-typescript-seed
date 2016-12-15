@@ -1,53 +1,54 @@
 namespace BridgePattern {
 
-    export class Abstraction {
-        implementor: Implementor;
-        constructor(imp: Implementor) {
-            this.implementor = imp;
-        }
+  export class Abstraction {
+    implementor: Implementor;
 
-        public callIt(s: String): void {
-            throw new Error("This method is abstract!");
-        }
+    constructor(imp: Implementor) {
+      this.implementor = imp;
     }
 
-    export class RefinedAbstractionA extends Abstraction {
-        constructor(imp: Implementor) {
-            super(imp);
-        }
+    public callIt(s: String): void {
+      throw new Error('This method is abstract!');
+    }
+  }
 
-        public callIt(s: String): void {
-            console.log("This is RefinedAbstractionA");
-            this.implementor.callee(s);
-        }
+  export class RefinedAbstractionA extends Abstraction {
+    constructor(imp: Implementor) {
+      super(imp);
     }
 
-    export class RefinedAbstractionB extends Abstraction {
-        constructor(imp: Implementor) {
-            super(imp);
-        }
+    public callIt(s: String): void {
+      console.log('This is RefinedAbstractionA');
+      this.implementor.callee(s);
+    }
+  }
 
-        public callIt(s: String): void {
-            console.log("This is RefinedAbstractionB");
-            this.implementor.callee(s);
-        }
+  export class RefinedAbstractionB extends Abstraction {
+    constructor(imp: Implementor) {
+      super(imp);
     }
 
-    export interface Implementor {
-        callee(s: any): void;
+    public callIt(s: String): void {
+      console.log('This is RefinedAbstractionB');
+      this.implementor.callee(s);
     }
+  }
 
-    export class ConcreteImplementorA implements Implementor {
-        public callee(s: any) : void {
-            console.log("`callee` of ConcreteImplementorA is being called.");
-            console.log(s);
-        }
-    }
+  export interface Implementor {
+    callee(s: any): void;
+  }
 
-    export class ConcreteImplementorB implements Implementor {
-        public callee(s: any) : void {
-            console.log("`callee` of ConcreteImplementorB is being called.");
-            console.log(s);
-        }
+  export class ConcreteImplementorA implements Implementor {
+    public callee(s: any): void {
+      console.log('`callee` of ConcreteImplementorA is being called.');
+      console.log(s);
     }
+  }
+
+  export class ConcreteImplementorB implements Implementor {
+    public callee(s: any): void {
+      console.log('`callee` of ConcreteImplementorB is being called.');
+      console.log(s);
+    }
+  }
 }

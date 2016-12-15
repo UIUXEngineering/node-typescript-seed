@@ -11,11 +11,11 @@ namespace MediatorPattern {
         }
 
         public send(msg: string): void {
-            throw new Error("Abstract Method!");
+            throw new Error('Abstract Method!');
         }
 
         public receive(msg: string): void {
-            throw new Error("Abstract Method!");
+            throw new Error('Abstract Method!');
         }
     }
 
@@ -29,7 +29,7 @@ namespace MediatorPattern {
         }
 
         public receive(msg: string): void {
-            console.log(msg, "`receive` of ConcreteColleagueA is being called!");
+            console.log(msg, '`receive` of ConcreteColleagueA is being called!');
         }
     }
 
@@ -43,7 +43,7 @@ namespace MediatorPattern {
         }
 
         public receive(msg: string): void {
-            console.log(msg, "`receive` of ConcreteColleagueB is being called!");
+            console.log(msg, '`receive` of ConcreteColleagueB is being called!');
         }
     }
 
