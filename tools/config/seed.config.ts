@@ -49,13 +49,14 @@ export class SeedConfig {
   CJS_DIR = 'cjs';
   COVERAGE_DIR = 'coverage';
   DIST_DIR = 'dist';
+  DOCS_DIR = 'docs';
   ES6_DIR = 'es6';
+  SAMPLES_DIR = 'samples';
   TASKS_DIR = 'tasks';
   TMP_DIR = 'tmp';
   TOOLS_DIR = 'tools';
   TYPES_DIR = 'types';
   UMD_DIR = 'umd';
-  DOCS_DIR = 'docs';
 
   DIST_ES6 = join(this.DIST_DIR, this.ES6_DIR);
   DIST_CJS = join(this.DIST_DIR, this.CJS_DIR);
@@ -79,6 +80,9 @@ export class SeedConfig {
   COVERAGE_JSON = 'coverage-final.json';
   COVERAGE_BASE_SRC_DIR = join(this.COVERAGE_DIR, this.APP_SRC);
   COVERAGE_SRC_JSON_PATH = join(this.COVERAGE_BASE_SRC_DIR, this.COVERAGE_JSON);
+
+  COVERAGE_BASE_SAMPLES_DIR = join(this.COVERAGE_DIR, this.SAMPLES_DIR);
+  COVERAGE_SAMPLES_JSON_PATH = join(this.COVERAGE_BASE_SAMPLES_DIR, this.COVERAGE_JSON);
 
   /**
    * PATHS
