@@ -1,5 +1,7 @@
 # <%= name %>
 
+This project is generated from the [node-typescript-seed](https://github.com/UIUXEngineering/node-typescript-seed).
+
 # Table of Contents
 - [Install](#install)
 - [API](#api)
@@ -121,7 +123,6 @@ Import using either method above, or using `define`:
 To contribute, see the [project repo](<%= repo %>).
 See [docs/PROJECT_README.md](docs/PROJECT_README.md) for development guide.
 
-This project is generate from the [node-typescript-seed](https://github.com/UIUXEngineering/node-typescript-seed).
 
 # Report Issues
 
