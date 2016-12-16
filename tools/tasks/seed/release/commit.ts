@@ -6,5 +6,5 @@ const plugins = <any>gulpLoadPlugins();
 export = () => {
   return gulp.src('.')
     .pipe(plugins.git.add())
-    .pipe(plugins.git.commit('[Prerelease] Bumped version number'));
+    .pipe(plugins.git.commit('Bumped version number'));
 };
