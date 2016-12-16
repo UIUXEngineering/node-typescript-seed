@@ -209,14 +209,14 @@ gulp.task('release.major', function (done: any) {
 gulp.task('_release', function (done: any) {
   runSequence(
     // 'changelog',
-    'commit.changes',
+    'commit',
     'push.changes',
     'create.new.tag',
     'github.release',
 
     // update changelog and push to master
     'regenerate.changelog',
-    'commit.changes',
+    'commit',
     'push.changes',
     function (error: any) {
       if (error) {
