@@ -8,7 +8,7 @@ export = () => {
 
   var version = argv['bump'];
 
-  gulp.src('./package.json')
+  return gulp.src('./package.json')
     .pipe( plugins.bump({version: version}))
     .pipe(gulp.dest('./'));
 

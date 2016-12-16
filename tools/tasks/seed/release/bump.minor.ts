@@ -8,7 +8,7 @@ export = () => {
 
   let newVersion = incSemverMinor();
 
-  gulp.src('./package.json')
+  return gulp.src('./package.json')
     .pipe( plugins.bump({version: newVersion}))
     .pipe(gulp.dest('./'));
 };
