@@ -28,6 +28,7 @@ This seed is designed to create consumable services, models ( for MVC ), busines
 - [SAMPLES](#samples)
 - [Add Jasmine Custom Matchers](#add-jasmine-custom-matchers)
 - [Mocks](#mocks)
+- [Update With This Seed](#update-with-this-seed)
 
 ### Common Tasks
 - [Most Used Tasks](#most-used-tasks)
@@ -87,6 +88,9 @@ When adding a custom matcher to the `./src/spec.helpers` dirctory, update the Ja
 To facilitate better testing and consumption, create test mocks independently of your tests. You can then reuse the mocks in multiple tests and scenarios in both this project and your consumption projdct.
 
 Mocks are built as a deliverable, but not included with application code. When consuming the application, you will **not** consume the mock code. You can then consume the mocks in unit tests of your consuming application separately.
+
+## Update With This Seed
+*yarn command* `yarn pull.upstream.seed`  
 
 # Common Tasks
 ## Most Used Tasks
@@ -293,17 +297,22 @@ Update the ***name*** and ***repo url*** in the `package.json` file with your pr
 If you just want to copy git hooks for a git push workflow:
 
 ```bash
-$ yarn run init
+$ yarn init
 ```
 
 if you just want to set up the README.md for npm publication:
 ```bash
-$ yarn run init.readme
+$ yarn init.readme
 ```
 
 If you want to initialize both above:
 ```bash
-$ yarn run init
+$ yarn init
+```
+
+To add this seed project as upstream to keep it updated with environment changes:
+```bash
+$ yarn init.upstream
 ```
 
 ## Git Hooks

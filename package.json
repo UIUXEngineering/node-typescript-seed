@@ -5,9 +5,10 @@
   "main": "index.ts",
   "scripts": {
     "build": "gulp build",
-    "copy.githooks": "gulp copy.githooks",
     "init": "gulp init",
     "init.env": "gulp init.env",
+    "init.githooks": "gulp copy.githooks",
+    "init.upstream": "gulp init.upstream",
     "init.readme": "gulp init.readme",
     "init.releaser": "conventional-github-releaser -p angular -r 0",
     "postinstall": "node tools/utils/seed/npm/copy-npm-shrinkwrap",
@@ -38,6 +39,8 @@
     "qa.cover": "gulp qa.cover",
     "qa.samples": "gulp qa.samples",
     "qa.cover.samples": "gulp qa.cover.samples",
+
+    "pull.upstream.seed": "gulp pull.upstream.seed",
 
     "doc": "node_modules/.bin/compodoc -p src/compodoc.tsconfig.json -d ./docs/angular/",
     "serve.doc": "node_modules/.bin/compodoc -s -d ./docs/angular/"

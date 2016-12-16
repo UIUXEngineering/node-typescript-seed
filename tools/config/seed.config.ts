@@ -22,6 +22,12 @@ import * as _ from 'lodash';
 export class SeedConfig {
 
   /**
+   * This seed clone url used
+   * to set upstream
+   */
+  GIT_UPSTREAM_SEED_URL = `https://github.com/UIUXEngineering/node-typescript-seed.git`;
+
+  /**
    *
    * BUILD PARAMS
    */

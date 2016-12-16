@@ -234,10 +234,26 @@ gulp.task('postinstall', function(done: any) {
     done);
 });
 
+/**
+ * PULL UPSTREAM MASTER OF SEED
+ */
+gulp.task('pull.upstream.seed', function(done: any) {
+  runSequence(
+    'git.checkout.branch.upstream',
+    'git.pull.upstream.master',
+    'git.checkout.develop',
+    done);
+});
+
+/**
+ * INIT
+ */
 gulp.task('init', function(done: any) {
   runSequence(
     'init.env',
     'init.readme',
+    'git.add.remote.upstream',
+    'git.create.branch.upstream',
     done);
 });
 
@@ -254,4 +270,6 @@ gulp.task('init.readme', function(done: any) {
     'init.npm.readme',
     done);
 });
+
+
 
