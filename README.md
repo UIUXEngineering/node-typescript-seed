@@ -51,7 +51,6 @@ This seed is designed to create consumable services, models ( for MVC ), busines
 - [Environment](#environment)
 
 ### More Info
-- [Gulp Tasks](#gulp-tasks)
 - [Configs](#configs)
 - [Change Log](#change-log)
 - [References](#references)
@@ -101,7 +100,6 @@ Mocks are built as a deliverable, but not included with application code. When c
 
 ## Build
 *yarn command* `yarn build`
-*gulp command* `gulp build`
 
 The build task runs unit tests, tslint and transpiles the `./src` directory to ES6, CommonJS, and UMD. UMD is generated from the ES6 files using rollup.
 
@@ -125,20 +123,11 @@ The transpiled code is output in the `./dist` directory:
 *yarn command to serve coverage report:* `yarn serve`  
 *yarn command to watch unit test:* `yarn watch`  
   
-*gulp command for unit test:* `gulp test`  
-*gulp command for code coverage:* `gulp cover`  
-*gulp command to watch unit test:* `gulp watch`  
-
-  
 ### `./samples` directory  
 *yarn command for unit test:* `yarn test.samples`  
 *yarn command for code coverage:* `yarn cover.samples`  
 *yarn command to serve coverage report:* `yarn serve.samples`  
 *yarn command to watch unit test:* `yarn watch.samples`  
-  
-*gulp command for unit test:* `gulp test.samples`  
-*gulp command for code coverage:* `gulp cover.samples`  
-*gulp command to watch unit test:* `gulp watch.samples`  
   
 **When running the `watch` command, do not run the `test` command.**
 
@@ -148,32 +137,23 @@ See [Add Jasmine Custom Matchers](#add-jasmine-custom-matchers) above.
 ## TS Lint
 ### `./src` directory
 *yarn command* `yarn lint`
-*gulp command* `gulp lint`
 
 ### `./samples` directory
 *yarn command* `yarn lint.samples`
-*gulp command* `gulp lint.samples`
 
 ### project except for `./src` and `./samples`
 *yarn command* `yarn lint.env`
-*gulp command* `gulp lint.env`
 
 ## QA
 Combines **lint** and **test** tasks for convenience of running one command.
 
 ### `./src` directory
 *yarn command* `yarn qa` -- lint, test
-*gulp command* `gulp qa` -- lint, test
-
 *yarn command* `yarn qa.cover` -- lint, test, coverage report
-*gulp command* `gulp qa.cover` -- lint, test, coverage report
 
 ### `./samples` directory
 *yarn command* `yarn qa.samples` -- lint, test
-*gulp command* `gulp qa.samples` -- lint, test
-
 *yarn command* `yarn qa.cover.samples` -- lint, test, coverage report
-*gulp command* `gulp qa.cover.samples` -- lint, test, coverage report
 
 ## Samples
 The `./samples` directory is your research and playground space to learn and try things which you not ready to place in `./src` code. The same test and coverage tools are available to allow TDD for your expirements.
@@ -254,8 +234,29 @@ For more instrunctions on shrinkwrap, see [./npm-shrinkwrap.readme.md](./npm-shr
 Clone this seed.
 
 ```bash
+# get a shallow copy of this seed
 $ git clone --depth 1 https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
 
+# change directories to your project
+$ cd [name-of-project]
+
+# remove the .git hidden directory
+$ rm -rf .git
+
+# reinitialize the project as a git repo
+$ git init
+
+# add the clone url of YOUR project
+$ git remote add origin [your project git url that your would clone]
+
+# add all files to get staging
+$ git add .
+
+# commit projct
+$ git commit -m "add project seed"
+
+# push to your master branch
+$ git push
 ```
 
 ## Yarn And NPM
@@ -274,8 +275,6 @@ $ cd your repo
 # fast install (via Yarn, https://yarnpkg.com)
 $ yarn install  # or yarn
 
-# install the project's dependencies
-$ npm install
 
 ```
 
@@ -316,10 +315,6 @@ All NPM packages needed are installed globally to isolate your environment from 
 ```
 
 # More Info
-## Gulp Tasks
-TODO
-
-
 ## Configs
 
 Unfortunately, there are many more configs than I would like to have ( more than one ). They all have a separate purpose, and if located in a peculiar place, there is a specific reason.
