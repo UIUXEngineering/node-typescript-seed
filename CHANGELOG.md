@@ -1,3 +1,13 @@
+<a name="1.0.4"></a>
+## [1.0.4](https://github.com/UIUXEngineering/node-typescript-seed/compare/1.0.2...1.0.4) (2016-12-16)
+
+
+### Bug Fixes
+
+* **release:** gulp task not returning stream ([6155b4a](https://github.com/UIUXEngineering/node-typescript-seed/commit/6155b4a))
+
+
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/UIUXEngineering/node-typescript-seed/compare/1.0.1...1.0.2) (2016-12-16)
 
