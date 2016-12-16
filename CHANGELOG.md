@@ -1,3 +1,13 @@
+<a name="1.0.5"></a>
+## [1.0.5](https://github.com/UIUXEngineering/node-typescript-seed/compare/1.0.4...1.0.5) (2016-12-16)
+
+
+### Features
+
+* **upstream:** add upstream remote as init process ([4da5857](https://github.com/UIUXEngineering/node-typescript-seed/commit/4da5857))
+
+
+
 <a name="1.0.4"></a>
 ## [1.0.4](https://github.com/UIUXEngineering/node-typescript-seed/compare/1.0.2...1.0.4) (2016-12-16)
 
