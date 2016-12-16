@@ -254,18 +254,8 @@ For more instrunctions on shrinkwrap, see [./npm-shrinkwrap.readme.md](./npm-shr
 Clone this seed.
 
 ```bash
-$ git clone --depth 1 https://github.com/mgechev/angular-seed.git
+$ git clone --depth 1 https://github.com/mgechev/angular-seed.git [name-of-project]
 
-```
-
-Or pull master into your established *empty* repo. 
-
-```bash
-# add this repo as upstream remote to your repo.
-$ git remote add upstream https://github.com/UIUXEngineering/node-typescript-seed.git
-
-# pull from master
-$ git pull upstream master --depth 1
 ```
 
 ## Yarn And NPM
