@@ -67,8 +67,11 @@ export class SeedConfig {
    */
   TS_ENTRY_FILENAME = 'index.ts';
   ES6_ENTRY_FILENAME = 'index.js';
+  ES6_MOCKS_ENTRY_FILENAME = 'mocks.js';
   JS_BUNDLE_FILENAME = 'index.js';
+  JS_MOCKS_BUNDLE_FILENAME = 'mocks.js';
   JS_BUNDLE_MIN_FILENAME = 'index.min.js';
+  JS_MOCKS_BUNDLE_MIN_FILENAME = 'mocks.min.js';
   PROJECT_README_FILENAME = 'PROJECT_README.md';
   NPM_README_FILENAME = 'NPM_README.md';
 
@@ -146,6 +149,16 @@ export class SeedConfig {
     }
   };
 
+  ROLLUP_MOCK_CONFIG = ((_config) => {
+    let config = _.cloneDeep(_config);
+
+    config.ROLLUP.entry = join(this.DIST_ES6, this.ES6_MOCKS_ENTRY_FILENAME);
+    config.BUNDLE.dest = join(this.DIST_UMD, this.JS_MOCKS_BUNDLE_FILENAME);
+
+    return config;
+
+  })(this.ROLLUP_CONFIG);
+
   /**
    * The port where the application will run, if the `hot-loader` option mode
    * is used. The default hot-loader port is `5578`.
@@ -182,6 +195,7 @@ export class SeedConfig {
     }
   };
 
+  // clones and overrides BROWSER_SYNC_CONFIG_COVERAGE_SRC
   BROWSER_SYNC_CONFIG_COVERAGE_SAMPLES: any = ((_config) => {
     let config = _.cloneDeep(_config);
 

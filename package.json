@@ -4,6 +4,7 @@
   "description": "Node project with TypeScript",
   "main": "index.ts",
   "scripts": {
+    "build": "gulp build",
     "init": "gulp init",
     "init.env": "gulp init.env",
     "init.readme": "gulp init.readme",
@@ -17,9 +18,28 @@
     "release.patch": "gulp release.patch",
     "release.minor": "gulp release.minor",
     "release.major": "gulp release.major",
-    "test": "gulp test.src",
-    "compodoc": "node_modules/.bin/compodoc -p src/doc.tsconfig.json -d ./docs/angular/",
-    "serve.compodoc": "node_modules/.bin/compodoc -s -d ./docs/angular/"
+
+    "test": "gulp test",
+    "cover": "gulp cover",
+    "watch": "gulp watch",
+    "serve": "gulp serve.cover.src",
+
+    "test.samples": "gulp test.samples",
+    "cover.samples": "gulp cover.samples",
+    "watch.samples": "gulp watch.samples",
+    "serve.samples": "gulp serve.cover.samples",
+
+    "lint": "gulp lint.src",
+    "lint.samples": "gulp lint.samples",
+    "lint.env": "gulp lint.env",
+
+    "qa": "gulp qa",
+    "qa.cover": "gulp qa.cover",
+    "qa.samples": "gulp qa.samples",
+    "qa.cover.samples": "gulp qa.cover.samples",
+
+    "doc": "node_modules/.bin/compodoc -p src/compodoc.tsconfig.json -d ./docs/angular/",
+    "serve.doc": "node_modules/.bin/compodoc -s -d ./docs/angular/"
   },
   "repository": {
     "type": "git",
@@ -83,7 +103,6 @@
     "rmfr": "^1.0.1",
     "rollup": "^0.36.4",
     "run-sequence": "^1.2.2",
-    "rxjs": "5.0.0-rc.4",
     "semver": "^5.3.0",
     "tildify": "^1.2.0",
     "ts-node": "^1.7.0",
@@ -101,5 +120,8 @@
     "browser-sync": "^2.18.5",
     "chokidar-socket-emitter": "^0.5.4",
     "compodoc": "^0.0.23"
+  },
+  "peerDependencies": {
+    "rxjs": "^5.0.0-rc.4"
   }
 }

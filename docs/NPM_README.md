@@ -2,6 +2,7 @@
 
 # Table of Contents
 - [Install](#install)
+- [API](#api)
 - [TypeScript Usage](#typescript-usage)
 - [ES6 Usage](#es6-usage)
 - [CommonJS Usage](#commonjs-usage)
@@ -22,11 +23,36 @@ Install using npm or yarn.
 
 ```
 
+# API
+TODO - document your api here
+
+## feature
+### Return Data Type
+### Coniguration params
+
+```typescript
+
+    // How to use
+
+```
+
+## feature
+### Return Data Type
+### Coniguration params
+
+
+```typescript
+
+    // How to use
+
+```
+
 # TypeScript Usage
 
 Import from index.ts
 
 ```typescript
+
     // import index.ts
     import '<%= name %>';
     
@@ -95,6 +121,7 @@ Import using either method above, or using `define`:
 To contribute, see the [project repo](<%= repo %>).
 See [docs/PROJECT_README.md](docs/PROJECT_README.md) for development guide.
 
+This project is generate from the [node-typescript-seed](https://github.com/UIUXEngineering/node-typescript-seed).
 
 # Report Issues
 

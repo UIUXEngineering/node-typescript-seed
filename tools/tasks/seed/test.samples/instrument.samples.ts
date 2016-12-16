@@ -10,6 +10,8 @@ export = () => {
   let cjsInstrumentFiles = [
     join(Config.SAMPLES_DIR, '**', '*.js'),
     '!' + join(Config.SAMPLES_DIR, '**', '*.spec.js')
+    // '!' + join(Config.APP_SRC, 'mocks.js'),
+    // '!' + join(Config.APP_SRC, '**', '*.mock.js')
   ];
 
   return gulp.src(cjsInstrumentFiles)

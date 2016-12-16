@@ -9,7 +9,7 @@ export = () => {
 
   let files: string[] = [
     join(Config.APP_SRC, '**', '*.ts'),
-    '!src/**/*.spec.ts'
+    '!' + join('src', '**', '*.spec.ts')
   ];
 
   return gulp.src(files)

@@ -1,0 +1,4 @@
+export * from './jasmineExamples/Player.mock';
+export * from './jasmineExamples/Song.mock';
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1vY2tzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGNBQWMsK0JBQStCLENBQUM7QUFDOUMsY0FBYyw2QkFBNkIsQ0FBQyIsImZpbGUiOiJtb2Nrcy5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCAqIGZyb20gJy4vamFzbWluZUV4YW1wbGVzL1BsYXllci5tb2NrJztcbmV4cG9ydCAqIGZyb20gJy4vamFzbWluZUV4YW1wbGVzL1NvbmcubW9jayc7XG4iXX0=

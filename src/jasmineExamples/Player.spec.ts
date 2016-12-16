@@ -1,15 +1,15 @@
 /// <reference path='../../tools/manual_typings/project/jasmine.d.ts' />
 
-import { Player } from './Player';
-import { Song } from './Song';
+import { createPlayer } from './Player.mock';
+import { createSong } from './Song.mock';
 
 describe('Player', function() {
   let player;
   let song;
 
   beforeEach(function() {
-    player = new Player();
-    song = new Song();
+    player = createPlayer();
+    song = createSong();
   });
 
   it('should be able to play a Song', function() {

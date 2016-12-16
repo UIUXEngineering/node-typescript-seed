@@ -2,8 +2,8 @@ import * as gulp from 'gulp';
 import * as runSequence from 'run-sequence';
 import { join } from 'path';
 import Config from './tools/config';
-import {loadTasks} from './tools/utils';
-import {checkEnvironment} from './tools/utils';
+import { loadTasks } from './tools/utils';
+import { checkEnvironment } from './tools/utils';
 
 checkEnvironment({
   requiredNpmVersion: '>=3.5.3 <4.0.0',
@@ -17,28 +17,31 @@ loadTasks(Config.TASKS_PATH);
  */
 gulp.task('build', function (done: any) {
   runSequence(
+    'qa',
     'clean.build',
     'build.es6',
     'build.cjs',
     'rollup.umd',
+    'rollup.umd.mocks',
     'rollup.umd.uglify',
+    'rollup.umd.uglify.mocks',
     done);
 });
 
 /**
  * QA SRC
  */
-gulp.task('qa.src', function(done: any) {
+gulp.task('qa', function(done: any) {
   runSequence(
-    'tslint.src',
+    'lint.src',
     'test.src',
     done);
 });
 
 
-gulp.task('qa.coverage.src', function(done: any) {
+gulp.task('qa.cover', function(done: any) {
   runSequence(
-    'tslint.src',
+    'lint.src',
     'test.coverage.src',
     done);
 });
@@ -48,15 +51,15 @@ gulp.task('qa.coverage.src', function(done: any) {
  */
 gulp.task('qa.samples', function(done: any) {
   runSequence(
-    'tslint.samples',
+    'lint.samples',
     'test.samples',
     done);
 });
 
 
-gulp.task('qa.coverage.samples', function(done: any) {
+gulp.task('qa.cover.samples', function(done: any) {
   runSequence(
-    'tslint.samples',
+    'lint.samples',
     'test.coverage.samples',
     done);
 });
@@ -65,16 +68,21 @@ gulp.task('qa.coverage.samples', function(done: any) {
 /**
  * QA ENV
  */
-
 gulp.task('qa.env', function(done: any) {
   runSequence(
-    'tslint.env',
+    'lint.env',
     done);
 });
 
 /**
+ * LINT
+ */
+gulp.task('lint', ['lint.src']);
+
+/**
  * TEST SRC
  */
+gulp.task('watch', ['watch.src']);
 gulp.task('watch.src', function(done: any) {
   runSequence(
     'clean.test.cjs.src',
@@ -83,7 +91,7 @@ gulp.task('watch.src', function(done: any) {
     done);
 });
 
-
+gulp.task('test', ['test.src']);
 gulp.task('test.src', function (done: any) {
   runSequence(
     'clean.test.cjs.src',
@@ -91,6 +99,7 @@ gulp.task('test.src', function (done: any) {
     done);
 });
 
+gulp.task('cover', ['coverage.src']);
 gulp.task('coverage.src', function (done: any) {
   runSequence(
     'clean.coverage.src',
@@ -121,6 +130,7 @@ gulp.task('test.samples', function (done: any) {
     done);
 });
 
+gulp.task('cover.samples', ['coverage.samples']);
 gulp.task('coverage.samples', function (done: any) {
   runSequence(
     'clean.coverage.samples',
