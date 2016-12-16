@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "build": "gulp build",
-    "copy.githooks": "copy.githooks",
+    "copy.githooks": "gulp copy.githooks",
     "init": "gulp init",
     "init.env": "gulp init.env",
     "init.readme": "gulp init.readme",
