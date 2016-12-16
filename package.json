@@ -6,7 +6,6 @@
   "scripts": {
     "build": "gulp build",
     "init.project": "gulp init.project",
-    "init.env": "gulp init.env",
     "init.githooks": "gulp copy.githooks",
     "init.upstream": "gulp init.upstream",
     "init.readme": "gulp init.readme",
