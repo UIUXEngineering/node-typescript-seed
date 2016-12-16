@@ -1,3 +1,8 @@
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/UIUXEngineering/node-typescript-seed/compare/1.0.1...1.0.2) (2016-12-16)
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/UIUXEngineering/node-typescript-seed/compare/0.2.0...1.0.1) (2016-12-16)
 
