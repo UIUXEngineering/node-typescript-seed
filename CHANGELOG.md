@@ -1,3 +1,62 @@
+<a name="0.0.1"></a>
+## [0.0.1](https://github.com/UIUXEngineering/node-typescript-seed/compare/0.0.0-alpha.4...0.0.1) (2016-12-16)
+
+
+### Bug Fixes
+
+* **appveyor:** copy shrinkwrap with node and not a gulp task ([6609d65](https://github.com/UIUXEngineering/node-typescript-seed/commit/6609d65))
+* **build:** fix test to have build pass ([9bb5eb7](https://github.com/UIUXEngineering/node-typescript-seed/commit/9bb5eb7))
+* **build:** remove reshirnkwrap from postinstall task ([756e6d9](https://github.com/UIUXEngineering/node-typescript-seed/commit/756e6d9))
+* **githooks:** fix qa.dev task ([0245d95](https://github.com/UIUXEngineering/node-typescript-seed/commit/0245d95))
+* **githooks:** fix type in task ([ef6ba0d](https://github.com/UIUXEngineering/node-typescript-seed/commit/ef6ba0d))
+* **istanbul:** includeUntested ([92a2ee4](https://github.com/UIUXEngineering/node-typescript-seed/commit/92a2ee4))
+* **qa.src:** fix pre-push hook ([c56fff5](https://github.com/UIUXEngineering/node-typescript-seed/commit/c56fff5))
+
+
+### Features
+
+* **appveyor:** add yml and badge on readme ([d534d7a](https://github.com/UIUXEngineering/node-typescript-seed/commit/d534d7a))
+* **appveyor:** install yarn ([a0b5dc9](https://github.com/UIUXEngineering/node-typescript-seed/commit/a0b5dc9))
+* **buid:** move tsconfig from json to seed config ([986322e](https://github.com/UIUXEngineering/node-typescript-seed/commit/986322e)), closes [#7](https://github.com/UIUXEngineering/node-typescript-seed/issues/7) [#8](https://github.com/UIUXEngineering/node-typescript-seed/issues/8)
+* **build:** es6 and types ([ecd1b29](https://github.com/UIUXEngineering/node-typescript-seed/commit/ecd1b29))
+* **cjs:** add sourcemaps to transpiled cjs ([d1027e1](https://github.com/UIUXEngineering/node-typescript-seed/commit/d1027e1))
+* **coverage:** coverage reports ([694523f](https://github.com/UIUXEngineering/node-typescript-seed/commit/694523f))
+* **coverage:** serve coverage ([c72fb01](https://github.com/UIUXEngineering/node-typescript-seed/commit/c72fb01)), closes [#4](https://github.com/UIUXEngineering/node-typescript-seed/issues/4) [#6](https://github.com/UIUXEngineering/node-typescript-seed/issues/6) [#9](https://github.com/UIUXEngineering/node-typescript-seed/issues/9)
+* **design patterns:** add design patters ([93d3824](https://github.com/UIUXEngineering/node-typescript-seed/commit/93d3824))
+* **env:** shrinkwrap ([4825eee](https://github.com/UIUXEngineering/node-typescript-seed/commit/4825eee))
+* **es6:** add sourcemaps ([0a3622c](https://github.com/UIUXEngineering/node-typescript-seed/commit/0a3622c))
+* **git_hooks:** add pre-commit hook ([360dc5c](https://github.com/UIUXEngineering/node-typescript-seed/commit/360dc5c))
+* **git_hooks:** pre-push ([5299dc0](https://github.com/UIUXEngineering/node-typescript-seed/commit/5299dc0))
+* **githooks:** postinsall ([075fbb9](https://github.com/UIUXEngineering/node-typescript-seed/commit/075fbb9))
+* **githooks:** run qa task ([b9611ee](https://github.com/UIUXEngineering/node-typescript-seed/commit/b9611ee))
+* **index:** add index.ts to root directory ([d0cc4e9](https://github.com/UIUXEngineering/node-typescript-seed/commit/d0cc4e9))
+* **init:** fix typo in npm readme ([a8956b5](https://github.com/UIUXEngineering/node-typescript-seed/commit/a8956b5))
+* **init:** gulp task to initialize project ([ef240d6](https://github.com/UIUXEngineering/node-typescript-seed/commit/ef240d6))
+* **jasmine:** add spec reporter ([dc105d1](https://github.com/UIUXEngineering/node-typescript-seed/commit/dc105d1))
+* **jasmine:** init jasmine ([16f47c2](https://github.com/UIUXEngineering/node-typescript-seed/commit/16f47c2))
+* **jasmine:** remove init spec ([8259d8a](https://github.com/UIUXEngineering/node-typescript-seed/commit/8259d8a))
+* **jasmine:** run unit tests ([4e6a5fa](https://github.com/UIUXEngineering/node-typescript-seed/commit/4e6a5fa))
+* **npm:** ignore coverage directory ([bdb2f0f](https://github.com/UIUXEngineering/node-typescript-seed/commit/bdb2f0f))
+* **npmignore:** add npm ignore files ([6977da9](https://github.com/UIUXEngineering/node-typescript-seed/commit/6977da9)), closes [#11](https://github.com/UIUXEngineering/node-typescript-seed/issues/11)
+* **rollup:** gulp task configruration ([e33fe24](https://github.com/UIUXEngineering/node-typescript-seed/commit/e33fe24))
+* **rollup:** move rollup config json to seed config ([c7b9980](https://github.com/UIUXEngineering/node-typescript-seed/commit/c7b9980)), closes [#8](https://github.com/UIUXEngineering/node-typescript-seed/issues/8)
+* **samples:** add design patterns ([d89bd13](https://github.com/UIUXEngineering/node-typescript-seed/commit/d89bd13))
+* **samples:** test coverage for src only ([1093561](https://github.com/UIUXEngineering/node-typescript-seed/commit/1093561))
+* **samples:** test, cover, lint samples and src separately ([33e730d](https://github.com/UIUXEngineering/node-typescript-seed/commit/33e730d))
+* **shrinkwrap:** add shrinkwrap functionality ([50ebcb3](https://github.com/UIUXEngineering/node-typescript-seed/commit/50ebcb3))
+* **shrinkwrap:** add shrinkwrap to scrpts in package.json ([5ee0522](https://github.com/UIUXEngineering/node-typescript-seed/commit/5ee0522))
+* **shrinkwrap:** update shrinkwrap script ([7b87e7e](https://github.com/UIUXEngineering/node-typescript-seed/commit/7b87e7e))
+* **travis-ci:** add badge ([04a1f68](https://github.com/UIUXEngineering/node-typescript-seed/commit/04a1f68))
+* **travis-ci:** add yml ([13f48bd](https://github.com/UIUXEngineering/node-typescript-seed/commit/13f48bd))
+* **tsdocs:** compodoc ([85c1d2d](https://github.com/UIUXEngineering/node-typescript-seed/commit/85c1d2d))
+* **tslint:** ts lint env ([cc87897](https://github.com/UIUXEngineering/node-typescript-seed/commit/cc87897))
+* **tslint:** tslint tasks for dev and env ([a13e773](https://github.com/UIUXEngineering/node-typescript-seed/commit/a13e773)), closes [#10](https://github.com/UIUXEngineering/node-typescript-seed/issues/10)
+* **uglify:** uglify umd ([d1d4c6b](https://github.com/UIUXEngineering/node-typescript-seed/commit/d1d4c6b)), closes [#3](https://github.com/UIUXEngineering/node-typescript-seed/issues/3)
+* **umd:** rollup umd bundling task ([2f5d13e](https://github.com/UIUXEngineering/node-typescript-seed/commit/2f5d13e))
+* **watch:** watch unit tests ([dc61ae4](https://github.com/UIUXEngineering/node-typescript-seed/commit/dc61ae4))
+
+
+
 <a name="0.0.0-alpha.4"></a>
 # [0.0.0-alpha.4](https://github.com/UIUXEngineering/node-typescript-seed/compare/0.0.0-alpha.3...0.0.0-alpha.4) (2016-12-07)
 
