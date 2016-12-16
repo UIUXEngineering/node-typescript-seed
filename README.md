@@ -293,27 +293,18 @@ $ npm install
 
 Update the ***name*** and ***repo url*** in the `package.json` file with your project information. 
 
-
-If you just want to copy git hooks for a git push workflow:
+To copy git hooks, readme, :
 
 ```bash
-$ yarn init
+$ yarn init.project
 ```
 
-if you just want to set up the README.md for npm publication:
+To copy git hooks to the .git directory:
+
 ```bash
-$ yarn init.readme
+$ yarn init.githooks
 ```
 
-If you want to initialize both above:
-```bash
-$ yarn init
-```
-
-To add this seed project as upstream to keep it updated with environment changes:
-```bash
-$ yarn init.upstream
-```
 
 ## Git Hooks
 A git hook is used to run unit tests and tslint before pushing to the remote repository. The git hook is automatically installed as a `postinstall` npm script. You can manually run the install script using the command:

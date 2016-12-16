@@ -248,18 +248,12 @@ gulp.task('pull.upstream.seed', function(done: any) {
 /**
  * INIT
  */
-gulp.task('init', function(done: any) {
+gulp.task('init.project', function(done: any) {
   runSequence(
     'init.env',
     'init.readme',
     'git.add.remote.upstream',
     'git.create.branch.upstream',
-    done);
-});
-
-gulp.task('init.env', function(done: any) {
-  runSequence(
-    'copy.gitHooks',
     done);
 });
 
