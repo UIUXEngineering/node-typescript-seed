@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">14.29% </span>
+        <span class="strong">57.14% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>2/14</span>
+        <span class='fraction'>8/14</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">16.67% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/6</span>
+        <span class='fraction'>1/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">15.38% </span>
+        <span class="strong">53.85% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>2/13</span>
+        <span class='fraction'>7/13</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -81,12 +81,12 @@
 36
 37
 38
-39</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+39</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -99,32 +99,32 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import { FOO } from './dep/foo';</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { FOO } from './dep/foo';
 &nbsp;
 /**
  * Sample Demo Class
  */
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >export class <span class="cstat-no" title="statement not covered" >Demo </span>{</span></span>
+export class Demo {
   _name: string;
   _dep: FOO;
 &nbsp;
@@ -137,7 +137,7 @@
    * Name Setter
    * @param _val
    */
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  set name(_val: string)</span> {</span>
+<span class="fstat-no" title="function not covered" >  set name(_val: string)</span> {
 <span class="cstat-no" title="statement not covered" >    this._name = _val;</span>
   }
 &nbsp;
@@ -149,10 +149,10 @@
 <span class="cstat-no" title="statement not covered" >    return this._name;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  get dep() {</span></span>
+<span class="fstat-no" title="function not covered" >  get dep() {</span>
 <span class="cstat-no" title="statement not covered" >    return this._dep;</span>
   }
-<span class="cstat-no" title="statement not covered" >}</span>
+}
 &nbsp;
 <span class="fstat-no" title="function not covered" >export function create():any {</span>
 <span class="cstat-no" title="statement not covered" >  return new Demo(FOO);</span>
@@ -163,7 +163,7 @@
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 16 2016 06:29:59 GMT-0600 (CST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 16 2016 15:13:48 GMT-0600 (CST)
 </div>
 </div>
 <script src="../prettify.js"></script>
