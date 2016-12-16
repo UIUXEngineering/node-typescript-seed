@@ -20,28 +20,22 @@
     "release.patch": "gulp release.patch",
     "release.minor": "gulp release.minor",
     "release.major": "gulp release.major",
-
     "test": "gulp test",
     "cover": "gulp cover",
     "watch": "gulp watch",
     "serve": "gulp serve.cover.src",
-
     "test.samples": "gulp test.samples",
     "cover.samples": "gulp cover.samples",
     "watch.samples": "gulp watch.samples",
     "serve.samples": "gulp serve.cover.samples",
-
     "lint": "gulp lint.src",
     "lint.samples": "gulp lint.samples",
     "lint.env": "gulp lint.env",
-
     "qa": "gulp qa",
     "qa.cover": "gulp qa.cover",
     "qa.samples": "gulp qa.samples",
     "qa.cover.samples": "gulp qa.cover.samples",
-
     "pull.upstream.seed": "gulp pull.upstream.seed",
-
     "doc": "node_modules/.bin/compodoc -p src/compodoc.tsconfig.json -d ./docs/angular/",
     "serve.doc": "node_modules/.bin/compodoc -s -d ./docs/angular/"
   },
@@ -126,6 +120,9 @@
     "compodoc": "^0.0.23"
   },
   "peerDependencies": {
+    "rxjs": "^5.0.0-rc.4"
+  },
+  "dependencies": {
     "rxjs": "^5.0.0-rc.4"
   }
 }
