@@ -254,7 +254,7 @@ For more instrunctions on shrinkwrap, see [./npm-shrinkwrap.readme.md](./npm-shr
 Clone this seed.
 
 ```bash
-$ git clone --depth 1 https://github.com/mgechev/angular-seed.git [name-of-project]
+$ git clone --depth 1 https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
 
 ```
 
