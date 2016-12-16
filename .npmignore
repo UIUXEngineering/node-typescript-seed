@@ -1,7 +1,10 @@
 .coverdata
 .coverrun
 .gitignore
+.github
 .idea
+.travis.yml
+appveyor.yml
 node_modules
 tools
 CHANGELOG.md
@@ -12,3 +15,5 @@ npm-shrinkwrap.readme.md
 tsconfig.json
 tmp
 coverage
+samples
+docs
