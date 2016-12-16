@@ -90,10 +90,10 @@ Mocks are built as a deliverable, but not included with application code. When c
 
 # Common Tasks
 ## Most Used Tasks
-*yarn command for build* `yarn build`
-*yarn command to lint and test* `yarn qa`
-*yarn command for code coverage:* `yarn cover`  
-*yarn command to serve coverage report:* `yarn serve`  
+*yarn command for build* `yarn build`  
+*yarn command to lint and test* `yarn qa`  
+*yarn command for code coverage:* `yarn cover`    
+*yarn command to serve coverage report:* `yarn serve`   
 
 ## Build
 *yarn command* `yarn build`
