@@ -265,7 +265,7 @@ Or pull master into your established *empty* repo.
 $ git remote add upstream https://github.com/UIUXEngineering/node-typescript-seed.git
 
 # pull from master
-$ git pull upstream master
+$ git pull upstream master --depth 1
 ```
 
 ## Yarn And NPM
