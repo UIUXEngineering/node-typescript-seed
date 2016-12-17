@@ -121,6 +121,6 @@
     "compodoc": "^0.0.23"
   },
   "dependencies": {
-    "rxjs": "^5.0.0-rc.4"
+    "rxjs": "5.0.0-rc.4"
   }
 }
