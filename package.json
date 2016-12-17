@@ -5,6 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "build": "gulp build",
+    "git.delete.all.tags": "gulp git.delete.all.tags",
     "init.project": "gulp init.project",
     "init.githooks": "gulp copy.githooks",
     "init.upstream": "gulp init.upstream",
