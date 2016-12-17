@@ -56,7 +56,11 @@ This seed is designed to create consumable services, models ( for MVC ), busines
 - [License](#license)
 
 # Quick Start
-  
+
+1. Create an empty project repo. The `init.project` task will push to that repo.
+
+2. Clone this seed.
+
  ```bash
  # get a shallow copy of this seed
  $ git clone --depth 1 https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
@@ -66,9 +70,9 @@ This seed is designed to create consumable services, models ( for MVC ), busines
  
  ```
  
-In your package.json:
+3. In your package.json:
 
-1. Update the name of your project as it will be published to the npm registry.
+Update the name of your project as it will be published to the npm registry.
 
 Example:
 ```json
@@ -87,7 +91,8 @@ Example:
       ...
     }
 ```
-2. Replace repository url with your project's repository url
+
+4. Replace repository url with your project's repository url
 
 Example:
 ```json
@@ -119,7 +124,8 @@ Example:
       
     }
 ```
-Init your project by running yarn commands.
+
+5. Init your project by running yarn commands.
 
 ```bash
     $ yarn install
