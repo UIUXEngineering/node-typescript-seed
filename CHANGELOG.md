@@ -1,3 +1,14 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/UIUXEngineering/node-typescript-seed/compare/1.0.7...1.0.0) (2016-12-17)
+
+
+### Bug Fixes
+
+* **init.project:** remove .git directory ([6658fd5](https://github.com/UIUXEngineering/node-typescript-seed/commit/6658fd5))
+* **init.project:** set remote url to origin ([bda502b](https://github.com/UIUXEngineering/node-typescript-seed/commit/bda502b))
+
+
+
 <a name="1.0.7"></a>
 ## [1.0.7](https://github.com/UIUXEngineering/node-typescript-seed/compare/1.0.6...1.0.7) (2016-12-17)
 
