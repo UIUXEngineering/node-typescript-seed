@@ -10,17 +10,11 @@ export class ProjectConfig extends SeedConfig {
 
   PROJECT_TASKS_DIR = join(process.cwd(), this.TOOLS_DIR, 'tasks', 'project');
 
+  // ADD GIT URL TO YOUR PROJECT
+  GIT_REMOTE_ORIGIN = `https://github.com/UIUXEngineering/node-typescript-test.git`;
+
   constructor() {
     super();
-    // this.APP_TITLE = 'Put name of your app here';
-
-    // this.HOT_LOADER_PORT = 5578;
-
-    // Add `local` third-party libraries to be injected/bundled.
-    // this.APP_ASSETS = [
-    //   ...this.APP_ASSETS,
-    //
-    // ];
 
     /* Add to or override NPM module configurations: */
     // this.mergeObject(this.PLUGIN_CONFIGS['browser-sync'], { ghostMode: false });

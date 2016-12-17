@@ -209,15 +209,15 @@ gulp.task('release.major', function (done: any) {
 gulp.task('_release', function (done: any) {
   runSequence(
     // 'changelog',
-    'commit',
-    'push.changes',
+    'git.add.commit.bump',
+    'git.push.changes',
     'create.new.tag',
     'github.release',
 
     // update changelog and push to master
     'regenerate.changelog',
-    'commit',
-    'push.changes',
+    'git.add.commit.bump',
+    'git.push.changes',
     function (error: any) {
       if (error) {
         console.log(error.message);
@@ -250,17 +250,28 @@ gulp.task('pull.upstream.seed', function(done: any) {
  */
 gulp.task('init.project', function(done: any) {
   runSequence(
-    'git.delete.all.tags',
     'init.readme',
+    'remove.git.dir',
+    'git.init',
+    'git.add.remote.origin',
+    'git.delete.all.tags',
     'git.add.remote.upstream',
     'git.create.branch.upstream',
+    'git.add.commit',
+    'git.push.changes',
+    'copy.githooks',
     done);
 });
 
 
 gulp.task('init.readme', function(done: any) {
   runSequence(
+
+    // copies ./README.md to ./docs/PROJECT_README.md
     'archive.readme',
+
+    // copies ./docs/NPM_README.md to ./README.md
+    // replaces string tags with project information
     'init.npm.readme',
     done);
 });

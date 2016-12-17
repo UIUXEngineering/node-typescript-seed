@@ -23,6 +23,8 @@ This seed is designed to create consumable services, models ( for MVC ), busines
 
 
 # Table of Contents
+- [Quick Start](#quick-start)
+
 ### Workflow
 - [SRC](#src)
 - [SAMPLES](#samples)
@@ -42,29 +44,98 @@ This seed is designed to create consumable services, models ( for MVC ), busines
 - [Generate Documentation](#generate-documentation)
 - [Shrinkwrap](#shrinkwrap)
 
-### Creating Your Project
-- [Clone](#clone)
+### Process
 - [Yarn and NPM](#yarn-and-npm)
-- [Install](#install)
-- [Init Project](#init-project)
 - [Git Hooks](#git-hooks)
-- [Environment](#environment)
+- [Environment Variables](#environment-variables)
 
-### More Info
+### Project Info
 - [Configs](#configs)
 - [Change Log](#change-log)
 - [References](#references)
 - [License](#license)
 
+# Quick Start
+  
+ ```bash
+ # get a shallow copy of this seed
+ $ git clone --depth 1 https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
+ 
+ # change directories to your project
+ $ cd [name-of-project]
+ 
+ ```
+ 
+In your package.json:
+
+1. Update the name of your project as it will be published to the npm registry.
+
+Example:
+```json
+    
+    // change  
+    
+    {
+      "name": "@UIUXEngineering/node-typescript-seed"
+      ...
+    }
+    
+    // to 
+    
+    {
+      "name": "@MyCompany/my-project-name"
+      ...
+    }
+```
+2. Replace repository url with your project's repository url
+
+Example:
+```json
+
+     // change 
+    {
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/UIUXEngineering/node-typescript-seed.git"
+      },
+      "bugs": {
+        "url": "https://github.com/UIUXEngineering/node-typescript-seed/issues"
+      },
+      "homepage": "https://github.com/UIUXEngineering/node-typescript-seed#readme",
+      
+    }
+    
+    // to
+    
+    {
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MyCompany/my-project-name.git"
+      },
+      "bugs": {
+        "url": "https://github.com/MyCompany/my-project-name/issues"
+      },
+      "homepage": "https://github.com/MyCompany/my-project-name#readme",
+      
+    }
+```
+Init your project by running yarn commands.
+
+```bash
+    $ yarn install
+    $ yarn init.project
+```
+
+
 # Workflow
 You have two dictories to work in -- `./src` and `./samples`.
 
-## SRC
+## `./src`
 Deliverable source code.
 
 `./src` - develop your TypeScript deliverable code here. Keep your `*.spec.ts` files next to your source `*.ts` files. Place Jasmine Custom Matchers or any other spec heler files in the `./src/specHelpers` directory.
 
-## SAMPLES
+## `./samples`
 Non-deliverable code.
 
 `./samples` - code that is not included in build tasks. `./samples` is supported by Unit Tests, Code Coverage, and TSLint.
@@ -228,36 +299,7 @@ NPM shrinkwrap is supported and maintained automatically via a `postinstall` and
 For more instrunctions on shrinkwrap, see [./npm-shrinkwrap.readme.md](./npm-shrinkwrap.readme.md).
 
 
-# Creating Your Project
-## Clone
-
-Clone this seed.
-
-```bash
-# get a shallow copy of this seed
-$ git clone --depth 1 https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
-
-# change directories to your project
-$ cd [name-of-project]
-
-# remove the .git hidden directory
-$ rm -rf .git
-
-# reinitialize the project as a git repo
-$ git init
-
-# add the clone url of YOUR project
-$ git remote add origin [your project git url that your would clone]
-
-# add all files to get staging
-$ git add .
-
-# commit projct
-$ git commit -m "add project seed"
-
-# push to your master branch
-$ git push
-```
+# Process
 
 ## Yarn And NPM
 This repo supports both yarn and npm. Yarn is the preferred package management tool. Npm is is maintained in case your build environment does not support yar.
@@ -267,33 +309,6 @@ For local development, *always use yarn*. When adding and removing npm modules, 
 You will see an error when installing / uninstall with yarn saying that npm-shrinkwrap is not respected. That is fine, nothing is broken. You are more than welecome to remove the shrinkwrap files and comment the tasks in the gulpFile.ts.
 
 
-## Install
-
-```bash
-$ cd your repo
-
-# fast install (via Yarn, https://yarnpkg.com)
-$ yarn install  # or yarn
-
-
-```
-
-## Init Project
-
-Update the ***name*** and ***repo url*** in the `package.json` file with your project information. 
-
-To copy git hooks, readme, :
-
-```bash
-$ yarn init.project
-```
-
-To copy git hooks to the .git directory:
-
-```bash
-$ yarn init.githooks
-```
-
 
 ## Git Hooks
 A git hook is used to run unit tests and tslint before pushing to the remote repository. The git hook is automatically installed as a `postinstall` npm script. You can manually run the install script using the command:
@@ -302,7 +317,7 @@ A git hook is used to run unit tests and tslint before pushing to the remote rep
     $ node tools/utils/seed/npm/copy-npm-shrinkwrap
 ```
 
-## Environment
+## Environment Variables
 All NPM packages needed are installed globally to isolate your environment from others. On a **Mac**, you can run packages locally that would only work globally installed. To configure this, add an alias to your `.zshrc` or `.bash_profile`:
 
 ```bash
@@ -314,7 +329,7 @@ All NPM packages needed are installed globally to isolate your environment from 
     $ run cz
 ```
 
-# More Info
+# Project Info
 ## Configs
 
 Unfortunately, there are many more configs than I would like to have ( more than one ). They all have a separate purpose, and if located in a peculiar place, there is a specific reason.
