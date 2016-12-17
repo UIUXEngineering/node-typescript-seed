@@ -126,6 +126,7 @@ Init your project by running yarn commands.
     $ yarn init.project
 ```
 
+**Ignore 'Your environment is not in a good shape' shrinkwrap warning.**
 
 # Workflow
 You have two dictories to work in -- `./src` and `./samples`.
