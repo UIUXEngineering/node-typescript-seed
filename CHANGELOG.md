@@ -1,40 +1,5 @@
-<a name="1.0.5"></a>
-## [1.0.5](https://github.com/UIUXEngineering/node-typescript-seed/compare/1.0.4...1.0.5) (2016-12-16)
-
-
-### Features
-
-* **upstream:** add upstream remote as init process ([4da5857](https://github.com/UIUXEngineering/node-typescript-seed/commit/4da5857))
-
-
-
-<a name="1.0.4"></a>
-## [1.0.4](https://github.com/UIUXEngineering/node-typescript-seed/compare/1.0.2...1.0.4) (2016-12-16)
-
-
-### Bug Fixes
-
-* **release:** gulp task not returning stream ([6155b4a](https://github.com/UIUXEngineering/node-typescript-seed/commit/6155b4a))
-
-
-
-<a name="1.0.2"></a>
-## [1.0.2](https://github.com/UIUXEngineering/node-typescript-seed/compare/1.0.1...1.0.2) (2016-12-16)
-
-
-
-<a name="1.0.1"></a>
-## [1.0.1](https://github.com/UIUXEngineering/node-typescript-seed/compare/0.2.0...1.0.1) (2016-12-16)
-
-
-
-<a name="0.2.0"></a>
-# [0.2.0](https://github.com/UIUXEngineering/node-typescript-seed/compare/0.0.1...0.2.0) (2016-12-16)
-
-
-
-<a name="0.0.1"></a>
-## [0.0.1](https://github.com/UIUXEngineering/node-typescript-seed/compare/0.0.0-alpha.4...0.0.1) (2016-12-16)
+<a name="1.0.6"></a>
+## [1.0.6](https://github.com/UIUXEngineering/node-typescript-seed/compare/b6aa178...1.0.6) (2016-12-17)
 
 
 ### Bug Fixes
@@ -42,10 +7,16 @@
 * **appveyor:** copy shrinkwrap with node and not a gulp task ([6609d65](https://github.com/UIUXEngineering/node-typescript-seed/commit/6609d65))
 * **build:** fix test to have build pass ([9bb5eb7](https://github.com/UIUXEngineering/node-typescript-seed/commit/9bb5eb7))
 * **build:** remove reshirnkwrap from postinstall task ([756e6d9](https://github.com/UIUXEngineering/node-typescript-seed/commit/756e6d9))
+* **changelog:** push latest changes to changelog ([981dcd4](https://github.com/UIUXEngineering/node-typescript-seed/commit/981dcd4))
+* **config:** comment unused prop in config ([a560224](https://github.com/UIUXEngineering/node-typescript-seed/commit/a560224))
+* **env:** add npm modules ([97bf5dc](https://github.com/UIUXEngineering/node-typescript-seed/commit/97bf5dc))
+* **env:** add validate extension utils ([b6aa178](https://github.com/UIUXEngineering/node-typescript-seed/commit/b6aa178))
 * **githooks:** fix qa.dev task ([0245d95](https://github.com/UIUXEngineering/node-typescript-seed/commit/0245d95))
 * **githooks:** fix type in task ([ef6ba0d](https://github.com/UIUXEngineering/node-typescript-seed/commit/ef6ba0d))
 * **istanbul:** includeUntested ([92a2ee4](https://github.com/UIUXEngineering/node-typescript-seed/commit/92a2ee4))
+* **npm:** add gulp-load-plugins missing module ([9ee7a35](https://github.com/UIUXEngineering/node-typescript-seed/commit/9ee7a35))
 * **qa.src:** fix pre-push hook ([c56fff5](https://github.com/UIUXEngineering/node-typescript-seed/commit/c56fff5))
+* **release:** gulp task not returning stream ([6155b4a](https://github.com/UIUXEngineering/node-typescript-seed/commit/6155b4a))
 
 
 ### Features
@@ -67,12 +38,15 @@
 * **index:** add index.ts to root directory ([d0cc4e9](https://github.com/UIUXEngineering/node-typescript-seed/commit/d0cc4e9))
 * **init:** fix typo in npm readme ([a8956b5](https://github.com/UIUXEngineering/node-typescript-seed/commit/a8956b5))
 * **init:** gulp task to initialize project ([ef240d6](https://github.com/UIUXEngineering/node-typescript-seed/commit/ef240d6))
+* **init.project:** refactor init project sequence ([da8f747](https://github.com/UIUXEngineering/node-typescript-seed/commit/da8f747))
 * **jasmine:** add spec reporter ([dc105d1](https://github.com/UIUXEngineering/node-typescript-seed/commit/dc105d1))
 * **jasmine:** init jasmine ([16f47c2](https://github.com/UIUXEngineering/node-typescript-seed/commit/16f47c2))
 * **jasmine:** remove init spec ([8259d8a](https://github.com/UIUXEngineering/node-typescript-seed/commit/8259d8a))
 * **jasmine:** run unit tests ([4e6a5fa](https://github.com/UIUXEngineering/node-typescript-seed/commit/4e6a5fa))
 * **npm:** ignore coverage directory ([bdb2f0f](https://github.com/UIUXEngineering/node-typescript-seed/commit/bdb2f0f))
+* **npm:** scripts for release ([137693f](https://github.com/UIUXEngineering/node-typescript-seed/commit/137693f))
 * **npmignore:** add npm ignore files ([6977da9](https://github.com/UIUXEngineering/node-typescript-seed/commit/6977da9)), closes [#11](https://github.com/UIUXEngineering/node-typescript-seed/issues/11)
+* **project:** remove tags task ([804163d](https://github.com/UIUXEngineering/node-typescript-seed/commit/804163d))
 * **rollup:** gulp task configruration ([e33fe24](https://github.com/UIUXEngineering/node-typescript-seed/commit/e33fe24))
 * **rollup:** move rollup config json to seed config ([c7b9980](https://github.com/UIUXEngineering/node-typescript-seed/commit/c7b9980)), closes [#8](https://github.com/UIUXEngineering/node-typescript-seed/issues/8)
 * **samples:** add design patterns ([d89bd13](https://github.com/UIUXEngineering/node-typescript-seed/commit/d89bd13))
@@ -88,45 +62,8 @@
 * **tslint:** tslint tasks for dev and env ([a13e773](https://github.com/UIUXEngineering/node-typescript-seed/commit/a13e773)), closes [#10](https://github.com/UIUXEngineering/node-typescript-seed/issues/10)
 * **uglify:** uglify umd ([d1d4c6b](https://github.com/UIUXEngineering/node-typescript-seed/commit/d1d4c6b)), closes [#3](https://github.com/UIUXEngineering/node-typescript-seed/issues/3)
 * **umd:** rollup umd bundling task ([2f5d13e](https://github.com/UIUXEngineering/node-typescript-seed/commit/2f5d13e))
+* **upstream:** add upstream remote as init process ([4da5857](https://github.com/UIUXEngineering/node-typescript-seed/commit/4da5857))
 * **watch:** watch unit tests ([dc61ae4](https://github.com/UIUXEngineering/node-typescript-seed/commit/dc61ae4))
-
-
-
-<a name="0.0.0-alpha.4"></a>
-# [0.0.0-alpha.4](https://github.com/UIUXEngineering/node-typescript-seed/compare/0.0.0-alpha.3...0.0.0-alpha.4) (2016-12-07)
-
-
-### Bug Fixes
-
-* **changelog:** push latest changes to changelog ([981dcd4](https://github.com/UIUXEngineering/node-typescript-seed/commit/981dcd4))
-
-
-
-<a name="0.0.0-alpha.3"></a>
-# [0.0.0-alpha.3](https://github.com/UIUXEngineering/node-typescript-seed/compare/0.0.0-alpha.2...0.0.0-alpha.3) (2016-12-07)
-
-
-### Features
-
-* **npm:** scripts for release ([137693f](https://github.com/UIUXEngineering/node-typescript-seed/commit/137693f))
-
-
-
-<a name="0.0.0-alpha.2"></a>
-# [0.0.0-alpha.2](https://github.com/UIUXEngineering/node-typescript-seed/compare/0.0.0-alpha.1...0.0.0-alpha.2) (2016-12-07)
-
-
-
-<a name="0.0.0-alpha.1"></a>
-# [0.0.0-alpha.1](https://github.com/UIUXEngineering/node-typescript-seed/compare/b6aa178...0.0.0-alpha.1) (2016-12-07)
-
-
-### Bug Fixes
-
-* **config:** comment unused prop in config ([a560224](https://github.com/UIUXEngineering/node-typescript-seed/commit/a560224))
-* **env:** add npm modules ([97bf5dc](https://github.com/UIUXEngineering/node-typescript-seed/commit/97bf5dc))
-* **env:** add validate extension utils ([b6aa178](https://github.com/UIUXEngineering/node-typescript-seed/commit/b6aa178))
-* **npm:** add gulp-load-plugins missing module ([9ee7a35](https://github.com/UIUXEngineering/node-typescript-seed/commit/9ee7a35))
 
 
 
