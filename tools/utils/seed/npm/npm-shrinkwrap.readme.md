@@ -1,3 +1,6 @@
+From Google Angular Project:
+
+
 All of our npm dependencies are locked via the `npm-shrinkwrap.json` file for the following reasons:
 
 - our project has lots of dependencies which update at unpredictable times, so it's important that
@@ -8,6 +11,14 @@ All of our npm dependencies are locked via the `npm-shrinkwrap.json` file for th
   which allows us to build the project with the correct dependencies every time
 
 We also generate `npm-shrinkwrap.clean.js` file which is used during code reviews or debugging to easily review what has actually changed without extra noise.
+
+Initial setup:
+
+1. remove node_modules
+2. npm install
+3. npm shrinkwrap
+4. npm run copy.shrinkwrap
+5. npm run create.clean.shrinkwrap
 
 To add a new dependency do the following:
 

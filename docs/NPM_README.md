@@ -17,11 +17,11 @@ This project is generated from the [node-typescript-seed](https://github.com/UIU
 Install using npm or yarn.
 
 ```bash
-    npm i <%= name %> -D
+    yarn install <%= name %>
     
     # or
     
-    yarn install <%= name %>
+    npm i <%= name %> -D
 
 ```
 

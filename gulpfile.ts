@@ -254,11 +254,11 @@ gulp.task('init.project', function(done: any) {
     'remove.git.dir',
     'git.init',
     'git.add.remote.origin',
-    'git.delete.all.tags',
-    'git.add.remote.upstream',
-    'git.create.branch.upstream',
     'git.add.commit',
     'git.push.changes',
+    // 'git.delete.all.tags',
+    'git.add.remote.upstream',
+    'git.create.branch.upstream',
     'copy.githooks',
     done);
 });

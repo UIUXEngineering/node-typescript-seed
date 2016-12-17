@@ -11,7 +11,8 @@
     "init.upstream": "gulp init.upstream",
     "init.readme": "gulp init.readme",
     "init.releaser": "conventional-github-releaser -p angular -r 0",
-    "postinstall": "node tools/utils/seed/npm/copy-npm-shrinkwrap",
+    "copy.shrinkwrap": "node tools/utils/seed/npm/copy-npm-shrinkwrap",
+    "create.clean.shrinkwrap": "cp npm-shrinkwrap.json npm-shrinkwrap.clean.json",
     "release": "gulp release",
     "release.build": "gulp release.build",
     "release.alpha": "gulp release.alpha",
@@ -118,9 +119,6 @@
     "browser-sync": "^2.18.5",
     "chokidar-socket-emitter": "^0.5.4",
     "compodoc": "^0.0.23"
-  },
-  "peerDependencies": {
-    "rxjs": "^5.0.0-rc.4"
   },
   "dependencies": {
     "rxjs": "^5.0.0-rc.4"

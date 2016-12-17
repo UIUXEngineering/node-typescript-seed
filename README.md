@@ -292,11 +292,8 @@ yarn  release.major
 
 
 ## Shrinkwrap
-Use yarn as your package manager. It maintains a **yarn.lock** file that serves the same purpose as shrinkwrap.
-
-NPM shrinkwrap is supported and maintained automatically via a `postinstall` and `postuninstall` npm script. When you add or remove packages with yarn ( which updates the yarn.lock file), the `postinstall` or `posuninstall` scripts update shrinkwrap.
-
-For more instrunctions on shrinkwrap, see [./npm-shrinkwrap.readme.md](./npm-shrinkwrap.readme.md).
+Use yarn as your package manager. It maintains a **yarn.lock** file that serves the same purpose as shrinkwrap. NPM shrinkwrap is not supported in this project, though there are helpful tasks set up if you want to get it working.
+For more instrunctions on shrinkwrap, see [./tools/utils/seed/npm/npm-shrinkwrap.readme.md](./tools/utils/seed/npm/npm-shrinkwrap.readme.md).
 
 
 # Process
