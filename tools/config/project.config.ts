@@ -10,9 +10,6 @@ export class ProjectConfig extends SeedConfig {
 
   PROJECT_TASKS_DIR = join(process.cwd(), this.TOOLS_DIR, 'tasks', 'project');
 
-  // ADD GIT URL TO YOUR PROJECT
-  GIT_REMOTE_ORIGIN = `https://github.com/UIUXEngineering/node-typescript-test.git`;
-
   constructor() {
     super();
 

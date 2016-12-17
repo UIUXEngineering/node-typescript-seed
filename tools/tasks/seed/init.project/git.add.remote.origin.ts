@@ -1,11 +1,15 @@
-import * as gulp from 'gulp';
 import * as gulpLoadPlugins from 'gulp-load-plugins';
-import Config from '../../../config';
+import { JSONParse } from '../../../utils';
 
 const plugins = <any>gulpLoadPlugins();
 
 export = (done: any) => {
-  plugins.git.addRemote('origin', Config.GIT_REMOTE_ORIGIN, function (err) {
+
+  let pkgJson = JSONParse('package.json');
+
+  let url: string = pkgJson.repository.url.replace('git+https', 'https');
+
+  plugins.git.addRemote('origin', url, function (err) {
     if (err) {
       done(err);
     } else {
