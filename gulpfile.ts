@@ -251,8 +251,7 @@ gulp.task('pull.upstream.seed', function(done: any) {
 gulp.task('init.project', function(done: any) {
   runSequence(
     'init.readme',
-    'remove.git.dir',
-    'git.init',
+    'git.remove.remote.origin',
     'git.add.remote.origin',
     'git.delete.all.tags',
     'git.add.remote.upstream',

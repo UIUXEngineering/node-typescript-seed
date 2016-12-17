@@ -7,7 +7,7 @@
     "build": "gulp build",
     "git.delete.all.tags": "gulp git.delete.all.tags",
     "init.project": "gulp init.project",
-    "init.githooks": "gulp copy.githooks",
+    "copy.githooks": "gulp copy.githooks",
     "init.upstream": "gulp init.upstream",
     "init.readme": "gulp init.readme",
     "init.releaser": "conventional-github-releaser -p angular -r 0",
