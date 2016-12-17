@@ -3,7 +3,7 @@ import {  resolve } from 'path';
 
 export = (done: any) => {
 
-  let gitDir: string = resolve('./git');
+  let gitDir: string = resolve('./.git');
 
   Promise.all([
     rmfr(gitDir, {glob: true})])

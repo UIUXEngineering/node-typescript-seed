@@ -5,7 +5,7 @@ import * as gulpLoadPlugins from 'gulp-load-plugins';
 const plugins = <any>gulpLoadPlugins();
 
 export = (done: any) => {
-  plugins.git.init({args: '--bare'}, function (err) {
+  plugins.git.init(function (err) {
     if (err) {
       done(err);
     } else {
