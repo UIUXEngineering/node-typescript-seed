@@ -2387,9 +2387,9 @@ gulp-decompress@^1.2.0:
     gulp-util "^3.0.1"
     readable-stream "^2.0.2"
 
-gulp-download@^0.0.1:
+"gulp-download@https://github.com/UIUXEngineering/gulp-download.git":
   version "0.0.1"
-  resolved "https://registry.yarnpkg.com/gulp-download/-/gulp-download-0.0.1.tgz#54a3018fc619b341ccf6491606f7adf0bd3c7397"
+  resolved "https://github.com/UIUXEngineering/gulp-download.git#73a82321da17c3cb31aa291914ac818aa1f362c4"
   dependencies:
     gulp-util latest
     request latest
