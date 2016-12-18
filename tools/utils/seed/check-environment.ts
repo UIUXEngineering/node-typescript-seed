@@ -57,7 +57,7 @@ export function checkEnvironment(reqs) {
           reqs.requiredNpmVersion + '. Run: npm update -g npm');
     }
 
-    if (!checkNodeModules(false, false)) {
+    if (reqs.shrinkwrap && !checkNodeModules(false, false)) {
       issues.push(
           'Your node_modules directory is stale or out of sync with npm-shrinkwrap.json. Run: npm install');
     }

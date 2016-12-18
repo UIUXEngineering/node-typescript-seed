@@ -1,6 +1,5 @@
 import * as gulp from 'gulp';
 import * as runSequence from 'run-sequence';
-import { join } from 'path';
 import Config from './tools/config';
 import { loadTasks } from './tools/utils';
 import { checkEnvironment } from './tools/utils';
@@ -8,6 +7,7 @@ import { checkEnvironment } from './tools/utils';
 checkEnvironment({
   requiredNpmVersion: '>=3.5.3 <4.0.0',
   requiredNodeVersion: '>=5.4.1 <7.0.0',
+  shrinkwrap: false
 });
 
 loadTasks(Config.TASKS_PATH);

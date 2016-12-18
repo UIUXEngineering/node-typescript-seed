@@ -13,12 +13,12 @@ All of our npm dependencies are locked via the `npm-shrinkwrap.json` file for th
 We also generate `npm-shrinkwrap.clean.js` file which is used during code reviews or debugging to easily review what has actually changed without extra noise.
 
 Initial setup:
-
-1. remove node_modules
-2. npm install
-3. npm shrinkwrap
-4. npm run copy.shrinkwrap
-5. npm run create.clean.shrinkwrap
+1. In `./gulpFile.ts`, set the `shrinkwrap` option to the method `checkEnvironment` to true.
+2. remove node_modules
+3. npm install
+4. npm shrinkwrap
+5. npm run copy.shrinkwrap
+6. npm run create.clean.shrinkwrap
 
 To add a new dependency do the following:
 
