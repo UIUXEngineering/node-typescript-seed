@@ -62,78 +62,78 @@ This seed is designed to create consumable services, models ( for MVC ), busines
 
 2. Clone this seed.
 
- ```bash
- # get a shallow copy of this seed
- $ git clone --depth 1 https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
- 
- # change directories to your project
- $ cd [name-of-project]
- 
- ```
+     ```bash
+     # get a shallow copy of this seed
+     $ git clone --depth 1 https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
+     
+     # change directories to your project
+     $ cd [name-of-project]
+     
+     ```
  
 3. In your package.json:
 
-Update the name of your project as it will be published to the npm registry.
-
-Example:
-```json
+    Update the name of your project as it will be published to the npm registry.
     
-    // change  
-    
-    {
-      "name": "@UIUXEngineering/node-typescript-seed"
-      ...
-    }
-    
-    // to 
-    
-    {
-      "name": "@MyCompany/my-project-name"
-      ...
-    }
-```
+    Example:
+    ```json
+        
+        // change  
+        
+        {
+          "name": "@UIUXEngineering/node-typescript-seed"
+          ...
+        }
+        
+        // to 
+        
+        {
+          "name": "@MyCompany/my-project-name"
+          ...
+        }
+    ```
 
 4. Replace repository url with your project's repository url
 
-Example:
-```json
-
-     // change 
-    {
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/UIUXEngineering/node-typescript-seed.git"
-      },
-      "bugs": {
-        "url": "https://github.com/UIUXEngineering/node-typescript-seed/issues"
-      },
-      "homepage": "https://github.com/UIUXEngineering/node-typescript-seed#readme",
-      
-    }
+    Example:
+    ```json
     
-    // to
-    
-    {
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/MyCompany/my-project-name.git"
-      },
-      "bugs": {
-        "url": "https://github.com/MyCompany/my-project-name/issues"
-      },
-      "homepage": "https://github.com/MyCompany/my-project-name#readme",
-      
-    }
-```
+         // change 
+        {
+        "repository": {
+            "type": "git",
+            "url": "git+https://github.com/UIUXEngineering/node-typescript-seed.git"
+          },
+          "bugs": {
+            "url": "https://github.com/UIUXEngineering/node-typescript-seed/issues"
+          },
+          "homepage": "https://github.com/UIUXEngineering/node-typescript-seed#readme",
+          
+        }
+        
+        // to
+        
+        {
+        "repository": {
+            "type": "git",
+            "url": "git+https://github.com/MyCompany/my-project-name.git"
+          },
+          "bugs": {
+            "url": "https://github.com/MyCompany/my-project-name/issues"
+          },
+          "homepage": "https://github.com/MyCompany/my-project-name#readme",
+          
+        }
+    ```
 
 5. Init your project by running yarn commands.
 
-```bash
-    $ yarn install
-    $ yarn init.project
-```
-
-**Ignore 'Your environment is not in a good shape' shrinkwrap warning.**
+    ```bash
+        $ yarn install
+        $ yarn init.project
+    ```
+    
+    **Ignore 'Your environment is not in a good shape' shrinkwrap warning.**
 
 # Workflow
 You have two dictories to work in -- `./src` and `./samples`.
