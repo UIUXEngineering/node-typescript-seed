@@ -11,10 +11,12 @@ export = () => {
 
   var pkgJson = JSONParse('package.json');
 
+  let url: string = pkgJson.repository.replace('git+https', 'https');
+
   let templateLocals = {
     name: pkgJson.name,
-    repo: pkgJson.repository.url.replace('git+https', 'https'),
-    issues: pkgJson.bugs.url
+    repo: url,
+    issues: url.replace('.git', '/issues')
   };
 
   return gulp.src(join(Config.DOCS_DIR, Config.NPM_README_FILENAME))
