@@ -5,6 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "build": "gulp build",
+    "download.docs": "gulp download.docs",
     "git.delete.all.tags": "gulp git.delete.all.tags",
     "init.project": "gulp init.project",
     "copy.githooks": "gulp copy.githooks",
@@ -55,8 +56,8 @@
   },
   "homepage": "https://github.com/UIUXEngineering/node-typescript-seed#readme",
   "devDependencies": {
-    "@angular/compiler": "^2.3.0",
-    "@angular/core": "^2.3.0",
+    "@angular/compiler": "^2.3.1",
+    "@angular/core": "^2.3.1",
     "@types/async": "^2.0.32",
     "@types/browser-sync": "0.0.34",
     "@types/chalk": "^0.4.31",
@@ -81,6 +82,7 @@
     "gulp": "^3.9.1",
     "gulp-bump": "^2.5.1",
     "gulp-conventional-changelog": "^1.1.0",
+    "gulp-download": "https://github.com/Metrime/gulp-download.git",
     "gulp-git": "^1.12.0",
     "gulp-istanbul": "^1.1.1",
     "gulp-jasmine": "^2.4.2",

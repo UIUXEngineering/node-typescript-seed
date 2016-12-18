@@ -42,6 +42,7 @@ This seed is designed to create consumable services, models ( for MVC ), busines
 - [Commiting Changes](#commiting-changes)
 - [Releasing](#releasing)
 - [Generate Documentation](#generate-documentation)
+- [Downloading documentation](#downloading-documentation)
 - [Shrinkwrap](#shrinkwrap)
 
 ### Process
@@ -167,14 +168,14 @@ To facilitate better testing and consumption, create test mocks independently of
 Mocks are built as a deliverable, but not included with application code. When consuming the application, you will **not** consume the mock code. You can then consume the mocks in unit tests of your consuming application separately.
 
 ## Update With This Seed
-*yarn command* `yarn pull.upstream.seed`  
+`yarn pull.upstream.seed`  
 
 # Common Tasks
 ## Most Used Tasks
-*yarn command for build* `yarn build`  
-*yarn command to lint and test* `yarn qa`  
-*yarn command for code coverage:* `yarn cover`    
-*yarn command to serve coverage report:* `yarn serve`   
+`yarn build` -- build  
+`yarn qa` -- lint and test  
+`yarn cover` -- code coverage    
+`yarn serve` -- serve coverage report  
 
 ## Build
 *yarn command* `yarn build`
@@ -196,16 +197,16 @@ The transpiled code is output in the `./dist` directory:
 
 ## Unit Test
 ### `./src` directory
-*yarn command for unit test:* `yarn test`  
-*yarn command for code coverage:* `yarn cover`  
-*yarn command to serve coverage report:* `yarn serve`  
-*yarn command to watch unit test:* `yarn watch`  
+`yarn test` -- unit test  
+`yarn cover` -- code coverage  
+`yarn serve` -- serve coverage report  
+`yarn watch` -- watch unit test  
   
 ### `./samples` directory  
-*yarn command for unit test:* `yarn test.samples`  
-*yarn command for code coverage:* `yarn cover.samples`  
-*yarn command to serve coverage report:* `yarn serve.samples`  
-*yarn command to watch unit test:* `yarn watch.samples`  
+`yarn test.samples` -- unit test  
+`yarn cover.samples` -- code coverage  
+`yarn serve.samples` -- serve coverage report  
+`yarn watch.samples` -- watch unit tests  
   
 **When running the `watch` command, do not run the `test` command.**
 
@@ -214,24 +215,24 @@ See [Add Jasmine Custom Matchers](#add-jasmine-custom-matchers) above.
 
 ## TS Lint
 ### `./src` directory
-*yarn command* `yarn lint`
+`yarn lint`
 
 ### `./samples` directory
-*yarn command* `yarn lint.samples`
+`yarn lint.samples`
 
 ### project except for `./src` and `./samples`
-*yarn command* `yarn lint.env`
+`yarn lint.env`
 
 ## QA
 Combines **lint** and **test** tasks for convenience of running one command.
 
 ### `./src` directory
-*yarn command* `yarn qa` -- lint, test
-*yarn command* `yarn qa.cover` -- lint, test, coverage report
+`yarn qa` -- lint, test
+`yarn qa.cover` -- lint, test, coverage report
 
 ### `./samples` directory
-*yarn command* `yarn qa.samples` -- lint, test
-*yarn command* `yarn qa.cover.samples` -- lint, test, coverage report
+`yarn qa.samples` -- lint, test 
+`yarn qa.cover.samples` -- lint, test, coverage report
 
 ## Samples
 The `./samples` directory is your research and playground space to learn and try things which you not ready to place in `./src` code. The same test and coverage tools are available to allow TDD for your expirements.
@@ -294,8 +295,15 @@ yarn  release.major
 ```
 
 ## Generate Documentation
-*yarn command to generate documentation* `yarn compodoc`
-*yarn command to serve documentation* `yarn serve.doc`
+`yarn compodoc` -- generate documentation
+`yarn serve.doc` -- serve documentation
+
+## Downloading documentation
+`yarn download.docs` 
+ 
+External documentation may be downloaded and committed to this repo. See the `DOWNLOAD_DOCS` in the `./tools/config/seed.config.ts` file.
+
+Add additional documentation in the file `./project.config.ts`;
 
 
 ## Shrinkwrap

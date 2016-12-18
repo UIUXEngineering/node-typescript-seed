@@ -221,6 +221,21 @@ export class SeedConfig {
 
   })(this.BROWSER_SYNC_CONFIG_COVERAGE_SRC);
 
+  DOWNLOAD_DOCS: any = [
+    {
+      url: 'https://raw.githubusercontent.com/Reactive-Extensions/RxJS/master/doc/gettingstarted/which-instance.md',
+      file: 'rxjs/which-instance.md'
+    },
+    {
+      url: 'https://raw.githubusercontent.com/Reactive-Extensions/RxJS/master/doc/gettingstarted/which-static.md',
+      file: 'rxjs/which-static.md'
+    },
+    {
+      url: 'https://raw.githubusercontent.com/Reactive-Extensions/RxJS/master/doc/api/core/observable.md',
+      file: 'rxjs/observable.md'
+    }
+  ]
+
   /**
    * The version of the application as defined in the `package.json`.
    */
