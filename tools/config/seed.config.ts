@@ -234,7 +234,14 @@ export class SeedConfig {
       url: 'https://raw.githubusercontent.com/Reactive-Extensions/RxJS/master/doc/api/core/observable.md',
       file: 'rxjs/observable.md'
     }
-  ]
+  ];
+
+  SEED_DOCS: any = [
+    {
+      url: 'https://raw.githubusercontent.com/UIUXEngineering/node-typescript-seed/master/README.md',
+      file: this.PROJECT_README_FILENAME
+    }
+  ];
 
   /**
    * The version of the application as defined in the `package.json`.

@@ -43,6 +43,7 @@ This seed is designed to create consumable services, models ( for MVC ), busines
 - [Releasing](#releasing)
 - [Generate Documentation](#generate-documentation)
 - [Downloading documentation](#downloading-documentation)
+- [Update Seed Readme](#update-seed-readme)
 - [Shrinkwrap](#shrinkwrap)
 
 ### Process
@@ -57,10 +58,11 @@ This seed is designed to create consumable services, models ( for MVC ), busines
 - [License](#license)
 
 # Quick Start
+1. This project uses [yarn](https://yarnpkg.com/) for the default package manager instead of `npm`. See [install instructions](https://yarnpkg.com/en/docs/install) you do not already have `yarn` installed.
 
-1. Create an empty project repo. The `init.project` task will push to that repo.
+2. Create an empty project repo. The `init.project` task will push to that repo.
 
-2. Clone this seed.
+3. Clone this seed.
 
      ```bash
      # get a shallow copy of this seed
@@ -71,7 +73,7 @@ This seed is designed to create consumable services, models ( for MVC ), busines
      
      ```
  
-3. In your package.json:
+4. In your package.json:
 
     Update the name of your project as it will be published to the npm registry.
     
@@ -93,7 +95,7 @@ This seed is designed to create consumable services, models ( for MVC ), busines
         }
     ```
 
-4. Replace repository url with your project's repository url
+5. Replace repository url with your project's repository url
 
     Example:
     ```json
@@ -114,7 +116,7 @@ This seed is designed to create consumable services, models ( for MVC ), busines
         }
     ```
 
-5. Init your project by running yarn commands.
+6. Init your project by running yarn commands.
 
     ```bash
         $ yarn install
@@ -292,6 +294,10 @@ yarn  release.major
 External documentation may be downloaded and committed to this repo. See the `DOWNLOAD_DOCS` in the `./tools/config/seed.config.ts` file.
 
 Add additional documentation in the file `./project.config.ts`;
+
+## Update Seed Readme
+`yarn update.seed.readme` 
+To update `./docs/PROJECT_README.md` to the latest README.md from node-typescript-seed master.
 
 
 ## Shrinkwrap
