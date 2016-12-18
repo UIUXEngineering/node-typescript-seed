@@ -100,29 +100,17 @@ This seed is designed to create consumable services, models ( for MVC ), busines
     
          // change 
         {
-        "repository": {
-            "type": "git",
-            "url": "git+https://github.com/UIUXEngineering/node-typescript-seed.git"
-          },
-          "bugs": {
-            "url": "https://github.com/UIUXEngineering/node-typescript-seed/issues"
-          },
-          "homepage": "https://github.com/UIUXEngineering/node-typescript-seed#readme",
-          
+            ...
+            "repository": "git+https://github.com/UIUXEngineering/node-typescript-seed.git"
+            ...  
         }
         
         // to
         
         {
-        "repository": {
-            "type": "git",
-            "url": "git+https://github.com/MyCompany/my-project-name.git"
-          },
-          "bugs": {
-            "url": "https://github.com/MyCompany/my-project-name/issues"
-          },
-          "homepage": "https://github.com/MyCompany/my-project-name#readme",
-          
+            ...
+            "repository": : "git+https://github.com/MyCompany/my-project-name.git"
+            ...
         }
     ```
 
