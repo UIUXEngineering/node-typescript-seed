@@ -7,7 +7,7 @@ export = (done: any) => {
 
   let pkgJson = JSONParse('package.json');
 
-  let url: string = pkgJson.repository.url.replace('git+https', 'https');
+  let url: string = pkgJson.repository.replace('git+https', 'https');
 
   plugins.git.addRemote('origin', url, function (err) {
     if (err) {
