@@ -82,7 +82,6 @@
     "gulp": "^3.9.1",
     "gulp-bump": "^2.5.1",
     "gulp-conventional-changelog": "^1.1.0",
-    "gulp-download": "https://github.com/Metrime/gulp-download.git",
     "gulp-git": "^1.12.0",
     "gulp-istanbul": "^1.1.1",
     "gulp-jasmine": "^2.4.2",
@@ -107,7 +106,7 @@
     "semver": "^5.3.0",
     "tildify": "^1.2.0",
     "ts-node": "^1.7.0",
-    "tslint": "^4.0.2",
+    "tslint": "4.0.0",
     "typescript": "^2.1.4",
     "yargs": "^6.5.0",
     "zone.js": "^0.7.2"
