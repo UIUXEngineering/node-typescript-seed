@@ -257,8 +257,6 @@ gulp.task('init.project', function(done: any) {
     'git.add.commit',
     'git.push.changes',
     // 'git.delete.all.tags',
-    'git.add.remote.upstream',
-    'git.create.branch.upstream',
     'copy.githooks',
     done);
 });
