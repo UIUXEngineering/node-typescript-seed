@@ -18,11 +18,6 @@ Install using npm or yarn.
 
 ```bash
     yarn install <%= name %>
-    
-    # or
-    
-    npm i <%= name %> -D
-
 ```
 
 # API
