@@ -235,17 +235,6 @@ gulp.task('postinstall', function(done: any) {
 });
 
 /**
- * PULL UPSTREAM MASTER OF SEED
- */
-gulp.task('pull.upstream.seed', function(done: any) {
-  runSequence(
-    'git.checkout.branch.upstream',
-    'git.pull.upstream.master',
-    'git.checkout.develop',
-    done);
-});
-
-/**
  * INIT
  */
 gulp.task('init.project', function(done: any) {

@@ -14,7 +14,6 @@
     "download.docs": "gulp download.docs",
     "git.delete.all.tags": "gulp git.delete.all.tags",
     "init.project": "gulp init.project",
-    "init.upstream": "gulp init.upstream",
     "init.readme": "gulp init.readme",
     "init.releaser": "conventional-github-releaser -p angular -r 0",
     "lint": "gulp lint.src",
