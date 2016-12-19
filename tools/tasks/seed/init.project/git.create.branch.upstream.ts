@@ -1,6 +1,3 @@
-/**
- * DEPRECATED
- */
 // import * as gulp from 'gulp';
 import * as gulpLoadPlugins from 'gulp-load-plugins';
 // import Config from '../../../config';

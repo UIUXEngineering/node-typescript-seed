@@ -162,6 +162,11 @@ Mocks are built as a deliverable, but not included with application code. When c
 ## Update With This Seed
 `yarn pull.upstream.seed`  
 
+Checks out `upstream` branch, pulls upstream master `node-typescript-seed` into `upstream` branch, then checks out develop branch.
+**Ensure develop branch is up to date and has no uncommitted files.**
+
+Then, it is up to you to merge upstream with develop as it is your decision to accept the environment updates or not.
+
 # Common Tasks
 ## Most Used Tasks
 `yarn build` -- build  

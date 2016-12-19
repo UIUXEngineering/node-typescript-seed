@@ -1,8 +1,8 @@
 import * as gulp from 'gulp';
 import * as runSequence from 'run-sequence';
 import Config from './tools/config';
-import { loadTasks } from './tools/utils';
-import { checkEnvironment } from './tools/utils';
+import {loadTasks} from './tools/utils';
+import {checkEnvironment} from './tools/utils';
 
 checkEnvironment({
   requiredNpmVersion: '>=3.5.3 <4.0.0',
@@ -31,7 +31,7 @@ gulp.task('build', function (done: any) {
 /**
  * QA SRC
  */
-gulp.task('qa', function(done: any) {
+gulp.task('qa', function (done: any) {
   runSequence(
     'lint.src',
     'test.src',
@@ -39,7 +39,7 @@ gulp.task('qa', function(done: any) {
 });
 
 
-gulp.task('qa.cover', function(done: any) {
+gulp.task('qa.cover', function (done: any) {
   runSequence(
     'lint.src',
     'test.coverage.src',
@@ -49,7 +49,7 @@ gulp.task('qa.cover', function(done: any) {
 /**
  * QA SAMPLES
  */
-gulp.task('qa.samples', function(done: any) {
+gulp.task('qa.samples', function (done: any) {
   runSequence(
     'lint.samples',
     'test.samples',
@@ -57,7 +57,7 @@ gulp.task('qa.samples', function(done: any) {
 });
 
 
-gulp.task('qa.cover.samples', function(done: any) {
+gulp.task('qa.cover.samples', function (done: any) {
   runSequence(
     'lint.samples',
     'test.coverage.samples',
@@ -68,7 +68,7 @@ gulp.task('qa.cover.samples', function(done: any) {
 /**
  * QA ENV
  */
-gulp.task('qa.env', function(done: any) {
+gulp.task('qa.env', function (done: any) {
   runSequence(
     'lint.env',
     done);
@@ -83,7 +83,7 @@ gulp.task('lint', ['lint.src']);
  * TEST SRC
  */
 gulp.task('watch', ['watch.src']);
-gulp.task('watch.src', function(done: any) {
+gulp.task('watch.src', function (done: any) {
   runSequence(
     'clean.test.cjs.src',
     'jasmine.src',
@@ -114,7 +114,7 @@ gulp.task('coverage.src', function (done: any) {
 /**
  * TEST SAMPLES
  */
-gulp.task('watch.samples', function(done: any) {
+gulp.task('watch.samples', function (done: any) {
   runSequence(
     'clean.test.cjs.samples',
     'jasmine.samples',
@@ -201,7 +201,6 @@ gulp.task('release.major', function (done: any) {
 });
 
 
-
 // --------------
 // Release
 
@@ -228,7 +227,7 @@ gulp.task('_release', function (done: any) {
     });
 });
 
-gulp.task('postinstall', function(done: any) {
+gulp.task('postinstall', function (done: any) {
   runSequence(
     // 'reshrinkwrap',
     done);
@@ -237,29 +236,39 @@ gulp.task('postinstall', function(done: any) {
 /**
  * INIT
  */
-gulp.task('init.project', function(done: any) {
+gulp.task('init.project', function (done: any) {
   runSequence(
     'init.readme',
-    'remove.git.dir',
-    'git.init',
-    'git.add.remote.origin',
+    // 'remove.git.dir',
+    // 'git.init',
+    // 'git.add.remote.origin',
+    'git.setUrl.origin',
+    'git.delete.all.tags',
     'git.add.commit',
     'git.push.changes',
-    // 'git.delete.all.tags',
+    'git.add.remote.upstream',
+    'git.create.branch.upstream',
     'copy.githooks',
     done);
 });
 
 
-gulp.task('init.readme', function(done: any) {
+gulp.task('init.readme', function (done: any) {
   runSequence(
-
     // copies ./README.md to ./docs/PROJECT_README.md
     'archive.readme',
 
     // copies ./docs/NPM_README.md to ./README.md
     // replaces string tags with project information
     'init.npm.readme',
+    done);
+});
+
+gulp.task('pull.upstream.seed', (done: any) => {
+  runSequence(
+    'git.checkout.branch.upstream',
+    'git.pull.upstream.master',
+    'git.checkout.develop',
     done);
 });
 
