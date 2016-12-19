@@ -147,3 +147,6 @@ tmp
 
 src/**/*.js
 src/**/*.map
+
+samples/**/*.js
+samples/**/*.map

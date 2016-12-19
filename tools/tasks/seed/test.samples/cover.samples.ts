@@ -4,7 +4,7 @@ import Config from '../../../config';
 import { join, sep } from 'path';
 
 var SpecReporter = require('jasmine-spec-reporter');
-var remapIstanbul = require('remap-istanbul/lib/gulpRemapIstanbul');
+var remapIstanbul = require('remap-istanbul/lib/gulpRemapIstanbul').default;
 
 const plugins = <any>gulpLoadPlugins();
 
