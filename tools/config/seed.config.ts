@@ -26,7 +26,7 @@ export class SeedConfig {
    * to set upstream
    */
   GIT_UPSTREAM_SEED_URL = `https://github.com/UIUXEngineering/node-typescript-seed.git`;
-
+  SIBLING_PROJECT_NAME: string = 'node-typescript-seed';
   /**
    *
    * BUILD PARAMS
@@ -58,6 +58,7 @@ export class SeedConfig {
   DOCS_DIR = 'docs';
   ES6_DIR = 'es6';
   SAMPLES_DIR = 'samples';
+  SEED_SIBLING_DIR = join('..', this.SIBLING_PROJECT_NAME);
   TASKS_DIR = 'tasks';
   TMP_DIR = 'tmp';
   TOOLS_DIR = 'tools';
