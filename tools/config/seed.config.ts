@@ -264,6 +264,7 @@ export class SeedConfig {
     '!' + join(this.SEED_SIBLING_DIR, 'dist' + '{,' + sep + '**}'),
     '!' + join(this.SEED_SIBLING_DIR, 'node_modules' + '{,' + sep + '**}'),
     '!' + join(this.SEED_SIBLING_DIR, 'src' + '{,' + sep + '**}'),
+    '!' + join(this.SEED_SIBLING_DIR, 'types' + '{,' + sep + '**}'),
     '!' + join(this.SEED_SIBLING_DIR, 'CHANGELOG.md'),
     '!' + join(this.SEED_SIBLING_DIR, 'seed.gulpfile.ts'),
     '!' + join(this.SEED_SIBLING_DIR, 'README.md'),
