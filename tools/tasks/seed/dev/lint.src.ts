@@ -1,6 +1,6 @@
 import * as gulp from 'gulp';
 import * as gulpLoadPlugins from 'gulp-load-plugins';
-import { join } from 'path';
+import { join, sep } from 'path';
 
 import Config from '../../../config';
 
@@ -12,7 +12,8 @@ const plugins = <any>gulpLoadPlugins();
 export = () => {
   let src = [
     join(Config.APP_SRC, '**','*.ts'),
-    '!' + join(Config.APP_SRC, '**','*.d.ts')
+    '!' + join(Config.APP_SRC, '**','*.d.ts'),
+    '!' + join(Config.APP_SRC, 'client' + '{,' + sep + '**}')
   ];
 
   return gulp.src(src, {'base': '.'})
