@@ -69,7 +69,7 @@ This seed is designed to create consumable services, models ( for MVC ), busines
 
      ```bash
      # get a shallow copy of this seed
-     $ git clone https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
+     $ git clone --depth 1  https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
      
      # change directories to your project
      $ cd [name-of-project]
