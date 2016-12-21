@@ -37,6 +37,7 @@
     "serve.samples": "gulp serve.cover.samples",
     "test": "gulp test",
     "test.samples": "gulp test.samples",
+    "update.from.sibling": "gulp update.from.sibling",
     "update.seed.readme": "gulp update.seed.readme",
     "watch": "gulp watch",
     "watch.samples": "gulp watch.samples"
