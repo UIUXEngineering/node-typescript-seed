@@ -167,6 +167,7 @@
   ],
 
   "update.from.sibling": [
+    "save.pkgjson.props",
     "seed.sibling.exists",
     "seed.sibling.checkout.master",
     "seed.sibling.pull.master",

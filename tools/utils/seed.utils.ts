@@ -5,3 +5,4 @@ export * from './seed/tasks_tools';
 export * from './seed/incSemver';
 export * from './seed/check-environment';
 export * from './seed/JSONParse';
+export * from './seed/save.pkgjson.props';

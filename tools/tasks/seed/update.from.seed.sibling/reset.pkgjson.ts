@@ -2,15 +2,13 @@ import * as fs from 'fs';
 import { JSONParse } from '../../../utils';
 import * as _ from 'lodash';
 import Config from '../../../config';
+import { getPropsCache } from '../../../utils';
 
 export = (done: any) => {
   let pkgjson = JSONParse('package.json');
-  let version = _.clone(pkgjson.version);
-  let description = _.clone(pkgjson.description);
+  let cache = getPropsCache();
 
-  let newPkgjson = _.merge(pkgjson, Config.PACKAGE_JSON);
-  newPkgjson.version = version;
-  newPkgjson.description = description;
+  let newPkgjson = _.merge(pkgjson, Config.PACKAGE_JSON, cache.props);
 
   let pkjsonString = JSON.stringify(newPkgjson, null, 2);
 
