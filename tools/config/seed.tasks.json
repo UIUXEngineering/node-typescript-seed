@@ -148,9 +148,7 @@
     "git.setUrl.origin",
     "git.delete.all.tags",
     "git.add.commit",
-    "git.push.changes",
-    "git.add.remote.upstream",
-    "git.create.branch.upstream",
+    "git.push.changes.force",
     "copy.githooks"
   ],
 
