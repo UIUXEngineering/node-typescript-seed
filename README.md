@@ -161,12 +161,19 @@ To facilitate better testing and consumption, create test mocks independently of
 Mocks are built as a deliverable, but not included with application code. When consuming the application, you will **not** consume the mock code. You can then consume the mocks in unit tests of your consuming application separately.
 
 ## Update With This Seed
-`yarn pull.upstream.seed`  
+`yarn update.from.sibling`
 
-Checks out `upstream` branch, pulls upstream master `node-typescript-seed` into `upstream` branch, then checks out develop branch.
-**Ensure develop branch is up to date and has no uncommitted files.**
+Before updating from seed:
+- A clone of [node-typescript-seed](https://github.com/UIUXEngineering/node-typescript-seed) needs to be in a sibling directory of this project.
+- There should be no uncommitted changes in this project.
+- Create and checkout a branch named something like "update" to keep your "develop" and "master" branches safe.
 
-Then, it is up to you to merge upstream with develop as it is your decision to accept the environment updates or not.
+After updating from seed:
+- Revert the name, description, and repository properties in the `package.json` file.
+- Review all other changes to ensure you want to accept them.
+- Commit your changes.
+- Rebase with develop.
+- Merge to develop.
 
 # Common Tasks
 ## Most Used Tasks
