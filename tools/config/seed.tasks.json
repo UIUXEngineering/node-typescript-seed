@@ -144,8 +144,9 @@
   ],
 
   "init.project": [
-    "init.readme",
-    "git.setUrl.origin",
+    "remove.git.dir",
+    "git.init",
+    "git.add.remote.origin",
     "git.delete.all.tags",
     "git.add.commit",
     "git.push.changes.force",
@@ -154,7 +155,9 @@
 
   "init.readme": [
     "archive.readme",
-    "init.npm.readme"
+    "init.npm.readme",
+    "git.add.commit",
+    "git.push.changes"
   ],
 
   "pull.upstream.seed": [
