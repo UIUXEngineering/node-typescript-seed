@@ -260,13 +260,18 @@ export class SeedConfig {
 
   SEED_SIBLING_COPY: any = [
     join(this.SEED_SIBLING_DIR, '**', '*'),
+    '!' + join(this.SEED_SIBLING_DIR, '.git' + '{,' + sep + '**}'),
     '!' + join(this.SEED_SIBLING_DIR, 'coverage' + '{,' + sep + '**}'),
     '!' + join(this.SEED_SIBLING_DIR, 'dist' + '{,' + sep + '**}'),
     '!' + join(this.SEED_SIBLING_DIR, 'node_modules' + '{,' + sep + '**}'),
     '!' + join(this.SEED_SIBLING_DIR, 'src' + '{,' + sep + '**}'),
+    '!' + join(this.SEED_SIBLING_DIR, 'tools', 'config', 'project.config.ts'),
+    '!' + join(this.SEED_SIBLING_DIR, 'tools', 'config', 'project.tasks.json'),
+    '!' + join(this.SEED_SIBLING_DIR, 'tools', 'tasks', 'project' + '{,' + sep + '**}'),
+    '!' + join(this.SEED_SIBLING_DIR, 'tools', 'utils', 'project' + '{,' + sep + '**}'),
     '!' + join(this.SEED_SIBLING_DIR, 'types' + '{,' + sep + '**}'),
     '!' + join(this.SEED_SIBLING_DIR, 'CHANGELOG.md'),
-    '!' + join(this.SEED_SIBLING_DIR, 'seed.gulpfile.ts'),
+    '!' + join(this.SEED_SIBLING_DIR, 'gulpfile.ts'),
     '!' + join(this.SEED_SIBLING_DIR, 'README.md'),
     '!' + join(this.SEED_SIBLING_DIR, 'yarn.lock')
   ];
