@@ -1,4 +1,4 @@
-import { join } from 'path';
+import { join, sep } from 'path';
 import { argv } from 'yargs';
 import * as _ from 'lodash';
 
@@ -260,10 +260,10 @@ export class SeedConfig {
 
   SEED_SIBLING_COPY: any = [
     join(this.SEED_SIBLING_DIR, '**', '*'),
-    '!' + join(this.SEED_SIBLING_DIR, 'coverage'),
-    '!' + join(this.SEED_SIBLING_DIR, 'dist'),
-    '!' + join(this.SEED_SIBLING_DIR, 'node_modules'),
-    '!' + join(this.SEED_SIBLING_DIR, 'src'),
+    '!' + join(this.SEED_SIBLING_DIR, 'coverage' + '{,' + sep + '**}'),
+    '!' + join(this.SEED_SIBLING_DIR, 'dist' + '{,' + sep + '**}'),
+    '!' + join(this.SEED_SIBLING_DIR, 'node_modules' + '{,' + sep + '**}'),
+    '!' + join(this.SEED_SIBLING_DIR, 'src' + '{,' + sep + '**}'),
     '!' + join(this.SEED_SIBLING_DIR, 'CHANGELOG.md'),
     '!' + join(this.SEED_SIBLING_DIR, 'seed.gulpfile.ts'),
     '!' + join(this.SEED_SIBLING_DIR, 'README.md'),
