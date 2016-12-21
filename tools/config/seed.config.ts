@@ -64,6 +64,18 @@ export class SeedConfig {
   TYPES_DIR = 'types';
   UMD_DIR = 'umd';
 
+  /**
+   * Seed tasks which are composition of other tasks.
+   */
+  SEED_COMPOSITE_TASKS = join(process.cwd(), this.TOOLS_DIR, 'config', 'seed.tasks.json');
+
+  /**
+   * Project tasks which are composition of other tasks
+   * and aim to override the tasks defined in
+   * SEED_COMPOSITE_TASKS.
+   */
+  PROJECT_COMPOSITE_TASKS = join(process.cwd(), this.TOOLS_DIR, 'config', 'project.tasks.json');
+
   DIST_ES6 = join(this.DIST_DIR, this.ES6_DIR);
   DIST_CJS = join(this.DIST_DIR, this.CJS_DIR);
   DIST_UMD = join(this.DIST_DIR, this.UMD_DIR);
@@ -103,6 +115,8 @@ export class SeedConfig {
    * TASK PATHS
    */
   TASKS_PATH = join(process.cwd(), this.TOOLS_DIR, this.TASKS_DIR);
+
+  SEED_TASKS_DIR = join(process.cwd(), this.TOOLS_DIR, 'tasks', 'seed');
 
   /**
    * SPECIFIC FILES

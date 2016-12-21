@@ -34,8 +34,9 @@ This seed is designed to create consumable services, models ( for MVC ), busines
 - [Mocks](#mocks)
 - [Update With This Seed](#update-with-this-seed)
 
-### Common Tasks
+### Common Gulp Tasks
 - [Most Used Tasks](#most-used-tasks)
+- [Configure Your Project Tasks](#configure-your-project-tasks)
 - [Build](#build)
 - [Unit Test](#unit-test)
 - [TS Lint](#ts-lint)
@@ -169,10 +170,95 @@ Then, it is up to you to merge upstream with develop as it is your decision to a
 
 # Common Tasks
 ## Most Used Tasks
-`yarn build` -- build  
+`yarn build` -- build 
+`yarn test` -- run unit tests once on `./src`
+`yarn watch` -- run unit continuously on `./src`
 `yarn qa` -- lint and test  
 `yarn cover` -- code coverage    
 `yarn serve` -- serve coverage report  
+
+## Configure Your Project Tasks
+Individual gulp tasks are create in the `.ts` files in the directories `./tools/tasks/seed` and 
+`./tools/tasks/project`. The file names represent the task name. The directories
+are scanned recursively so directory structure does not matter. Organize them however
+you like. The the tasks in `./tools/tasks/seed/` as examples.
+
+A 'composite' task is simple the name of a group of tasks. For example:
+
+```javascript
+
+    import * as gulp from 'gulp';
+    import * as runSequence from 'run-sequence';
+
+    gulp.task('build', function (done: any) {
+      runSequence(
+        'qa',
+        'clean.build',
+        'build.es6',
+        'build.cjs',
+        'rollup.umd',
+        'rollup.umd.mocks',
+        'rollup.umd.uglify',
+        'rollup.umd.uglify.mocks',
+        done);
+    });
+```
+
+In the json file `./tools/config/seed.tasks.json`, this 'componsite' task is represented
+ by 
+ 
+ ```json
+ 
+    {
+      "build": [
+          "qa",
+          "clean.build",
+          "build.es6",
+          "build.cjs",
+          "rollup.umd",
+          "rollup.umd.mocks",
+          "rollup.umd.uglify",
+          "rollup.umd.uglify.mocks"
+        ]
+    }
+ ```
+ 
+ To end a task sequence with an error the error handler:
+ 
+ ```javascript
+    
+    function handler(error: any) {
+      if (error) {
+        console.log(error.message);
+      } else {
+        console.log("FINISHED SUCCESSFULLY");
+      }
+      done(error);
+    }
+            
+```
+
+end the sequence with "report.success.error". For example:
+
+```json
+
+    {
+      "_release": [
+          "git.add.commit.bump",
+          "git.push.changes",
+          "create.new.tag",
+          "github.release",
+          "regenerate.changelog",
+          "git.add.commit.bump",
+          "git.push.changes",
+          "report.success.error"   // <-- handler
+        ]
+    }
+```
+
+Configure your composite tasks in the json file `./tools/config/project.tasks.json`. They will
+override the tasks in `./tools/config/seed.tasks.json` ( which you do NOT edit ) of the same
+name in `./tools/config/seed.tasks.json`. 
 
 ## Build
 *yarn command* `yarn build`

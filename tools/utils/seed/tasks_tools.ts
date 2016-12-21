@@ -1,12 +1,14 @@
-import * as chalk from 'chalk';
-import { existsSync, lstatSync, readdirSync  } from 'fs';
+import { existsSync, lstatSync, readFileSync, readdirSync  } from 'fs';
+import * as runSequence from 'run-sequence';
 import * as gulp from 'gulp';
 import * as util from 'gulp-util';
 import * as isstream from 'isstream';
 import { join  } from 'path';
 import * as tildify from 'tildify';
-import { argv  } from 'yargs';
+import { argv } from 'yargs';
 
+import { changeFileManager } from './code_change_tools';
+import { Task } from '../../tasks/task';
 /**
  * Loads the tasks within the given path.
  * @param {string} path the path to load the tasks from
@@ -15,33 +17,187 @@ export function loadTasks(path: string): void {
   readDir(path, (taskname, path) => registerTask(taskname, path));
 }
 
+function validateTasks(tasks: any) {
+  return Object.keys(tasks)
+    .map((taskName: string) => {
+      if (!tasks[taskName] ||
+        !Array.isArray(tasks[taskName]) ||
+        tasks[taskName].some((t: any) => typeof t !== 'string')) {
+        return taskName;
+      }
+      return null;
+    }).filter((taskName: string) => !!taskName);
+}
+
+function registerTasks(tasks: any) {
+  Object.keys(tasks)
+    .forEach((t: string) => {
+      if (tasks[t][tasks[t].length - 1] === 'report.success.error') {
+
+        tasks[t].pop();
+
+        gulp.task(t, (done: any) => runSequence.apply(null, [...tasks[t], function (error: any) {
+          if (error) {
+            console.log(error.message);
+          } else {
+            console.log("FINISHED SUCCESSFULLY");
+          }
+          done(error);
+        }
+        ]))
+
+      } else {
+        gulp.task(t, (done: any) => runSequence.apply(null, [...tasks[t], done]));
+      }
+    });
+}
+
+function getInvalidTaskErrorMessage(invalid: string[], file: string) {
+  let error = `Invalid configuration in "${file}. `;
+  if (invalid.length === 1) {
+    error += 'Task';
+  } else {
+    error += 'Tasks';
+  }
+  error += ` ${invalid.map((t: any) => `"${t}"`).join(', ')} do not have proper format.`;
+  return error;
+}
+
 /**
  * Registers the task by the given taskname and path.
  * @param {string} taskname the name of the task
  * @param {string} path     the path of the task
  */
+// function registerTask(taskname: string, path: string): void {
+//   const TASK = join(path, taskname);
+//
+//   if (argv['verbose']) {
+//     util.log('Registering task', chalk.yellow(tildify(taskname)));
+//   }
+//
+//   gulp.task(taskname, (done: any) => {
+//     const task = require(TASK);
+//     if (task.length > 0) {
+//       return task(done);
+//     }
+//
+//     const taskReturnedValue = task();
+//     if (isstream(taskReturnedValue)) {
+//       return taskReturnedValue;
+//     }
+//
+//
+//     done();
+//   });
+// }
+
+/**
+ * Registers the task by the given taskname and path.
+ * @param {string} taskname - The name of the task.
+ * @param {string} path     - The path of the task.
+ */
 function registerTask(taskname: string, path: string): void {
   const TASK = join(path, taskname);
-
   if (argv['verbose']) {
-    util.log('Registering task', chalk.yellow(tildify(taskname)));
+    util.log('Registering task', util.colors.yellow(tildify(TASK)));
   }
 
   gulp.task(taskname, (done: any) => {
-    const task = require(TASK);
-    if (task.length > 0) {
-      return task(done);
+    const task = normalizeTask(require(TASK), TASK);
+
+    if (changeFileManager.pristine || task.shallRun(changeFileManager.lastChangedFiles)) {
+      const result = task.run(done);
+      if (result && typeof result.catch === 'function') {
+        result.catch((e: any) => {
+          util.log(`Error while running "${TASK}"`, e);
+        });
+      }
+      return result;
+    } else {
+      done();
     }
-
-    const taskReturnedValue = task();
-    if (isstream(taskReturnedValue)) {
-      return taskReturnedValue;
-    }
-
-    // TODO: add promise handling if needed at some point.
-
-    done();
   });
+}
+
+/**
+ * Defines complex, composite tasks. The composite tasks
+ * are simply a composition of another tasks.
+ * Each composite tasks has the following format:
+ *
+ * "composite_task": ["task1", "task2"]
+ *
+ * This means that the format should be flat, with no nesting.
+ *
+ * The existing composite tasks are defined in
+ * "tools/config/seed.tasks.json" and can be overriden by
+ * editing the composite tasks project configuration.
+ *
+ * By default it is located in: "tools/config/project.tasks.json".
+ *
+ * Override existing tasks by simply providing a task
+ * name and a list of tasks that this task hould execute.
+ *
+ * For instance:
+ * ```
+ * {
+ *  "test": [
+ *    "build.test",
+ *    "mocha.run"
+ *  ]
+ * }
+ * ```
+ *
+ * Note that the tasks do not support nested objects.
+ */
+export function loadCompositeTasks(seedTasksFile: string, projectTasksFile: string): void {
+  let seedTasks: any;
+  let projectTasks: any;
+  try {
+    seedTasks = JSON.parse(readFileSync(seedTasksFile).toString());
+    projectTasks = JSON.parse(readFileSync(projectTasksFile).toString());
+  } catch (e) {
+    util.log('Cannot load the task configuration files: ' + e.toString());
+    return;
+  }
+  [[seedTasks, seedTasksFile], [projectTasks, projectTasksFile]]
+    .forEach(([tasks, file]: [string, string]) => {
+      const invalid = validateTasks(tasks);
+      if (invalid.length) {
+        const errorMessage = getInvalidTaskErrorMessage(invalid, file);
+        util.log(util.colors.red(errorMessage));
+        process.exit(1);
+      }
+    });
+  const mergedTasks = Object.assign({}, seedTasks, projectTasks);
+  registerTasks(mergedTasks);
+}
+
+
+function normalizeTask(task: any, taskName: string) {
+  if (task instanceof Task) {
+    return task;
+  }
+  if (task.prototype && task.prototype instanceof Task) {
+    return new task();
+  }
+  if (typeof task === 'function') {
+    return new class AnonTask extends Task {
+      run(done: any) {
+        if (task.length > 0) {
+          return task(done);
+        }
+
+        const taskReturnedValue = task();
+        if (isstream(taskReturnedValue)) {
+          return taskReturnedValue;
+        }
+
+        done();
+      }
+    };
+  }
+  throw new Error(taskName + ' should be instance of the class ' +
+    'Task, a function or a class which extends Task.');
 }
 
 /**
@@ -60,7 +216,7 @@ function readDir(root: string, cb: (taskname: string, path: string) => void) {
   function walk(path: string) {
 
     if (argv['verbose']) {
-      util.log('Loading tasks folder', chalk.green(path.replace(process.cwd(), '.')));
+      util.log('Loading tasks folder', util.colors.green(path.replace(process.cwd(), '.')));
     }
 
     let files = readdirSync(path);

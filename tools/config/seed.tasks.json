@@ -1,0 +1,168 @@
+{
+  "build": [
+    "qa",
+    "clean.build",
+    "build.es6",
+    "build.cjs",
+    "rollup.umd",
+    "rollup.umd.mocks",
+    "rollup.umd.uglify",
+    "rollup.umd.uglify.mocks"
+  ],
+
+  "qa": [
+    "lint.src",
+    "test.src"
+  ],
+
+  "qa.cover": [
+    "lint.src",
+    "test.coverage.src"
+  ],
+
+  "qa.samples": [
+    "lint.samples",
+    "test.samples"
+  ],
+
+  "qa.cover.samples": [
+    "lint.samples",
+    "test.coverage.samples"
+  ],
+
+  "qa.env": [
+    "lint.env"
+  ],
+
+  "lint": [
+    "lint.src"
+  ],
+
+  "watch": [
+    "watch.src"
+  ],
+
+  "watch.src": [
+    "clean.test.cjs.src",
+    "jasmine.src",
+    "watch.src.dir"
+  ],
+
+  "test": [
+    "test.src"
+  ],
+
+  "test.src": [
+    "clean.test.cjs.src",
+    "jasmine.src"
+  ],
+
+  "cover": [
+    "coverage.src"
+  ],
+
+  "coverage.src": [
+    "clean.coverage.src",
+    "clean.test.cjs.src",
+    "build.test.cjs.src",
+    "instrument.src",
+    "cover.src"
+  ],
+
+  "watch.samples": [
+    "clean.test.cjs.samples",
+    "jasmine.samples",
+    "watch.samples.dir"
+  ],
+
+  "test.samples": [
+    "clean.test.cjs.samples",
+    "jasmine.samples"
+  ],
+
+  "cover.samples": [
+    "coverage.samples"
+  ],
+
+  "coverage.samples": [
+    "clean.coverage.samples",
+    "clean.test.cjs.samples",
+    "build.test.cjs.samples",
+    "instrument.samples",
+    "cover.samples"
+  ],
+
+  "release": [
+    "bump",
+    "_release"
+  ],
+
+  "release.build": [
+    "bump.build",
+    "_release"
+  ],
+
+  "release.alpha": [
+    "bump.alpha",
+    "_release"
+  ],
+
+  "release.beta": [
+    "bump.beta",
+    "_release"
+  ],
+
+  "release.rc": [
+    "bump.rc",
+    "_release"
+  ],
+
+  "release.patch": [
+    "bump.patch",
+    "_release"
+  ],
+
+  "release.minor": [
+    "bump.minor",
+    "_release"
+  ],
+
+  "release.major": [
+    "bump.major",
+    "_release"
+  ],
+
+  "_release": [
+    "git.add.commit.bump",
+    "git.push.changes",
+    "create.new.tag",
+    "github.release",
+    "regenerate.changelog",
+    "git.add.commit.bump",
+    "git.push.changes",
+    "report.success.error"
+  ],
+
+  "init.project": [
+    "init.readme",
+    "git.setUrl.origin",
+    "git.delete.all.tags",
+    "git.add.commit",
+    "git.push.changes",
+    "git.add.remote.upstream",
+    "git.create.branch.upstream",
+    "copy.githooks"
+  ],
+
+  "init.readme": [
+    "archive.readme",
+    "init.npm.readme"
+  ],
+
+  "pull.upstream.seed": [
+    "git.checkout.branch.upstream",
+    "git.pull.upstream.master",
+    "git.checkout.develop"
+  ]
+}
+
