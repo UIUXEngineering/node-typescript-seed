@@ -163,6 +163,14 @@
     "git.checkout.branch.upstream",
     "git.pull.upstream.master",
     "git.checkout.develop"
+  ],
+
+  "update.from.sibling": [
+    "seed.sibling.exists",
+    "seed.sibling.checkout.master",
+    "seed.sibling.pull.master",
+    "seed.sibling.copy",
+    "update.seed.readme"
   ]
 }
 
