@@ -21,6 +21,11 @@ import * as _ from 'lodash';
  */
 export class SeedConfig {
 
+  PACKAGE_JSON: any = {
+    name: '@uiuxengineering/node-typescript-seed',
+    repository: 'https://github.com/UIUXEngineering/node-typescript-seed.git'
+  };
+
   /**
    * This seed clone url used
    * to set upstream

@@ -76,50 +76,24 @@ This seed is designed to create consumable services, models ( for MVC ), busines
      
      ```
  
-4. In your package.json:
+4. Update your project name and repository:
 
-    Update the name of your project as it will be published to the npm registry.
-    
-    Example:
-    ```json
+    Update the name of your project as it will be published to the npm registry in the file `./tools/config/project.config.ts`
+    ```javascript
         
-        // change  
-        
-        {
-          "name": "@UIUXEngineering/node-typescript-seed"
-          ...
-        }
-        
-        // to 
-        
-        {
-          "name": "@MyCompany/my-project-name"
-          ...
-        }
+        /**
+         * Change to your custom project info here.
+         */
+        this.PACKAGE_JSON = _.merge(this.PACKAGE_JSON, {
+          name: 'YOUR PROJECT NAME',                       // <- update with your project name, such as '@uiuxengineering/node-typescript-seed'
+          repository: 'YOUR REPO URL',                     // <- update with your project name, such as 'https://github.com/UIUXEngineering/node-typescript-seed.git'
+          'scripts' : {
+            'test': 'gulp test'
+          }
+        });
     ```
 
-5. Replace repository url with your project's repository url
-
-    Example:
-    ```json
-    
-         // change 
-        {
-            ...
-            "repository": "git+https://github.com/UIUXEngineering/node-typescript-seed.git"
-            ...  
-        }
-        
-        // to
-        
-        {
-            ...
-            "repository": : "git+https://github.com/MyCompany/my-project-name.git"
-            ...
-        }
-    ```
-
-6. Init your project by running yarn commands.
+5. Init your project by running yarn commands.
 
     ```bash
         $ yarn install
@@ -167,6 +141,7 @@ Before updating from seed:
 - A clone of [node-typescript-seed](https://github.com/UIUXEngineering/node-typescript-seed) needs to be in a sibling directory of this project.
 - There should be no uncommitted changes in this project.
 - Create and checkout a branch named something like "update" to keep your "develop" and "master" branches safe.
+- Any package.json properties you do not wish to be over-written, copy to the "PACKAGE_JSON" property in the file `./tools/config/project.config.ts`.
 
 After updating from seed:
 - Revert the name, description, and repository properties in the `package.json` file.

@@ -171,7 +171,8 @@
     "seed.sibling.checkout.master",
     "seed.sibling.pull.master",
     "seed.sibling.copy",
-    "update.seed.readme"
+    "update.seed.readme",
+    "reset.pkgjson"
   ]
 }
 
