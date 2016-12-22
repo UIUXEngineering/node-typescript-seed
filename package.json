@@ -45,12 +45,10 @@
   "repository": "https://github.com/UIUXEngineering/node-typescript-seed.git",
   "author": "Jerry Orta <jerryorta.dev@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "rxjs": "5.0.0-rc.4"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@angular/compiler": "^2.3.1",
-    "@angular/core": "^2.3.1",
+    "@angular/compiler": "^2.4.0",
+    "@angular/core": "^2.4.0",
     "@types/async": "^2.0.37",
     "@types/browser-sync": "^0.0.34",
     "@types/chalk": "^0.4.31",
@@ -98,6 +96,7 @@
     "rmfr": "^1.0.1",
     "rollup": "^0.37.0",
     "run-sequence": "^1.2.2",
+    "rxjs": "^5.0.1",
     "semver": "^5.3.0",
     "tildify": "^1.2.0",
     "ts-node": "^1.7.2",
