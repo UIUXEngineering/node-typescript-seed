@@ -89,7 +89,7 @@
     "clean.test.cjs.samples",
     "build.test.cjs.samples",
     "instrument.samples",
-    "cover.samples"
+    "cover.samples.dir"
   ],
 
   "release": [
