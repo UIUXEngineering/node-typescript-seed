@@ -1,37 +1,37 @@
 /// <reference path='../../../../tools/manual_typings/project/jasmine.d.ts' />
 
 import { createSubscriber } from './basic';
-import { SubscriberMonitor } from '../../SubscriberMonitor';
+import { SubscriberLogger } from '../../rxjs.spec.helpers/SubscriberLogger';
 
 describe('RXJS Observer ( Subscriber )', () => {
-  let monitor;
+  let logger;
   let observer; // aka subscriber
 
   beforeEach(() =>  {
-    monitor = SubscriberMonitor.create();
-    observer = createSubscriber(monitor);
+    logger = SubscriberLogger.create();
+    observer = createSubscriber(logger);
   });
 
   afterEach(() => {
-    monitor = null;
+    logger = null;
     observer = null;
   });
 
   it('should not have next called', () => {
-    expect(monitor.next).toEqual(monitor.noData);
+    expect(logger.next).toEqual(logger.noData);
   });
 
   it('should not have error called', () => {
-    expect(monitor.error).toEqual(monitor.noData);
+    expect(logger.error).toEqual(logger.noData);
   });
 
   it('should not have completed', () => {
-    expect(monitor.complete).toBeFalsy();
+    expect(logger.complete).toBeFalsy();
   });
 
   it('should call next', () => {
     observer.next('next1');
-    expect(monitor.next).toEqual('next1');
+    expect(logger.next).toEqual('next1');
   });
 
   it('should keep calling next', () => {
@@ -39,13 +39,13 @@ describe('RXJS Observer ( Subscriber )', () => {
     observer.next('next2');
     observer.next('next3');
 
-    expect(monitor.next).toEqual('next3');
-    expect(monitor.nextSequence).toEqual(['next1', 'next2', 'next3']);
+    expect(logger.next).toEqual('next3');
+    expect(logger.nextSequence).toEqual(['next1', 'next2', 'next3']);
   });
 
   it('should call error', () => {
     observer.error('err1');
-    expect(monitor.error).toEqual('err1');
+    expect(logger.error).toEqual('err1');
   });
 
   it('should call error once', () => {
@@ -57,9 +57,9 @@ describe('RXJS Observer ( Subscriber )', () => {
      */
     observer.error('err2');
 
-    expect(monitor.error).toEqual('err1');
-    expect(monitor.errorSequence).toEqual(['err1']);
-    expect(monitor.complete).toBeFalsy();
+    expect(logger.error).toEqual('err1');
+    expect(logger.errorSequence).toEqual(['err1']);
+    expect(logger.complete).toBeFalsy();
   });
 
   it('should call next once if error occurs', () => {
@@ -75,31 +75,31 @@ describe('RXJS Observer ( Subscriber )', () => {
      */
     observer.next('next2');
 
-    expect(monitor.next).toEqual('next1'); // first call
-    expect(monitor.error).toEqual('err1'); // subscriber stopped
-    expect(monitor.nextSequence).toEqual(['next1']);
-    expect(monitor.errorSequence).toEqual(['err1']);
-    expect(monitor.complete).toBeFalsy();
+    expect(logger.next).toEqual('next1'); // first call
+    expect(logger.error).toEqual('err1'); // subscriber stopped
+    expect(logger.nextSequence).toEqual(['next1']);
+    expect(logger.errorSequence).toEqual(['err1']);
+    expect(logger.complete).toBeFalsy();
   });
 
   it('should be complete', () => {
     observer.complete(true);
-    expect(monitor.complete).toBeTruthy();
-    expect(monitor.closed).toBeTruthy();
+    expect(logger.complete).toBeTruthy();
+    expect(logger.closed).toBeTruthy();
   });
 
   it('should not call next of complete', () => {
     observer.complete(true);
     observer.next('next1');
 
-    expect(monitor.next).toEqual(monitor.noData); // first call
+    expect(logger.next).toEqual(logger.noData); // first call
   });
 
   it('should not call error of complete', () => {
     observer.complete(true);
     observer.error('err1');
 
-    expect(monitor.next).toEqual(monitor.noData); // first call
+    expect(logger.next).toEqual(logger.noData); // first call
   });
 
 

@@ -3,9 +3,9 @@
  * in TypeScript.
  */
 import { Subscriber, Observer } from '@reactivex/rxjs'
-import { SubscriberMonitor } from '../../SubscriberMonitor';
+import { SubscriberLogger } from '../../rxjs.spec.helpers/SubscriberLogger';
 
-export function createSubscriber(monitor: SubscriberMonitor): Observer<string> {
+export function createSubscriber(monitor: SubscriberLogger): Observer<string> {
 
   let observer: Observer<string> = new Subscriber(
     function onNext(x: string) {

@@ -1,4 +1,8 @@
-export class SubscriberMonitor {
+/**
+ * Helper class to log Observer behavior
+ * to learn how Subscribers work in RXJS
+ */
+export class SubscriberLogger {
   public _next: string;
   public _error: string;
   public _complete: boolean;
@@ -57,6 +61,6 @@ export class SubscriberMonitor {
   }
 
   static create() {
-    return new SubscriberMonitor();
+    return new SubscriberLogger();
   }
 }
