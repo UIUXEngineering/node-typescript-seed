@@ -253,6 +253,10 @@ export class SeedConfig {
     {
       url: 'https://raw.githubusercontent.com/Reactive-Extensions/RxJS/master/doc/api/core/observable.md',
       file: 'rxjs/observable.md'
+    },
+    {
+      url: 'https://raw.githubusercontent.com/ReactiveX/rxjs/master/MIGRATION.md',
+      file: 'rxjs/MIGRATION.md'
     }
   ];
 

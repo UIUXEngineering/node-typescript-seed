@@ -2,7 +2,7 @@
  * Demonstrate how to make an Observer ( aka Subscriber )
  * in TypeScript.
  */
-import { Subscriber, Observer } from '@reactivex/rxjs'
+import { Subscriber, Observer } from '@reactivex/rxjs';
 import { SubscriberLogger } from '../../rxjs.spec.helpers/SubscriberLogger';
 
 export function createSubscriber(monitor: SubscriberLogger): Observer<string> {

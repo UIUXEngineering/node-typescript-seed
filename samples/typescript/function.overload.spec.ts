@@ -15,9 +15,9 @@ describe('TypeScript', () => {
     beforeEach(() =>  {
       demoClass = new OverloadDemoClass();
       myDeck = [
-        { suit: "diamonds", card: 2 },
-        { suit: "spades", card: 10 },
-        { suit: "hearts", card: 4 }];
+        { suit: 'diamonds', card: 2 },
+        { suit: 'spades', card: 10 },
+        { suit: 'hearts', card: 4 }];
 
       // Pick the card
       pickedCard = myDeck[demoClass.pickCard(myDeck)];
@@ -44,9 +44,9 @@ describe('TypeScript', () => {
     beforeEach(() =>  {
       demoClass = new OverloadDemoClass();
       myDeck = [
-        { suit: "diamonds", card: 10 },
+        { suit: 'diamonds', card: 10 },
         { suit: 'spades', card: 2 },
-        { suit: "hearts", card: 4 }
+        { suit: 'hearts', card: 4 }
         ];
 
       // Pick the card

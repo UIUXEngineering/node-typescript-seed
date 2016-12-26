@@ -12,6 +12,10 @@ export class SubscriberLogger {
 
   public noData: string = 'no data';
 
+  static create() {
+    return new SubscriberLogger();
+  }
+
   constructor() {
     this._next = this.noData;
     this._error = this.noData;
@@ -58,9 +62,5 @@ export class SubscriberLogger {
 
   get errorSequence(): string[] {
     return this._errorSequence;
-  }
-
-  static create() {
-    return new SubscriberLogger();
   }
 }
