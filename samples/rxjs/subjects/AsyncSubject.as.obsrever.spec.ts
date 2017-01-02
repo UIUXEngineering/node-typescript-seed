@@ -1,5 +1,9 @@
 /// <reference path='../../../tools/manual_typings/project/jasmine.d.ts' />
 
+/**
+ * See http://xgrommx.github.io/rx-book/content/subjects/async_subject/index.html
+ * And
+ */
 import { AsyncSubject, Observable } from '@reactivex/rxjs';
 import { createObserverWithLogger, ObserverLogger } from '../rxjs.spec.helpers/index';
 
@@ -26,6 +30,39 @@ describe('RXJS', () => {
       subject = null;
       observable = null;
       olog = null;
+    });
+
+    it('Should cache on the last value produced when ' +
+      'followed by an onCompleted notification which makes ' +
+      'it available to all subscribers.', () => {
+        subject.next(1);
+        subject.next(2);
+        subject.next(3);
+        subject.complete();
+
+        subject.next(4);
+
+      // subscribe to subject
+      subject.subscribe(subjectSubscriber);
+
+      expect(olog.nextSequence).toEqual([3]);
+    });
+
+    it('Should cache on the last value produced when ' +
+      'followed by an onCompleted notification which makes ' +
+      'it available to all subscribers.', () => {
+
+      // subscribe to subject
+      subject.subscribe(subjectSubscriber);
+
+      subject.next(1);
+      subject.next(2);
+      subject.next(3);
+      subject.complete();
+
+      subject.next(4);
+
+      expect(olog.nextSequence).toEqual([3]);
     });
 
     it('should pass last value to subject', () => {
