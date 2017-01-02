@@ -1,14 +1,14 @@
-/// <reference path='../../../../tools/manual_typings/project/jasmine.d.ts' />
+/// <reference path='../../../tools/manual_typings/project/jasmine.d.ts' />
 
 import { creatObservable } from './array';
-import { SubscriberLogger } from '../../rxjs.spec.helpers/SubscriberLogger';
+import { ObserverLogger } from '../rxjs.spec.helpers/ObserverLogger';
 
 describe('RXJS', () => {
   describe('Observable', () => {
     let logger;
 
     beforeEach(() =>  {
-      logger = SubscriberLogger.create();
+      logger = ObserverLogger.create();
       creatObservable(logger);
     });
 

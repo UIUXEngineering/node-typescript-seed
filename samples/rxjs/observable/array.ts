@@ -5,12 +5,12 @@ export function creatObservable(logger) {
     .from(['Adrià', 'Jen', 'Sergi'])
     .subscribe(
       function onNext(x: string) {
-        logger.next = x;
+        logger.next(x);
       },
       function onError(err: string) {
-        logger.error = err;
+        logger.error(err);
       },
       function onCompleted() {
-        logger.complete = true;
+        logger.complete();
       });
 }

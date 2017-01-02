@@ -3,21 +3,20 @@
  * in TypeScript.
  */
 import { Subscriber, Observer } from '@reactivex/rxjs';
-import { SubscriberLogger } from '../../rxjs.spec.helpers/SubscriberLogger';
+import { ObserverLogger } from '../rxjs.spec.helpers/ObserverLogger';
 
-export function createSubscriber(monitor: SubscriberLogger): Observer<string> {
+export function createSubscriber(logger: ObserverLogger): Observer<string> {
 
   let observer: Observer<string> = new Subscriber(
     function onNext(x: string) {
-      monitor.next = x;
+      logger.next(x);
     },
     function onError(err: string) {
-      monitor.error = err;
+      logger.error(err);
     },
     function onCompleted() {
-      monitor.complete = true;
-    }
-  );
+      logger.complete();
+    });
 
   return observer;
 }
