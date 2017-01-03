@@ -177,11 +177,11 @@ $ git clone https://github.com/UIUXEngineering/node-typescript-seed.git [name-of
 
 # Common Tasks
 ## Most Used Tasks
-`yarn build` -- build 
-`yarn test` -- run unit tests once on `./src`
-`yarn watch` -- run unit continuously on `./src`
+`yarn build` -- build  
+`yarn test` -- run unit tests once on `./src`  
+`yarn watch` -- run unit continuously on `./src`  
 `yarn qa` -- lint and test  
-`yarn cover` -- code coverage    
+`yarn cover` -- code coverage  
 `yarn serve` -- serve coverage report  
 
 ## Configure Your Project Tasks
