@@ -145,7 +145,7 @@ When adding a custom matcher to the `./src/spec.helpers` dirctory, update the Ja
 ```
 
 ## Mocks
-To facilitate better testing and consumption, create test mocks independently of your tests. You can then reuse the mocks in multiple tests and scenarios in both this project and your consumption projdct.
+To facilitate better testing and consumption, create test mocks independently of your tests. You can then reuse the mocks in multiple tests and scenarios in both this project and your consumption project.
 
 Mocks are built as a deliverable, but not included with application code. When consuming the application, you will **not** consume the mock code. You can then consume the mocks in unit tests of your consuming application separately.
 

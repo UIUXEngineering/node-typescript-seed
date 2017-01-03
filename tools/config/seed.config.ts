@@ -137,7 +137,7 @@ export class SeedConfig {
     'experimentalDecorators': true,
     'module': 'es2015',
     'moduleResolution': 'node',
-    "importHelpers": true,
+    'importHelpers': true,
     'sourceMap': true,
     'inlineSources': true,
     'target': 'es5',
