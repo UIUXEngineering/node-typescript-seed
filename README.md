@@ -132,8 +132,8 @@ Non-deliverable code.
 `./samples` - code that is not included in build tasks. `./samples` is supported by Unit Tests, Code Coverage, and TSLint.
 
 Samples Include:
-- Design Patterns in TypeScript
-- RXJS ( TODO )
+- [Design Patterns in TypeScript](https://github.com/UIUXEngineering/node-typescript-seed/tree/master/samples/design_patterns_in_typescript)
+- [RxJS](https://github.com/UIUXEngineering/node-typescript-seed/tree/master/samples/rxjs)
 
 ## Add Jasmine Custom Matchers
 When adding a custom matcher to the `./src/spec.helpers` dirctory, update the Jasmine Type Definintion file at `./tools/manual_typings/project/jasmine.d.ts` For examples, search for the following in the file:
