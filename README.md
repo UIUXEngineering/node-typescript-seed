@@ -68,8 +68,13 @@ This seed is designed to create consumable services, models ( for MVC ), busines
 3. Clone this seed.
 
      ```bash
-     # get a shallow copy of this seed
+     # to get a shallow copy of this seed ( not git history )
+     # you will have to update from seed using yarn update.from.sibling 
      $ git clone --depth 1  https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
+     
+     # to get a deep copy of this seed ( full git history )
+     # you will have to update from seed using yarn pull.upstream.seed
+     $ git clone https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
      
      # change directories to your project
      $ cd [name-of-project]
@@ -101,6 +106,16 @@ This seed is designed to create consumable services, models ( for MVC ), busines
     ```
     
     **Ignore 'Your environment is not in a good shape' shrinkwrap warning.**
+
+6. Initialize `README.md`.
+   If you want to initialize your project's README.md with usefull instructions
+   to install from NPM, run:
+   
+   ```bash
+       $ yarn init.readme
+   ```
+   
+   This README.md will be archived to `./docs/PROJECT_README.md`, and replaced by `./docs/NPM_README.md`.
 
 # Workflow
 You have two dictories to work in -- `./src` and `./samples`.
@@ -136,6 +151,10 @@ Mocks are built as a deliverable, but not included with application code. When c
 
 ## Update With This Seed
 `yarn update.from.sibling`
+Use if you created this project using a shallow clone:
+```bash
+$ git clone --depth 1  https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
+```
 
 Before updating from seed:
 - A clone of [node-typescript-seed](https://github.com/UIUXEngineering/node-typescript-seed) needs to be in a sibling directory of this project.
@@ -149,6 +168,12 @@ After updating from seed:
 - Commit your changes.
 - Rebase with develop.
 - Merge to develop.
+
+`yarn pull.upstream.seed`
+Use if you created this project using a deep clone:
+```bash
+$ git clone https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
+```
 
 # Common Tasks
 ## Most Used Tasks
