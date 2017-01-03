@@ -488,6 +488,10 @@ You can follow the [node-typescript-seed](http://github.com/UIUXEngineering/node
 - [typescript compiler options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
 - [UMD examples](https://github.com/umdjs/umd)
 - [UMD article](http://bob.yexley.net/umd-javascript-that-runs-anywhere/)
+- [RXJS rxmarbles.com](http://rxmarbles.com/)
+- [RXJS github](https://github.com/ReactiveX/rxjs)
+- [RXJS docs](http://reactivex.io/rxjs/)
+- [RXJS manual](http://reactivex.io/rxjs/manual/index.html)
 
 ## License
 
