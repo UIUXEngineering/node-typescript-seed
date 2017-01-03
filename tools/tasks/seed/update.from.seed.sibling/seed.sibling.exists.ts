@@ -1,4 +1,4 @@
-import { existsSync} from 'fs';
+import { existsSync } from 'fs';
 // import * as gulpLoadPlugins from 'gulp-load-plugins';
 import Config from '../../../config';
 

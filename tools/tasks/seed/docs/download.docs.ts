@@ -3,7 +3,7 @@ import * as gulpLoadPlugins from 'gulp-load-plugins';
 import { sep } from 'path';
 import Config from '../../../config';
 
-var progress = require("request-progress");
+var progress = require('request-progress');
 
 const plugins = <any>gulpLoadPlugins();
 

@@ -1,8 +1,9 @@
+import { Observer } from 'rxjs';
 /**
  * Helper class to log Observer behavior
  * to learn how Subscribers work in RXJS
  */
-export class SubscriberLogger {
+export class ObserverLogger implements Observer<any> {
   public _next: string;
   public _error: string;
   public _complete: boolean;
@@ -13,7 +14,7 @@ export class SubscriberLogger {
   public noData: string = 'no data';
 
   static create() {
-    return new SubscriberLogger();
+    return new ObserverLogger();
   }
 
   constructor() {
@@ -25,34 +26,55 @@ export class SubscriberLogger {
     this._errorSequence = [];
   }
 
-  get next(): string {
-    return this._next;
+  onNext(x: any): void {
+    this.next = x;
   }
 
-  set next(_value: string) {
+  onError(x: any): void {
+    this.error = x;
+  }
+
+  onComplete(x?: any): void {
+    var isComplete = x !== undefined ? x : true;
+    this._complete = isComplete;
+  }
+
+  next(_value: string) {
     this._next = _value;
     this._nextSequence.push(_value);
   }
 
-  get error(): string {
-    return this._error;
+  get nextValue(): any {
+    return this._next;
   }
 
-  set error(_value: string) {
+  error(_value: string) {
     this._error = _value;
     this._errorSequence.push(_value);
   }
 
-  get complete(): boolean {
+  get errorValue(): any {
+    return this._error;
+  }
+
+  complete() {
+    this._closed = true;
+    this._complete = true;
+  }
+
+  get completeValue(): any {
     return this._complete;
   }
 
-  set complete(_value: boolean) {
-    this._complete = _value;
-    this._closed = true;
+  set closed(_val: boolean) {
+    this._closed = _val;
   }
 
   get closed(): boolean {
+    return this._closed;
+  }
+
+  get closedValue(): any {
     return this._closed;
   }
 

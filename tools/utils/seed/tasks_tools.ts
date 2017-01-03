@@ -40,11 +40,11 @@ function registerTasks(tasks: any) {
           if (error) {
             console.log(error.message);
           } else {
-            console.log("FINISHED SUCCESSFULLY");
+            console.log('FINISHED SUCCESSFULLY');
           }
           done(error);
         }
-        ]))
+        ]));
 
       } else {
         gulp.task(t, (done: any) => runSequence.apply(null, [...tasks[t], done]));
@@ -53,7 +53,7 @@ function registerTasks(tasks: any) {
 }
 
 function getInvalidTaskErrorMessage(invalid: string[], file: string) {
-  let error = `Invalid configuration in "${file}. `;
+  let error = `Invalid configuration in "${file}". `;
   if (invalid.length === 1) {
     error += 'Task';
   } else {

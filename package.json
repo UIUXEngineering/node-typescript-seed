@@ -1,6 +1,6 @@
 {
   "name": "@uiuxengineering/node-typescript-seed",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "description": "Node Typescript seed.",
   "main": "index.ts",
   "scripts": {
@@ -47,7 +47,8 @@
   "license": "MIT",
   "dependencies": {
     "@reactivex/rxjs": "^5.0.1",
-    "rxjs": "^5.0.1"
+    "rxjs": "^5.0.1",
+    "tslib": "^1.4.0"
   },
   "devDependencies": {
     "@angular/compiler": "^2.4.1",
