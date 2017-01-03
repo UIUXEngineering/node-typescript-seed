@@ -58,6 +58,7 @@ This seed is designed to create consumable services, models ( for MVC ), busines
 - [Configs](#configs)
 - [Change Log](#change-log)
 - [References](#references)
+- [Projects Using This Seed](#projects-using-this-seed)
 - [License](#license)
 
 # Quick Start
@@ -517,6 +518,12 @@ You can follow the [node-typescript-seed](http://github.com/UIUXEngineering/node
 - [RXJS github](https://github.com/ReactiveX/rxjs)
 - [RXJS docs](http://reactivex.io/rxjs/)
 - [RXJS manual](http://reactivex.io/rxjs/manual/index.html)
+
+# Projects Using This Seed
+- [node-typescript-utils](https://github.com/UIUXEngineering/node-typescript-utils)
+- [node-typescript-validate](https://github.com/UIUXEngineering/node-typescript-validate)
+
+*Contributions ( PR's ) welcome*
 
 ## License
 
