@@ -1,6 +1,6 @@
 {
   "name": "@uiuxengineering/node-typescript-seed",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Node Typescript seed.",
   "main": "index.ts",
   "scripts": {
