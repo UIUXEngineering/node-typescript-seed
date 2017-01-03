@@ -137,6 +137,7 @@ export class SeedConfig {
     'experimentalDecorators': true,
     'module': 'es2015',
     'moduleResolution': 'node',
+    "importHelpers": true,
     'sourceMap': true,
     'inlineSources': true,
     'target': 'es5',
@@ -170,8 +171,10 @@ export class SeedConfig {
 
       // output format - 'amd', 'cjs', 'es', 'iife', 'umd'
       format: this.JS_BUNDLE_FORMAT,
-      sourceMap: true
-
+      sourceMap: true,
+      globals:{
+        'tslib':'tslib'
+      }
     }
   };
 
