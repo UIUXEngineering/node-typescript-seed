@@ -120,7 +120,21 @@ This seed is designed to create consumable services, models ( for MVC ), busines
    This README.md will be archived to `./docs/PROJECT_README.md`, and replaced by `./docs/NPM_README.md`.
    
 7. Configure npm publish gulp task for the release process if needed.  
-   Currently, when you invoke a gulp release task, the last gulp task to run is to publish this project to the npm registry for **public access**. This task configuration is set in the file `./tools/config/project.tasks.json`:
+   Currently, when you invoke a gulp release task, the last gulp task to run is to publish this project to the npm registry for **public access**. 
+   
+   To use the feature, you need to add your user credentials to your `~/.npmrc` file using the command:
+   
+   ```bash
+       $ npm adduser
+    
+       # will respond with with something like:
+       # Username: username
+       # Password: password
+       # Email: (this IS public) your.email@domain.com
+       # Logged in as username to scope @yourNpmScope on http://registry.npmjs.org/.
+   ```
+   
+   This task configuration is set in the file `./tools/config/project.tasks.json`:
    
    ```json
    
