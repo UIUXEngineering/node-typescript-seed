@@ -1,14 +1,21 @@
-<a name="1.0.1"></a>
-## [1.0.1](https://github.com/UIUXEngineering/node-typescript-seed/compare/1.0.0...1.0.1) (2017-01-03)
+<a name="1.0.3"></a>
+## [1.0.3](https://github.com/UIUXEngineering/node-typescript-seed/compare/1.0.2...1.0.3) (2017-01-04)
+
+
+
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/UIUXEngineering/node-typescript-seed/compare/1.0.0...1.0.2) (2017-01-04)
 
 
 ### Bug Fixes
 
 * **coverage:** gulpRemapInstanbul return default object ([ae9c040](https://github.com/UIUXEngineering/node-typescript-seed/commit/ae9c040))
 * **dep:** bring sample file back ([1c6056c](https://github.com/UIUXEngineering/node-typescript-seed/commit/1c6056c))
+* **ignore:** ignore dist and types directory ([c40296b](https://github.com/UIUXEngineering/node-typescript-seed/commit/c40296b)), closes [#27](https://github.com/UIUXEngineering/node-typescript-seed/issues/27)
 * **init:** force push ([10b5182](https://github.com/UIUXEngineering/node-typescript-seed/commit/10b5182))
 * **init project:** set package.json ([96c3302](https://github.com/UIUXEngineering/node-typescript-seed/commit/96c3302))
 * **install:** peer dependencies ([b032ef6](https://github.com/UIUXEngineering/node-typescript-seed/commit/b032ef6))
+* **release:** fix release task sequence ([211ddd4](https://github.com/UIUXEngineering/node-typescript-seed/commit/211ddd4))
 * **samples:** fix code coverage ([2f023a6](https://github.com/UIUXEngineering/node-typescript-seed/commit/2f023a6))
 * **update:** fix update.from.sibling task ([9803fba](https://github.com/UIUXEngineering/node-typescript-seed/commit/9803fba))
 * **update:** save package.json params and reset them after update ([ac88476](https://github.com/UIUXEngineering/node-typescript-seed/commit/ac88476))
@@ -20,8 +27,9 @@
 * **decorators:** add tslib for build.umd ([dca283e](https://github.com/UIUXEngineering/node-typescript-seed/commit/dca283e))
 * **download:** add download task ([27d4874](https://github.com/UIUXEngineering/node-typescript-seed/commit/27d4874))
 * **env:** update from sibling ([c658075](https://github.com/UIUXEngineering/node-typescript-seed/commit/c658075))
-* **rxjs:** AsyncSubject ([0238c3a](https://github.com/UIUXEngineering/node-typescript-seed/commit/0238c3a))
+* **npm:** add task to publish to npm ([d0bd01b](https://github.com/UIUXEngineering/node-typescript-seed/commit/d0bd01b))
 * **rxjs:** AsyncSubject ([95c3c48](https://github.com/UIUXEngineering/node-typescript-seed/commit/95c3c48))
+* **rxjs:** AsyncSubject ([0238c3a](https://github.com/UIUXEngineering/node-typescript-seed/commit/0238c3a))
 * **rxjs:** oberver unit tests ([20ec124](https://github.com/UIUXEngineering/node-typescript-seed/commit/20ec124))
 * **rxjs:** observer examples ([b83af00](https://github.com/UIUXEngineering/node-typescript-seed/commit/b83af00))
 * **rxjs:** operators ([192755d](https://github.com/UIUXEngineering/node-typescript-seed/commit/192755d))

@@ -1,6 +1,10 @@
 {
   "test": [
     "test.src"
+  ],
+
+  "_post.release": [
+    "npm.publish.public"
   ]
 }
 

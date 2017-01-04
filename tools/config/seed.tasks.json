@@ -140,7 +140,12 @@
     "regenerate.changelog",
     "git.add.commit.bump",
     "git.push.changes",
+    "_post.release",
     "report.success.error"
+  ],
+
+  "_post.release": [
+
   ],
 
   "init.project": [
