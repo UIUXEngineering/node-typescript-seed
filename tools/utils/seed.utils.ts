@@ -6,3 +6,4 @@ export * from './seed/incSemver';
 export * from './seed/check-environment';
 export * from './seed/JSONParse';
 export * from './seed/save.pkgjson.props';
+export * from './seed/normalizeSpecPath';

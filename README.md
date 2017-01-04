@@ -288,17 +288,19 @@ The transpiled code is output in the `./dist` directory:
 
 ## Unit Test
 ### `./src` directory
-`yarn test` -- unit test  
+`yarn test` -- unit test 
+`yarn test -- --src=index` -- unit test (specific files)  
 `yarn cover` -- code coverage  
 `yarn serve` -- serve coverage report  
 `yarn watch` -- watch unit test  
-  
 ### `./samples` directory  
 `yarn test.samples` -- unit test  
+`yarn test.samples -- --src=typescript/*` -- unit test (specific files)  
 `yarn cover.samples` -- code coverage  
 `yarn serve.samples` -- serve coverage report  
 `yarn watch.samples` -- watch unit tests  
-  
+`yarn watch.samples -- --src=typescript/*` -- watch unit tests (specific files)
+
 **When running the `watch` command, do not run the `test` command.**
 
 **Jasmine Type Definitions for Custom Matchers**
