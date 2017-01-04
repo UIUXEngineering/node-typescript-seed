@@ -151,3 +151,5 @@ src/**/*.map
 samples/**/*.js
 samples/**/*.map
 coverage
+dist
+types

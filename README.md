@@ -8,7 +8,7 @@
 
 A seed for TypeScript NodeJS projects. 
 
-This project enables TDD ( Test Driven Development ) using Jasmine. It can generate coverage reports and has a document generator ( Angular 2 with Compodoc ).
+This project enables TDD ( Test Driven Development ) using Jasmine, your custom Jasmine Matchers and code coverage remapped to your source TypeScript files.
 
 Unit Tests are a required task of the `build` and `git push` commands.
 
@@ -18,9 +18,10 @@ This seed is designed to create consumable services, models ( for MVC ), busines
 # Features
 - Develop with TypeScript
 - Unit Testing with Jasmine
-- Code Coverage
+- Create custom Jasmine Matchers
+- Code Coverage remapped to source TypeScript files
 - Build ES6, CommonJS, and UMD formats
-- Code Generator with Compodoc
+- Document Generator with Compodoc
 - `.npmignore` stubbed.
 
 
@@ -58,6 +59,7 @@ This seed is designed to create consumable services, models ( for MVC ), busines
 - [Configs](#configs)
 - [Change Log](#change-log)
 - [References](#references)
+- [Projects Using This Seed](#projects-using-this-seed)
 - [License](#license)
 
 # Quick Start
@@ -68,8 +70,13 @@ This seed is designed to create consumable services, models ( for MVC ), busines
 3. Clone this seed.
 
      ```bash
-     # get a shallow copy of this seed
+     # to get a shallow copy of this seed ( not git history )
+     # you will have to update from seed using yarn update.from.sibling 
      $ git clone --depth 1  https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
+     
+     # to get a deep copy of this seed ( full git history )
+     # you will have to update from seed using yarn pull.upstream.seed
+     $ git clone https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
      
      # change directories to your project
      $ cd [name-of-project]
@@ -102,6 +109,65 @@ This seed is designed to create consumable services, models ( for MVC ), busines
     
     **Ignore 'Your environment is not in a good shape' shrinkwrap warning.**
 
+6. Initialize `README.md`.
+   If you want to initialize your project's README.md with usefull instructions
+   to install from NPM, run:
+   
+   ```bash
+       $ yarn init.readme
+   ```
+   
+   This README.md will be archived to `./docs/PROJECT_README.md`, and replaced by `./docs/NPM_README.md`.
+   
+7. Configure npm publish gulp task for the release process if needed.  
+   Currently, when you invoke a gulp release task, the last gulp task to run is to publish this project to the npm registry for **public access**. 
+   
+   To use the feature, you need to add your user credentials to your `~/.npmrc` file using the command:
+   
+   ```bash
+       $ npm adduser
+    
+       # will respond with with something like:
+       # Username: username
+       # Password: password
+       # Email: (this IS public) your.email@domain.com
+       # Logged in as username to scope @yourNpmScope on http://registry.npmjs.org/.
+   ```
+   
+   This task configuration is set in the file `./tools/config/project.tasks.json`:
+   
+   ```json
+   
+    {
+        "_post.release": [
+            "npm.publish.public"            // <-- npm publish gulp task
+          ]
+    }
+   ``` 
+   
+   To publish for **private access**, change the task to `"npm.publish.private"`.
+   
+    ```json
+      
+       {
+           "_post.release": [
+               "npm.publish.private"       // <-- npm publish gulp task
+             ]
+       }
+    ``` 
+      
+   Or remove it to not publish to the npm registry.   
+   
+   ```json
+         
+      {
+          "_post.release": [
+    
+            ]
+      }
+   ``` 
+    
+
 # Workflow
 You have two dictories to work in -- `./src` and `./samples`.
 
@@ -116,8 +182,8 @@ Non-deliverable code.
 `./samples` - code that is not included in build tasks. `./samples` is supported by Unit Tests, Code Coverage, and TSLint.
 
 Samples Include:
-- Design Patterns in TypeScript
-- RXJS ( TODO )
+- [Design Patterns in TypeScript](https://github.com/UIUXEngineering/node-typescript-seed/tree/master/samples/design_patterns_in_typescript)
+- [RxJS](https://github.com/UIUXEngineering/node-typescript-seed/tree/master/samples/rxjs)
 
 ## Add Jasmine Custom Matchers
 When adding a custom matcher to the `./src/spec.helpers` dirctory, update the Jasmine Type Definintion file at `./tools/manual_typings/project/jasmine.d.ts` For examples, search for the following in the file:
@@ -130,12 +196,16 @@ When adding a custom matcher to the `./src/spec.helpers` dirctory, update the Ja
 ```
 
 ## Mocks
-To facilitate better testing and consumption, create test mocks independently of your tests. You can then reuse the mocks in multiple tests and scenarios in both this project and your consumption projdct.
+To facilitate better testing and consumption, create test mocks independently of your tests. You can then reuse the mocks in multiple tests and scenarios in both this project and your consumption project.
 
 Mocks are built as a deliverable, but not included with application code. When consuming the application, you will **not** consume the mock code. You can then consume the mocks in unit tests of your consuming application separately.
 
 ## Update With This Seed
 `yarn update.from.sibling`
+Use if you created this project using a shallow clone:
+```bash
+$ git clone --depth 1  https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
+```
 
 Before updating from seed:
 - A clone of [node-typescript-seed](https://github.com/UIUXEngineering/node-typescript-seed) needs to be in a sibling directory of this project.
@@ -150,22 +220,33 @@ After updating from seed:
 - Rebase with develop.
 - Merge to develop.
 
+`yarn pull.upstream.seed`
+Use if you created this project using a deep clone:
+```bash
+$ git clone https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
+```
+
 # Common Tasks
 ## Most Used Tasks
-`yarn build` -- build 
-`yarn test` -- run unit tests once on `./src`
-`yarn watch` -- run unit continuously on `./src`
-`yarn qa` -- lint and test  
-`yarn cover` -- code coverage    
-`yarn serve` -- serve coverage report  
+`yarn build` -- build type definitions, es6, commonjs, and umd on `./src`  
+`yarn test` -- run unit tests once on `./src`  
+`yarn watch` -- run unit continuously on `./src`  
+`yarn qa` -- lint and test on `./src`    
+`yarn cover` -- run unit tests and code coverage on `./src`    
+`yarn serve` -- serve coverage report for `./src` coverage  
 
 ## Configure Your Project Tasks
-Individual gulp tasks are create in the `.ts` files in the directories `./tools/tasks/seed` and 
+Care is taken to allow easier writing and *overriding* seed gulp tasks with your project tasks.
+
+Write **your** gulp tasks in the `./tools/tasks/project/` directory. The following explains the task architecture.
+
+Individual gulp tasks are created in the `.ts` files in the directories `./tools/tasks/seed` and 
 `./tools/tasks/project`. The file names represent the task name. The directories
 are scanned recursively so directory structure does not matter. Organize them however
-you like. The the tasks in `./tools/tasks/seed/` as examples.
+you like *in your project directory*. Use the tasks in `./tools/tasks/seed/` as examples.
 
-A 'composite' task is simple the name of a group of tasks. For example:
+A 'composite' gulp task is simply the name of a group of tasks. For example, 
+a normal gulp sequence of tasks is written as:
 
 ```javascript
 
@@ -220,7 +301,8 @@ In the json file `./tools/config/seed.tasks.json`, this 'componsite' task is rep
             
 ```
 
-end the sequence with "report.success.error". For example:
+To use a general error handler task ( see line ~35 in `./tools/utils/seed/tasks_tools.ts`) 
+end the sequence with the "report.success.error" task. For example:
 
 ```json
 
@@ -238,7 +320,7 @@ end the sequence with "report.success.error". For example:
     }
 ```
 
-Configure your composite tasks in the json file `./tools/config/project.tasks.json`. They will
+Configure **your** composite tasks in the json file `./tools/config/project.tasks.json`. They will
 override the tasks in `./tools/config/seed.tasks.json` ( which you do NOT edit ) of the same
 name in `./tools/config/seed.tasks.json`. 
 
@@ -383,12 +465,9 @@ For more instrunctions on shrinkwrap, see [./tools/utils/seed/npm/npm-shrinkwrap
 # Process
 
 ## Yarn And NPM
-This repo supports both yarn and npm. Yarn is the preferred package management tool. Npm is is maintained in case your build environment does not support yar.
+This repo supports both yarn and npm. Yarn is the preferred package management tool. Npm is maintained in case your build environment does not support yarn.
 
-For local development, *always use yarn*. When adding and removing npm modules, shrinkwrap is automatically updated.
-
-You will see an error when installing / uninstall with yarn saying that npm-shrinkwrap is not respected. That is fine, nothing is broken. You are more than welecome to remove the shrinkwrap files and comment the tasks in the gulpFile.ts.
-
+For local development, *always use yarn*. 
 
 
 ## Git Hooks
@@ -399,7 +478,7 @@ A git hook is used to run unit tests and tslint before pushing to the remote rep
 ```
 
 ## Environment Variables
-All NPM packages needed are installed globally to isolate your environment from others. On a **Mac**, you can run packages locally that would only work globally installed. To configure this, add an alias to your `.zshrc` or `.bash_profile`:
+All NPM packages needed are installed locally to isolate your environment from others. On a **Mac**, you can run packages locally that would only work globally installed. To configure this, add an alias to your `.zshrc` or `.bash_profile`:
 
 ```bash
     alias run='PATH=$(npm bin):$PATH'
@@ -434,7 +513,7 @@ Node runs *.ts files in the `./tools` and root directory with the `ts-node` modu
 ```
 
 ### tslint config
-`gulp-tslint` requires a config in the root directory to run. This is the place to put your customcustom rules. This root config loads the seed config located at `./tools/config/seed.tslint.json`, which is the seed standard. It is located here so you have a fallback if you are overriding it with the config in the root directory. The `tslint` config in the tools directory loads tslint rules from the `codelyzer` npm module, a module specifically created for Angular 2 tslint rules.
+`gulp-tslint` requires a config in the root directory to run. This is the place to put your custom rules. This root config loads the seed config located at `./tools/config/seed.tslint.json`, which is the seed standard. It is located here so you have a fallback if you are overriding it with the config in the root directory. The `tslint` config in the tools directory loads tslint rules from the `codelyzer` npm module, a module specifically created for Angular 2 tslint rules.
 
 Two tslint gulp tasks -- one for the environment and one for the `./src` directory -- use the same config in the root directory.
 
@@ -488,6 +567,16 @@ You can follow the [node-typescript-seed](http://github.com/UIUXEngineering/node
 - [typescript compiler options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
 - [UMD examples](https://github.com/umdjs/umd)
 - [UMD article](http://bob.yexley.net/umd-javascript-that-runs-anywhere/)
+- [RXJS rxmarbles.com](http://rxmarbles.com/)
+- [RXJS github](https://github.com/ReactiveX/rxjs)
+- [RXJS docs](http://reactivex.io/rxjs/)
+- [RXJS manual](http://reactivex.io/rxjs/manual/index.html)
+
+# Projects Using This Seed
+- [node-typescript-utils](https://github.com/UIUXEngineering/node-typescript-utils)
+- [node-typescript-validate](https://github.com/UIUXEngineering/node-typescript-validate)
+
+*Contributions ( PR's ) welcome*
 
 ## License
 
