@@ -118,6 +118,41 @@ This seed is designed to create consumable services, models ( for MVC ), busines
    ```
    
    This README.md will be archived to `./docs/PROJECT_README.md`, and replaced by `./docs/NPM_README.md`.
+   
+7. Configure npm publish gulp task for the release process if needed.  
+   Currently, when you invoke a gulp release task, the last gulp task to run is to publish this project to the npm registry for **public access**. This task configuration is set in the file `./tools/config/project.tasks.json`:
+   
+   ```json
+   
+    {
+        "_post.release": [
+            "npm.publish.public"            // <-- npm publish gulp task
+          ]
+    }
+   ``` 
+   
+   To publish for **private access**, change the task to `"npm.publish.private"`.
+   
+    ```json
+      
+       {
+           "_post.release": [
+               "npm.publish.private"       // <-- npm publish gulp task
+             ]
+       }
+    ``` 
+      
+   Or remove it to not publish to the npm registry.   
+   
+   ```json
+         
+      {
+          "_post.release": [
+    
+            ]
+      }
+   ``` 
+    
 
 # Workflow
 You have two dictories to work in -- `./src` and `./samples`.
