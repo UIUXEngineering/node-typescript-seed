@@ -409,12 +409,9 @@ For more instrunctions on shrinkwrap, see [./tools/utils/seed/npm/npm-shrinkwrap
 # Process
 
 ## Yarn And NPM
-This repo supports both yarn and npm. Yarn is the preferred package management tool. Npm is is maintained in case your build environment does not support yar.
+This repo supports both yarn and npm. Yarn is the preferred package management tool. Npm is maintained in case your build environment does not support yarn.
 
-For local development, *always use yarn*. When adding and removing npm modules, shrinkwrap is automatically updated.
-
-You will see an error when installing / uninstall with yarn saying that npm-shrinkwrap is not respected. That is fine, nothing is broken. You are more than welecome to remove the shrinkwrap files and comment the tasks in the gulpFile.ts.
-
+For local development, *always use yarn*. 
 
 
 ## Git Hooks
