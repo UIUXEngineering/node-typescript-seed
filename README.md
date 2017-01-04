@@ -70,17 +70,16 @@ This seed is designed to create consumable services, models ( for MVC ), busines
 3. Clone this seed.
 
      ```bash
+     # to get a deep copy of this seed ( full git history )
+     # you will have to update from seed using yarn pull.upstream.seed
+     $ git clone https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
+       
      # to get a shallow copy of this seed ( not git history )
      # you will have to update from seed using yarn update.from.sibling 
      $ git clone --depth 1  https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
      
-     # to get a deep copy of this seed ( full git history )
-     # you will have to update from seed using yarn pull.upstream.seed
-     $ git clone https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
-     
      # change directories to your project
      $ cd [name-of-project]
-     
      ```
  
 4. Update your project name and repository:
@@ -100,17 +99,16 @@ This seed is designed to create consumable services, models ( for MVC ), busines
         });
     ```
 
-5. Init your project by running yarn commands.
+5. yarn install.
 
     ```bash
         $ yarn install
-        $ yarn init.project
     ```
     
     **Ignore 'Your environment is not in a good shape' shrinkwrap warning.**
 
 6. Initialize `README.md`.
-   If you want to initialize your project's README.md with usefull instructions
+   If you want to initialize your project's README.md with useful instructions
    to install from NPM, run:
    
    ```bash
@@ -167,6 +165,19 @@ This seed is designed to create consumable services, models ( for MVC ), busines
       }
    ``` 
     
+8. Init your project.
+   
+   - Sets semver in package.json to 0.0.0.
+   - Sets git url and project name in package.json.
+   - Deletes and Re-initializes git repo to remove all tags.
+   - Sets git url to your repo url.
+   - Performs initial git commit.
+   - Pushes initial commit to your repo.
+   - Copies git-hooks to `.git` directory.
+
+    ```bash
+        $ yarn init.project
+    ```
 
 # Workflow
 You have two dictories to work in -- `./src` and `./samples`.
@@ -248,7 +259,7 @@ you like *in your project directory*. Use the tasks in `./tools/tasks/seed/` as 
 A 'composite' gulp task is simply the name of a group of tasks. For example, 
 a normal gulp sequence of tasks is written as:
 
-```javascript
+```typescript
 
     import * as gulp from 'gulp';
     import * as runSequence from 'run-sequence';
@@ -288,7 +299,7 @@ In the json file `./tools/config/seed.tasks.json`, this 'componsite' task is rep
  
  To end a task sequence with an error the error handler:
  
- ```javascript
+ ```typescript
     
     function handler(error: any) {
       if (error) {
