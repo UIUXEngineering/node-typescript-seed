@@ -149,7 +149,7 @@
   ],
 
   "init.project": [
-    "reset.pkgjson",
+    "init.pkgjson",
     "remove.git.dir",
     "git.init",
     "git.add.remote.origin",
