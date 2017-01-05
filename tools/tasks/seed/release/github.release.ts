@@ -14,7 +14,7 @@ export = (done: any) => {
   } else {
     conventionalGithubReleaser({
       type: 'oauth',
-      token: process.env.CONVENTIONAL_GITHUB_RELEASER_TOKEN// change this to your own GitHub token or use an environment variable
+      token: process.env.CONVENTIONAL_GITHUB_RELEASER_TOKEN // change this to your own GitHub token or use an environment variable
     }, {
       preset: 'angular' // Or to any other commit message convention you use.
     }, done);
