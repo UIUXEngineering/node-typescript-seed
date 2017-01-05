@@ -65,7 +65,7 @@ This seed is designed to create consumable services, models ( for MVC ), busines
 # Quick Start
 1. This project uses [yarn](https://yarnpkg.com/) for the default package manager instead of `npm`. See [install instructions](https://yarnpkg.com/en/docs/install) you do not already have `yarn` installed.
 
-2. Create an empty project repo. The `init.project` task will push to that repo.
+2. Create an empty project repo in your cloud service. The `init.project` task will push to that repo.
 
 3. Clone this seed.
 
@@ -105,9 +105,7 @@ This seed is designed to create consumable services, models ( for MVC ), busines
         $ yarn install
     ```
     
-    **Ignore 'Your environment is not in a good shape' shrinkwrap warning.**
-
-6. Initialize `README.md`.
+6. Initialize `README.md`.  
    If you want to initialize your project's README.md with useful instructions
    to install from NPM, run:
    
@@ -117,7 +115,7 @@ This seed is designed to create consumable services, models ( for MVC ), busines
    
    This README.md will be archived to `./docs/PROJECT_README.md`, and replaced by `./docs/NPM_README.md`.
    
-7. Configure npm publish gulp task for the release process if needed.  
+7. Configure the gulp task to publish to the npm registry.  
    Currently, when you invoke a gulp release task, the last gulp task to run is to publish this project to the npm registry for **public access**. 
    
    To use the feature, you need to add your user credentials to your `~/.npmrc` file using the command:
