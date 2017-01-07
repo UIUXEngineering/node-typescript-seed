@@ -16,6 +16,8 @@ npm-shrinkwrap.json
 npm-shrinkwrap.readme.md
 tsconfig.json
 tslint.json
+yarn-error.log
+yarn.lock
 tmp
 coverage
 samples
