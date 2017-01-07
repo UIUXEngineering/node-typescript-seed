@@ -48,10 +48,8 @@
   "author": "Jerry Orta <jerryorta.dev@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@reactivex/rxjs": "^5.0.1",
-    "@types/open": "^0.0.29",
-    "open": "^0.0.5",
-    "rxjs": "^5.0.1",
+    "@reactivex/rxjs": "^5.0.3",
+    "rxjs": "^5.0.3",
     "tslib": "^1.4.0"
   },
   "devDependencies": {
@@ -67,6 +65,7 @@
     "@types/lodash": "^4.14.44",
     "@types/merge2": "^0.3.29",
     "@types/node": "^6.0.52",
+    "@types/open": "^0.0.29",
     "@types/run-sequence": "^0.0.28",
     "@types/semver": "^5.3.30",
     "@types/serve-static": "^1.7.31",
@@ -101,6 +100,7 @@
     "jasmine-spec-reporter": "^2.7.0",
     "lodash": "^4.17.2",
     "merge2": "^1.0.2",
+    "open": "^0.0.5",
     "remap-istanbul": "^0.8.4",
     "rmfr": "^1.0.1",
     "rollup": "^0.38.0",
