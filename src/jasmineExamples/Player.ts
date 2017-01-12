@@ -1,9 +1,3 @@
-function sealed(constructor: Function) {
-  Object.seal(constructor);
-  Object.seal(constructor.prototype);
-}
-
-@sealed
 class Player {
 
   currentlyPlayingSong: any;
