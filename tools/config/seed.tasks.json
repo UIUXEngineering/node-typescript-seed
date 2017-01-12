@@ -148,22 +148,37 @@
 
   ],
 
-  "init.project": [
+  "init.project.noHistory": [
     "init.pkgjson",
     "remove.git.dir",
     "git.init",
     "git.add.remote.origin",
-    "git.delete.all.tags",
     "git.add.commit",
     "git.push.changes.force",
-    "copy.githooks"
+    "copy.githooks",
+    "_post.release",
+    "report.success.error"
+  ],
+
+  "init.project.keepHistory": [
+    "init.pkgjson",
+    "git.setUrl.origin",
+    "git.add.remote.upstream",
+    "git.create.branch.upstream",
+    "git.delete.all.tags",
+    "git.add.commit",
+    "regenerate.changelog",
+    "git.add.commit",
+    "create.new.tag",
+    "git.push.changes",
+    "copy.githooks",
+    "_post.release",
+    "report.success.error"
   ],
 
   "init.readme": [
     "archive.readme",
-    "init.npm.readme",
-    "git.add.commit",
-    "git.push.changes"
+    "init.npm.readme"
   ],
 
   "pull.upstream.seed": [

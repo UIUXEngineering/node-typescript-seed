@@ -65,7 +65,6 @@ export class SeedConfig {
   SAMPLES_DIR = 'samples';
   SEED_SIBLING_DIR = join('..', this.SIBLING_PROJECT_NAME);
   TASKS_DIR = 'tasks';
-  TMP_DIR = 'tmp';
   TOOLS_DIR = 'tools';
   TYPES_DIR = 'types';
   UMD_DIR = 'umd';
@@ -195,54 +194,8 @@ export class SeedConfig {
    * @type {number}
    */
   HOT_LOADER_PORT                         = 5578;
-
-  /**
-   * The BrowserSync configuration serving coverage reports.
-   * The default open behavior is to open the browser,
-   * To prevent the browser from opening
-   * `--b`  flag when running `npm start` (tested with serve.dev)
-   * example `npm start -- --b`
-   * @type {any}
-   */
-  BROWSER_SYNC_CONFIG_COVERAGE_SRC: any = {
-    middleware: [require('connect-history-api-fallback')({ index: join('/' + `index.html`) })],
-    port: 8090,
-    // startPath: this.APP_SRC + '/',
-    open: argv['b'] ? false : true,
-    files: [].concat(
-      // [this.BROWSER_DEST + '/app/**/*.css'],
-      // [this.BROWSER_DEST + '/app/**/*.scss'],
-      [join(this.COVERAGE_DIR, this.APP_SRC, '**', '*.json')],
-      [join(this.COVERAGE_DIR, this.APP_SRC, '**', '*.html')],
-      [join(this.COVERAGE_DIR, 'index.html')],
-      [join(this.COVERAGE_DIR, '**', '*.svg')],
-      [join(this.COVERAGE_DIR, '**', '*.map')]
-    ),
-    server: {
-      baseDir: join(this.COVERAGE_DIR, this.APP_SRC),
-      index: 'index.html'
-    }
-  };
-
-  // clones and overrides BROWSER_SYNC_CONFIG_COVERAGE_SRC
-  BROWSER_SYNC_CONFIG_COVERAGE_SAMPLES: any = ((_config) => {
-    let config = _.cloneDeep(_config);
-
-    config.files = [].concat(
-      // [this.BROWSER_DEST + '/app/**/*.css'],
-      // [this.BROWSER_DEST + '/app/**/*.scss'],
-      [join(this.COVERAGE_DIR, this.SAMPLES_DIR, '**', '*.json')],
-      [join(this.COVERAGE_DIR, this.SAMPLES_DIR, '**', '*.html')],
-      [join(this.COVERAGE_DIR, 'index.html')],
-      [join(this.COVERAGE_DIR, '**', '*.svg')],
-      [join(this.COVERAGE_DIR, '**', '*.map')]
-    );
-
-    config.server.baseDir = join(this.COVERAGE_DIR, this.SAMPLES_DIR);
-
-    return config;
-
-  })(this.BROWSER_SYNC_CONFIG_COVERAGE_SRC);
+  SERVER_SRC_PORT                         = 8090;
+  SERVER_SAMPLES_PORT                     = 8095;
 
   DOWNLOAD_DOCS: any = [
     {

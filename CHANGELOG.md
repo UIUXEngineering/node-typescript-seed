@@ -1,3 +1,28 @@
+<a name="1.0.5"></a>
+## [1.0.5](https://github.com/UIUXEngineering/node-typescript-seed/compare/1.0.4...1.0.5) (2017-01-10)
+
+
+### Bug Fixes
+
+* **rollup:** add to globals and external ([76c2402](https://github.com/UIUXEngineering/node-typescript-seed/commit/76c2402))
+
+
+
+<a name="1.0.4"></a>
+## [1.0.4](https://github.com/UIUXEngineering/node-typescript-seed/compare/1.0.3...1.0.4) (2017-01-07)
+
+
+### Bug Fixes
+
+* **node_modules:** move modules to devDependencies ([87bfdba](https://github.com/UIUXEngineering/node-typescript-seed/commit/87bfdba))
+
+
+### Features
+
+* **init.project.keepHistory:** init a project keeping the commit history ([0436324](https://github.com/UIUXEngineering/node-typescript-seed/commit/0436324))
+
+
+
 <a name="1.0.3"></a>
 ## [1.0.3](https://github.com/UIUXEngineering/node-typescript-seed/compare/1.0.2...1.0.3) (2017-01-04)
 
