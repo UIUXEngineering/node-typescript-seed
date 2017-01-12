@@ -1,4 +1,4 @@
-
+import { Observable } from '@reactivex/rxjs';
 
 var a = Observable.interval(200).map(function(i) {
   return 'A' + i;

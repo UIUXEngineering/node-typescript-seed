@@ -65,25 +65,22 @@ This seed is designed to create consumable services, models ( for MVC ), busines
 # Quick Start
 1. This project uses [yarn](https://yarnpkg.com/) for the default package manager instead of `npm`. See [install instructions](https://yarnpkg.com/en/docs/install) you do not already have `yarn` installed.
 
-2. Create an empty project repo. The `init.project` task will push to that repo.
+2. Create an empty project repo in your cloud service. The `init.project` task will push to that repo.
 
 3. Clone this seed.
 
+    *Note: Commit history may optionally be removed in the step "Initialize your project".*
+
      ```bash
-     # to get a shallow copy of this seed ( not git history )
-     # you will have to update from seed using yarn update.from.sibling 
-     $ git clone --depth 1  https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
-     
      # to get a deep copy of this seed ( full git history )
      # you will have to update from seed using yarn pull.upstream.seed
      $ git clone https://github.com/UIUXEngineering/node-typescript-seed.git [name-of-project]
      
      # change directories to your project
      $ cd [name-of-project]
-     
      ```
  
-4. Update your project name and repository:
+4. Update your project name, repository url, and initial semver:
 
     Update the name of your project as it will be published to the npm registry in the file `./tools/config/project.config.ts`
     ```javascript
@@ -98,19 +95,22 @@ This seed is designed to create consumable services, models ( for MVC ), busines
             'test': 'gulp test'
           }
         });
+     
+        this.INIT_PACKAGE_JSON = _.merge(this.PACKAGE_JSON, {
+           version: '0.0.0'                       // <- update if you want to start with a different semver
+        });
+     
+           
     ```
 
-5. Init your project by running yarn commands.
+5. yarn install.
 
     ```bash
         $ yarn install
-        $ yarn init.project
     ```
     
-    **Ignore 'Your environment is not in a good shape' shrinkwrap warning.**
-
-6. Initialize `README.md`.
-   If you want to initialize your project's README.md with usefull instructions
+6. Initialize `README.md`.  
+   If you want to initialize your project's README.md with useful instructions
    to install from NPM, run:
    
    ```bash
@@ -119,8 +119,8 @@ This seed is designed to create consumable services, models ( for MVC ), busines
    
    This README.md will be archived to `./docs/PROJECT_README.md`, and replaced by `./docs/NPM_README.md`.
    
-7. Configure npm publish gulp task for the release process if needed.  
-   Currently, when you invoke a gulp release task, the last gulp task to run is to publish this project to the npm registry for **public access**. 
+7. **Important**: Configure the gulp task to publish to the npm registry.  
+   Currently, when you invoke a gulp release or initialize project task, a gulp task will publish this project to the npm registry for **public access**. 
    
    To use the feature, you need to add your user credentials to your `~/.npmrc` file using the command:
    
@@ -136,7 +136,8 @@ This seed is designed to create consumable services, models ( for MVC ), busines
    
    This task configuration is set in the file `./tools/config/project.tasks.json`:
    
-   ```json
+   **To publish with public access (default)**.  
+   ```javascript
    
     {
         "_post.release": [
@@ -145,9 +146,8 @@ This seed is designed to create consumable services, models ( for MVC ), busines
     }
    ``` 
    
-   To publish for **private access**, change the task to `"npm.publish.private"`.
-   
-    ```json
+   **To publish with private access**, change the task to `"npm.publish.private"`.  
+    ```javascript
       
        {
            "_post.release": [
@@ -156,20 +156,52 @@ This seed is designed to create consumable services, models ( for MVC ), busines
        }
     ``` 
       
-   Or remove it to not publish to the npm registry.   
-   
-   ```json
+   **To NOT publish to npm registry** remove the task from "_post.release".  
+   ```javascript
          
       {
           "_post.release": [
-    
+                                            // <-- removed
             ]
       }
    ``` 
     
+8. Initialize your project.
+
+    **Option 1:** Keep the seed commit history.
+    
+    ```bash
+        $ yarn init.project.keepHistory
+    ```
+        
+    Makes updating your project with the latest seed changes **very easy**. The commit history is not very large and this seed's updates will be minimal ( it's near feature complete ), so your project will not see much project bloat.
+   
+    What will happen:  
+    - package.json updated from the settings you set above.
+        - properties updated from `INIT_PACKAGE_JSON` from the file `./tools/config/project.config.ts`.
+        - defaults are project name, repository, and version.
+    - Sets git remote origin to your repository url.
+    - Removes all git tags cloned from seed.
+    - Performs initial git commit.
+    - Performs initial git tag.
+    - Pushes initial commit and tag to your repo.
+    - Publishes to NPM registry.
+    - Copies git-hooks to `.git` directory.
+    
+    **Option 2:** Remove the seed commit history.
+    
+    ```bash
+        $ yarn init.project.noHistory
+    ```       
+    Updating your project with the latest seed changes **more difficult**. But your commit history is absolutely clean.
+    
+    What will happen:  
+    - All tasks from **Option 1**.
+    - Deletes './git' directory, then Re-initializes local git repo to remove history and all tags.
+    
 
 # Workflow
-You have two dictories to work in -- `./src` and `./samples`.
+You have two directories to work in -- `./src` and `./samples`.
 
 ## `./src`
 Deliverable source code.
@@ -288,7 +320,7 @@ In the json file `./tools/config/seed.tasks.json`, this 'componsite' task is rep
  
  To end a task sequence with an error the error handler:
  
- ```javascript
+ ```typescript
     
     function handler(error: any) {
       if (error) {
@@ -344,17 +376,19 @@ The transpiled code is output in the `./dist` directory:
 
 ## Unit Test
 ### `./src` directory
-`yarn test` -- unit test  
+`yarn test` -- unit test 
+`yarn test -- --src=index` -- unit test (specific files)  
 `yarn cover` -- code coverage  
 `yarn serve` -- serve coverage report  
 `yarn watch` -- watch unit test  
-  
 ### `./samples` directory  
 `yarn test.samples` -- unit test  
+`yarn test.samples -- --src=typescript/*` -- unit test (specific files)  
 `yarn cover.samples` -- code coverage  
 `yarn serve.samples` -- serve coverage report  
 `yarn watch.samples` -- watch unit tests  
-  
+`yarn watch.samples -- --src=typescript/*` -- watch unit tests (specific files)
+
 **When running the `watch` command, do not run the `test` command.**
 
 **Jasmine Type Definitions for Custom Matchers**

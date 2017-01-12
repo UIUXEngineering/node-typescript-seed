@@ -1,11 +1,11 @@
 import * as gulpLoadPlugins from 'gulp-load-plugins';
-import { JSONParse } from '../../../utils';
+import Config from '../../../config';
 
 const plugins = <any>gulpLoadPlugins();
 
 export = (done: any) => {
 
-  let pkgJson = JSONParse('package.json');
+  let pkgJson = Config.INIT_PACKAGE_JSON;
 
   let url: string = pkgJson.repository.replace('git+https', 'https');
 

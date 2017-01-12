@@ -2,16 +2,16 @@ import * as gulp from 'gulp';
 import * as gulpLoadPlugins from 'gulp-load-plugins';
 import Config from '../../../config';
 import { join, sep } from 'path';
-var SpecReporter = require('jasmine-spec-reporter');
+import { normalizeSpecPath } from '../../../utils';
+const SpecReporter = require('jasmine-spec-reporter');
+const argv = require('yargs').argv;
 
 const plugins = <any>gulpLoadPlugins();
 
 export = (done: any) => {
-
   let tsSpecFiles = [
-    join(Config.SAMPLES_DIR, '**', '*[spec].ts')
+    join(Config.SAMPLES_DIR, '**', normalizeSpecPath(argv.src))
   ];
-
 
   return  gulp.src(tsSpecFiles)
   // gulp-jasmine works on filepaths so you can't have any plugins before it
@@ -20,5 +20,4 @@ export = (done: any) => {
         new SpecReporter()
       ]
     }));
-
 };

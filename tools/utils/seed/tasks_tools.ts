@@ -227,7 +227,9 @@ function readDir(root: string, cb: (taskname: string, path: string) => void) {
         let taskname = file.replace(/\.ts$/, '');
         cb(taskname, path);
       } else {
-        walk(curPath);
+        // ignore .DS_Store file
+        if (!curPath.includes('.DS_Store'))
+          walk(curPath);
       }
     }
   }
