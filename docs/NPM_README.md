@@ -17,7 +17,7 @@ This project is generated from the [node-typescript-seed](https://github.com/UIU
 Install using npm or yarn.
 
 ```bash
-    yarn install <%= name %>
+    yarn add <%= name %>
 ```
 
 # API
