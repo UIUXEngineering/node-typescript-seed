@@ -3,6 +3,7 @@
   "version": "1.0.5",
   "description": "Node Typescript seed.",
   "main": "index.ts",
+  "typings": "types/index.d.ts",
   "scripts": {
     "build": "gulp build",
     "copy.githooks": "gulp copy.githooks",
