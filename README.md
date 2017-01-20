@@ -161,8 +161,8 @@ This seed is designed to create consumable services, models ( for MVC ), busines
          
       {
           "_post.release": [
-                                            // <-- removed
-            ]
+               "npm.publish.none"            // <-- npm publish gulp task
+             ]
       }
    ``` 
     

@@ -4,7 +4,7 @@
   ],
 
   "_post.release": [
-    "npm.publish.public"
+    "npm.publish.none"
   ]
 }
 
