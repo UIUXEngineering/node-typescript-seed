@@ -35,6 +35,7 @@
     "release.patch": "gulp release.patch",
     "release.minor": "gulp release.minor",
     "release.major": "gulp release.major",
+    "remove.githooks": "gulp remove.githooks",
     "serve": "gulp serve.cover.src",
     "serve.doc": "node_modules/.bin/compodoc -s -d ./docs/angular/",
     "serve.samples": "gulp serve.cover.samples",
