@@ -1,14 +1,12 @@
 import * as rmfr from 'rmfr';
 import { join } from 'path';
 
-import Config from '../../../config';
-
 /**
  * Executes the build task, copying all TypeScript files over to the `dist/tmp` directory.
  */
 export = (done: any) => {
 
-  let removePrePush = rmfr(join(Config.GIT_HOOKS_PATH, 'pre-push'));
+  let removePrePush = rmfr(join('.git', 'hooks', 'pre-push'));
 
   Promise.all([removePrePush])
     .then(() => {
