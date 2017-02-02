@@ -1,6 +1,6 @@
-import {join} from 'path';
+import { join } from 'path';
 import * as _ from 'lodash';
-import {SeedConfig} from './seed.config';
+import { SeedConfig } from './seed.config';
 
 /**
  * This class extends the basic seed configuration, allowing for project specific overrides. A few examples can be found
@@ -43,7 +43,8 @@ export class ProjectConfig extends SeedConfig {
         let moreDocs: any[] = [
             {
                 file: 'rxjs/introrx.md',
-                url: 'https://gist.githubusercontent.com/staltz/868e7e9bc2a7b8c1f754/raw/35cc1edb69b7175fd1308800a244410890bc9b5f/introrx.md'
+                url: 'https://gist.githubusercontent.com/staltz/868e7' +
+                'e9bc2a7b8c1f754/raw/35cc1edb69b7175fd1308800a244410890bc9b5f/introrx.md'
             }
         ];
 
