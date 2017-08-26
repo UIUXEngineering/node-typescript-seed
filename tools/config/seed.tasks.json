@@ -93,41 +93,49 @@
   ],
 
   "release": [
+    "build",
     "bump",
     "_release"
   ],
 
   "release.build": [
+    "build",
     "bump.build",
     "_release"
   ],
 
   "release.alpha": [
+    "build",
     "bump.alpha",
     "_release"
   ],
 
   "release.beta": [
+    "build",
     "bump.beta",
     "_release"
   ],
 
   "release.rc": [
+    "build",
     "bump.rc",
     "_release"
   ],
 
   "release.patch": [
+    "build",
     "bump.patch",
     "_release"
   ],
 
   "release.minor": [
+    "build",
     "bump.minor",
     "_release"
   ],
 
   "release.major": [
+    "build",
     "bump.major",
     "_release"
   ],
