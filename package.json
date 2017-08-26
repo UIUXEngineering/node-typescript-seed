@@ -62,7 +62,7 @@
     "@types/gulp-util": "^3.0.30",
     "@types/lodash": "^4.14.44",
     "@types/merge2": "^0.3.29",
-    "@types/node": "^6.0.52",
+    "@types/node": "^8.0.25",
     "@types/open": "^0.0.29",
     "@types/run-sequence": "^0.0.28",
     "@types/semver": "^5.3.30",
