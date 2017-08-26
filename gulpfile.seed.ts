@@ -8,8 +8,8 @@ import { checkEnvironment } from './tools/utils';
 
 export function loadSeedTasks() {
   checkEnvironment({
-    requiredNpmVersion: '>=3.5.3 <4.0.0',
-    requiredNodeVersion: '>=5.4.1 <7.0.0',
+    requiredNpmVersion: '>=3.5.3 <5.4.0',
+    requiredNodeVersion: '>=5.4.1 <8.4.0',
     shrinkwrap: false
   });
 
